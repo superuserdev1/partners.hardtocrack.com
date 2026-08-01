@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conviértase en Partner Oficial HardToCrack</title>
+<meta name="description" content="Una nueva línea de negocio basada en privacidad digital, dispositivos preparados profesionalmente y servicios de alto valor añadido. Solicite una reunión.">
+<!-- FUTURE ROUTES (not yet exposed in nav): /login /dashboard /training /resources /support -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN SYSTEM — idéntico a partners.hardtocrack.com ============ */
+  :root{
+    --bg: #05070a;
+    --bg-1: #080b10;
+    --bg-2: #0c1119;
+    --card: #0e151f;
+    --card-2: #0a0f16;
+    --border: rgba(255,255,255,0.08);
+    --border-2: rgba(255,255,255,0.14);
+    --cyan: #2dd4e8;
+    --green: #4ade80;
+    --cyan-dim: rgba(45,212,232,0.14);
+    --green-dim: rgba(74,222,128,0.14);
+    --grad: linear-gradient(120deg, var(--cyan), var(--green));
+    --text: #eaf1f6;
+    --muted: #93a1ae;
+    --dim: #5c6773;
+    --radius: 14px;
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; overflow-x:hidden;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer;}
+  h1,h2,h3,h4{font-family:'Oswald',sans-serif; text-transform:uppercase; font-weight:700; letter-spacing:0.01em; line-height:1.14;}
+  .grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--cyan); display:flex; align-items:center; gap:10px; margin-bottom:16px; font-weight:500;
+  }
+  .eyebrow::before{content:''; width:26px; height:1px; background:var(--grad); display:inline-block;}
+  .container{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  section{position:relative; padding:110px 0;}
+  .section-head{max-width:680px; margin:0 auto 56px; text-align:center;}
+  .section-head h2{font-size:clamp(28px,4vw,42px); margin-bottom:16px;}
+  .section-head p{color:var(--muted); font-size:17px;}
+  .divider-line{height:1px; background:linear-gradient(90deg, transparent, var(--border-2), transparent); max-width:var(--maxw); margin:0 auto;}
+  .icon{width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:16px 32px; border-radius:8px;
+    font-family:'JetBrains Mono',monospace; font-size:13.5px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
+    border:1px solid transparent; transition:transform .18s ease, box-shadow .18s ease; white-space:nowrap;
+  }
+  .btn-primary{background:var(--grad); color:#04120e;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 30px -8px rgba(74,222,128,0.45);}
+  .btn-ghost{background:transparent; border-color:var(--border-2); color:var(--text);}
+  .btn-ghost:hover{border-color:var(--cyan); color:var(--cyan);}
+  .btn:focus-visible{outline:2px solid var(--cyan); outline-offset:3px;}
+  .btn:disabled{opacity:0.4; cursor:not-allowed;}
+  .btn[disabled]:hover{transform:none; box-shadow:none;}
+
+  /* ---- nav (minimal, single purpose) ---- */
+  header{position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter:blur(14px); background:rgba(5,7,10,0.72); border-bottom:1px solid var(--border);}
+  nav{max-width:var(--maxw); margin:0 auto; padding:0 28px; height:74px; display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:11px;}
+  .hex-mark{width:32px; height:32px;}
+  .logo-word{font-family:'Oswald',sans-serif; font-weight:700; font-size:19px; letter-spacing:0.04em;}
+  .logo-sub{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.28em; color:var(--dim); margin-top:1px;}
+  .nav-links{display:flex; align-items:center; gap:30px;}
+  .nav-links a{font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); transition:color .15s ease;}
+  .nav-links a:hover{color:var(--text);}
+  @media (max-width:760px){ .nav-links{display:none;} }
+
+  /* ---- hero ---- */
+  #inicio{padding-top:170px; padding-bottom:110px; min-height:96vh; display:flex; align-items:center; position:relative;}
+  .hero-glow{position:absolute; top:-10%; right:-10%; width:640px; height:640px; background:radial-gradient(circle, rgba(45,212,232,0.16), transparent 65%); z-index:0; pointer-events:none;}
+  .hero-glow-2{position:absolute; bottom:-15%; left:-8%; width:520px; height:520px; background:radial-gradient(circle, rgba(74,222,128,0.13), transparent 65%); z-index:0; pointer-events:none;}
+  .hero-grid{position:relative; z-index:1; display:grid; grid-template-columns:1.1fr 0.9fr; gap:60px; align-items:center;}
+  .hero-copy h1{font-size:clamp(32px,4.6vw,52px); margin-bottom:24px;}
+  .hero-copy p.lead{color:var(--muted); font-size:18px; max-width:520px; margin-bottom:38px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+
+  /* ---- phone illustration (vector, no stock photos) ---- */
+  .phone-stage{display:flex; align-items:center; justify-content:center; position:relative;}
+  .phone-glow{position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(74,222,128,0.18), transparent 68%); filter:blur(4px);}
+  .phone{
+    position:relative; width:230px; height:470px; border-radius:34px;
+    background:linear-gradient(160deg, #0c1119, #060a0f);
+    border:1px solid var(--border-2);
+    box-shadow:0 40px 90px -30px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.02) inset;
+    padding:10px;
+  }
+  .phone-cam{position:absolute; top:26px; left:50%; transform:translateX(-50%); width:56px; height:14px; border-radius:8px; background:#050708; border:1px solid var(--border);}
+  .phone-screen{
+    width:100%; height:100%; border-radius:26px; background:#04070a; border:1px solid var(--border);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; position:relative; overflow:hidden;
+  }
+  .phone-screen::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(circle at 30% 20%, rgba(45,212,232,0.14), transparent 55%), radial-gradient(circle at 75% 85%, rgba(74,222,128,0.12), transparent 55%);
+  }
+  .phone-status{position:absolute; top:16px; left:22px; right:22px; display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--dim);}
+  .phone-hex{width:52px; height:52px; position:relative; z-index:1;}
+  .phone-title{font-family:'Oswald'; font-size:14px; letter-spacing:.06em; color:var(--text); z-index:1;}
+  .phone-sub{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--green); letter-spacing:.08em; z-index:1;}
+  .phone-lock{display:flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:9.5px; color:var(--dim); z-index:1;}
+  .phone-lock svg{width:12px; height:12px; color:var(--cyan);}
+
+  /* ---- generic card ---- */
+  .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:30px; position:relative; transition:border-color .2s ease;}
+  .card:hover{border-color:var(--border-2);}
+  .card-top-line{position:absolute; top:0; left:24px; right:24px; height:2px; background:var(--grad); border-radius:2px; opacity:0; transition:opacity .2s ease;}
+  .card:hover .card-top-line{opacity:1;}
+  .icon-badge{width:46px; height:46px; clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0% 50%); background:var(--cyan-dim); display:flex; align-items:center; justify-content:center; margin-bottom:18px; color:var(--cyan);}
+  .card h3{font-size:18px; margin-bottom:12px;}
+  .card p{color:var(--muted); font-size:14.5px;}
+  .mini-list{margin-top:14px;}
+  .mini-list li{display:flex; align-items:flex-start; gap:8px; font-size:13.5px; color:var(--muted); padding:5px 0;}
+  .mini-list svg{width:14px; height:14px; color:var(--green); margin-top:3px; flex-shrink:0;}
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .grid-7{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+
+  /* ---- infographic flow ---- */
+  .infographic{display:flex; align-items:center; justify-content:center; gap:0; margin-bottom:56px; flex-wrap:wrap;}
+  .info-node{display:flex; flex-direction:column; align-items:center; gap:14px; padding:0 30px;}
+  .info-hex-wrap{position:relative; width:88px; height:88px;}
+  .info-hex-wrap .grad-bg{position:absolute; inset:0; clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0% 50%); background:var(--grad);}
+  .info-hex-wrap .grad-fg{position:absolute; inset:2px; clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0% 50%); background:#070b10; display:flex; align-items:center; justify-content:center;}
+  .info-hex-wrap svg{width:34px; height:34px; color:var(--green);}
+  .info-node span{font-family:'Oswald'; font-size:14px; letter-spacing:.04em;}
+  .info-arrow{color:var(--cyan); opacity:.6;}
+  .info-arrow svg{width:26px; height:26px;}
+  @media (max-width:760px){ .info-arrow svg{transform:rotate(90deg);} }
+
+  /* ---- program cards ---- */
+  .prog-card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:36px 30px; text-align:center; display:flex; flex-direction:column; align-items:center;}
+  .prog-card.featured{border-color:rgba(74,222,128,0.4); background:linear-gradient(180deg, rgba(74,222,128,0.05), var(--card) 35%);}
+  .prog-name{font-size:22px; margin-bottom:14px;}
+  .prog-tag{color:var(--muted); font-size:15px; margin-bottom:22px; flex-grow:1;}
+  .prog-note{font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.05em; color:var(--dim); border-top:1px solid var(--border); padding-top:18px; width:100%;}
+
+  /* ---- rentable statement ---- */
+  .quote-box{margin-top:56px; text-align:center;}
+  .quote-box p{font-family:'Oswald'; text-transform:uppercase; font-size:clamp(20px,3vw,30px); letter-spacing:.01em;}
+
+  /* ---- timeline ---- */
+  .timeline{display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative; margin-top:20px;}
+  .timeline::before{content:''; position:absolute; top:33px; left:10%; right:10%; height:1px; background:linear-gradient(90deg, var(--cyan), var(--green)); opacity:.35;}
+  .tl-step{position:relative; z-index:1; padding:0 16px; text-align:center;}
+  .tl-wrap{position:relative; width:66px; height:66px; margin:0 auto 20px;}
+  .tl-wrap .grad-bg{position:absolute; inset:0; clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0% 50%); background:var(--grad);}
+  .tl-wrap .grad-fg{position:absolute; inset:2px; clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0% 50%); background:#070b10; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; color:var(--green); font-weight:600; font-size:19px;}
+  .tl-step p{color:var(--muted); font-size:14px;}
+  @media (max-width:760px){ .timeline{grid-template-columns:1fr; gap:34px;} .timeline::before{display:none;} }
+
+  /* ---- CTA block ---- */
+  .cta-block{text-align:center; max-width:640px; margin:0 auto;}
+  .cta-block h2{font-size:clamp(24px,3.4vw,36px); margin-bottom:30px;}
+
+  /* ---- lead form (reunión) ---- */
+  .form-wrap{background:var(--card); border:1px solid var(--border-2); border-radius:var(--radius); padding:44px; max-width:640px; margin:0 auto;}
+  .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .field{display:flex; flex-direction:column; gap:8px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--dim);}
+  .field label span{color:var(--green);}
+  .field input, .field textarea{background:var(--bg-1); border:1px solid var(--border-2); border-radius:8px; padding:13px 14px; color:var(--text); font-family:'Inter'; font-size:14.5px;}
+  .field input:focus, .field textarea:focus{outline:none; border-color:var(--cyan);}
+  .form-submit{margin-top:26px; display:flex; flex-direction:column; align-items:center; gap:16px;}
+  .form-note{font-size:12.5px; color:var(--dim); text-align:center;}
+  .success-block{display:none; margin-top:28px; text-align:center; padding-top:28px; border-top:1px solid var(--border);}
+  .success-block.show{display:block;}
+  .success-block svg{width:34px; height:34px; color:var(--green); margin:0 auto 14px;}
+  .success-block p{color:var(--muted); font-size:14.5px; margin-bottom:22px;}
+
+  /* ---- contact ---- */
+  .contact-row{display:flex; justify-content:center; gap:60px; flex-wrap:wrap; text-align:center;}
+  .contact-item span{display:block; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); margin-bottom:8px;}
+  .contact-item a{font-family:'Oswald'; font-size:18px; color:var(--cyan);}
+
+  /* ---- footer (idéntico a partners.hardtocrack.com) ---- */
+  footer{background:var(--bg-1); border-top:1px solid var(--border); padding:64px 0 30px;}
+  .footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:50px;}
+  .footer-brand p{color:var(--dim); font-size:13.5px; margin-top:16px; max-width:280px;}
+  .footer-col h5{font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); margin-bottom:16px;}
+  .footer-col a{display:block; color:var(--muted); font-size:14px; padding:6px 0; transition:color .15s;}
+  .footer-col a:hover{color:var(--cyan);}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:26px; border-top:1px solid var(--border); font-size:12.5px; color:var(--dim); flex-wrap:wrap; gap:12px;}
+  .footer-tag{font-family:'JetBrains Mono',monospace; letter-spacing:.05em;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.visible{opacity:1; transform:translateY(0);}
+
+  @media (max-width:1024px){
+    .hero-grid{grid-template-columns:1fr; gap:50px;}
+    .hero-copy{text-align:center;}
+    .hero-copy p.lead{margin-left:auto; margin-right:auto;}
+    .hero-ctas{justify-content:center;}
+    .grid-4, .grid-7{grid-template-columns:repeat(2,1fr);}
+    .grid-3{grid-template-columns:1fr 1fr;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:760px){
+    section{padding:76px 0;}
+    #inicio{padding-top:130px;}
+    .grid-2, .grid-3, .grid-4, .grid-7{grid-template-columns:1fr;}
+    .form-grid{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr;}
+    .info-node{padding:14px 0;}
+    .infographic{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+<defs>
+  <linearGradient id="hexgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4e8"/><stop offset="1" stop-color="#4ade80"/></linearGradient>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 018 0v4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.3 2.3-2.4-2.4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 8l1-4h16l1 4"/><path d="M4 8v12h16V8"/><path d="M9 20v-6h6v6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 5-6 8-6s6.5 1.5 8 6"/></symbol>
+  <symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4h3l6 4V6l-6 4H3z"/><path d="M15 9a3 3 0 010 6"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4-10-4z"/><path d="M6 11v5c2 1.6 10 1.6 12 0v-5"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v9l9 5 9-5V8"/><line x1="12" y1="13" x2="12" y2="22"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.4"/><rect x="17" y="13" width="4" height="6" rx="1.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><path d="M14 6l6 6-6 6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></symbol>
+</defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header>
+  <nav>
+    <a href="https://hardtocrack.com" class="logo">
+      <svg class="hex-mark" viewBox="0 0 40 40"><polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="url(#hexgrad)" stroke-width="2"/><text x="20" y="25" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="13" fill="#eaf1f6">HT</text></svg>
+      <div>
+        <div class="logo-word">HARDTOCRACK</div>
+        <div class="logo-sub">PARTNERS</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#por-que">Por qué</a>
+      <a href="#programa">Programa</a>
+      <a href="#empezar">Cómo empezar</a>
+    </div>
+    <a href="#reunion" class="btn btn-primary">Solicitar reunión</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="inicio">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Programa Partner Oficial</div>
+      <h1>Convierta su tienda en un<br><span class="grad-text">Partner Oficial</span> HardToCrack</h1>
+      <p class="lead">Una nueva línea de negocio basada en privacidad digital, dispositivos preparados profesionalmente y servicios de alto valor añadido.</p>
+      <div class="hero-ctas">
+        <a href="#reunion" class="btn btn-primary">Solicitar una reunión</a>
+        <a href="#programa" class="btn btn-ghost">Conocer el programa Partner</a>
+      </div>
+    </div>
+    <div class="phone-stage reveal">
+      <div class="phone-glow"></div>
+      <div class="phone">
+        <div class="phone-cam"></div>
+        <div class="phone-screen">
+          <div class="phone-status"><span>10:24</span><span>5G ●●●</span></div>
+          <svg class="phone-hex" viewBox="0 0 40 40"><polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="url(#hexgrad)" stroke-width="2"/></svg>
+          <div class="phone-title">GRAPHENEOS</div>
+          <div class="phone-sub">PRIVACY · SECURITY · FREEDOM</div>
+          <div class="phone-lock"><svg><use href="#i-lock"/></svg> DISPOSITIVO PROTEGIDO</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ POR QUÉ HARDTOCRACK ============ -->
+<section id="por-que">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">¿Por qué HardToCrack?</div>
+      <h2>Cuatro razones para colaborar</h2>
+    </div>
+    <div class="grid-4 reveal">
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div>
+        <h3>Mercado en crecimiento</h3>
+        <p>La privacidad digital ya no es un lujo. Es una necesidad.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-tool"/></svg></div>
+        <h3>Nosotros hacemos el trabajo técnico</h3>
+        <ul class="mini-list">
+          <li><svg><use href="#i-check"/></svg> Instalación</li>
+          <li><svg><use href="#i-check"/></svg> Configuración</li>
+          <li><svg><use href="#i-check"/></svg> Actualizaciones</li>
+          <li><svg><use href="#i-check"/></svg> Soporte</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-store"/></svg></div>
+        <h3>Usted vende</h3>
+        <ul class="mini-list">
+          <li><svg><use href="#i-check"/></svg> No necesita conocimientos técnicos</li>
+          <li><svg><use href="#i-check"/></svg> No necesita instalar software</li>
+          <li><svg><use href="#i-check"/></svg> No necesita formar empleados</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-box"/></svg></div>
+        <h3>Ingresos recurrentes</h3>
+        <ul class="mini-list">
+          <li><svg><use href="#i-check"/></svg> Servicios</li>
+          <li><svg><use href="#i-check"/></svg> Accesorios</li>
+          <li><svg><use href="#i-check"/></svg> Renovaciones</li>
+          <li><svg><use href="#i-check"/></svg> Clientes fidelizados</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ QUÉ OBTIENE UN PARTNER ============ -->
+<section id="obtiene">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">Qué obtiene un Partner</div>
+      <h2>De HardToCrack a su cliente</h2>
+    </div>
+
+    <div class="infographic reveal">
+      <div class="info-node">
+        <div class="info-hex-wrap"><div class="grad-bg"></div><div class="grad-fg"><svg><use href="#i-shield"/></svg></div></div>
+        <span>HardToCrack</span>
+      </div>
+      <div class="info-arrow"><svg><use href="#i-arrow"/></svg></div>
+      <div class="info-node">
+        <div class="info-hex-wrap"><div class="grad-bg"></div><div class="grad-fg"><svg><use href="#i-store"/></svg></div></div>
+        <span>Tienda</span>
+      </div>
+      <div class="info-arrow"><svg><use href="#i-arrow"/></svg></div>
+      <div class="info-node">
+        <div class="info-hex-wrap"><div class="grad-bg"></div><div class="grad-fg"><svg><use href="#i-user"/></svg></div></div>
+        <span>Cliente</span>
+      </div>
+    </div>
+
+    <div class="grid-7 reveal">
+      <div class="card"><div class="icon-badge"><svg class="icon"><use href="#i-tool"/></svg></div><h3 style="font-size:15.5px;">Instalación profesional</h3></div>
+      <div class="card"><div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div><h3 style="font-size:15.5px;">GrapheneOS</h3></div>
+      <div class="card"><div class="icon-badge"><svg class="icon"><use href="#i-headset"/></svg></div><h3 style="font-size:15.5px;">Soporte</h3></div>
+      <div class="card"><div class="icon-badge"><svg class="icon"><use href="#i-box"/></svg></div><h3 style="font-size:15.5px;">Accesorios</h3></div>
+      <div class="card"><div class="icon-badge"><svg class="icon"><use href="#i-mega"/></svg></div><h3 style="font-size:15.5px;">Marketing</h3></div>
+      <div class="card"><div class="icon-badge"><svg class="icon"><use href="#i-cap"/></svg></div><h3 style="font-size:15.5px;">Formación</h3></div>
+      <div class="card"><div class="icon-badge"><svg class="icon"><use href="#i-doc"/></svg></div><h3 style="font-size:15.5px;">Portal Partner</h3></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ PROGRAMA PARTNER ============ -->
+<section id="programa">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">Programa Partner</div>
+      <h2>Un modelo de colaboración<br>para cada tienda</h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="prog-card">
+        <div class="prog-name">Launch</div>
+        <p class="prog-tag">Empiece sin inversión inicial.</p>
+        <p class="prog-note">Más información durante la reunión.</p>
+      </div>
+      <div class="prog-card featured">
+        <div class="prog-name">Growth</div>
+        <p class="prog-tag">Propiedad desde el primer día mediante pago diferido.</p>
+        <p class="prog-note">Más información durante la reunión.</p>
+      </div>
+      <div class="prog-card">
+        <div class="prog-name">Elite</div>
+        <p class="prog-tag">Máxima rentabilidad desde el inicio.</p>
+        <p class="prog-note">Más información durante la reunión.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ POR QUÉ ES RENTABLE ============ -->
+<section id="rentable">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">¿Por qué es rentable?</div>
+      <h2>Márgenes claros,<br>en cada operación</h2>
+    </div>
+    <div class="grid-7 reveal">
+      <div class="card" style="text-align:left;"><div class="icon-badge"><svg class="icon"><use href="#i-check"/></svg></div><h3 style="font-size:15px;">Comisión por dispositivos</h3></div>
+      <div class="card" style="text-align:left;"><div class="icon-badge"><svg class="icon"><use href="#i-check"/></svg></div><h3 style="font-size:15px;">Servicios adicionales</h3></div>
+      <div class="card" style="text-align:left;"><div class="icon-badge"><svg class="icon"><use href="#i-check"/></svg></div><h3 style="font-size:15px;">Venta de accesorios</h3></div>
+      <div class="card" style="text-align:left;"><div class="icon-badge"><svg class="icon"><use href="#i-check"/></svg></div><h3 style="font-size:15px;">Renovaciones</h3></div>
+      <div class="card" style="text-align:left;"><div class="icon-badge"><svg class="icon"><use href="#i-check"/></svg></div><h3 style="font-size:15px;">Material comercial</h3></div>
+      <div class="card" style="text-align:left;"><div class="icon-badge"><svg class="icon"><use href="#i-check"/></svg></div><h3 style="font-size:15px;">Formación</h3></div>
+      <div class="card" style="text-align:left;"><div class="icon-badge"><svg class="icon"><use href="#i-check"/></svg></div><h3 style="font-size:15px;">Soporte técnico</h3></div>
+    </div>
+    <div class="quote-box reveal">
+      <p>Una <span class="grad-text">nueva línea de negocio</span> para su establecimiento.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ CÓMO EMPEZAR ============ -->
+<section id="empezar">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">Cómo empezar</div>
+      <h2>De la reunión a la primera venta</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-step">
+        <div class="tl-wrap"><div class="grad-bg"></div><div class="grad-fg">01</div></div>
+        <p>Solicite una reunión.</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-wrap"><div class="grad-bg"></div><div class="grad-fg">02</div></div>
+        <p>Le mostramos el programa.</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-wrap"><div class="grad-bg"></div><div class="grad-fg">03</div></div>
+        <p>Seleccionamos el modelo de colaboración.</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-wrap"><div class="grad-bg"></div><div class="grad-fg">04</div></div>
+        <p>Empiece a vender.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ CTA + FORMULARIO DE REUNIÓN ============ -->
+<section id="reunion">
+  <div class="container">
+    <div class="cta-block reveal" style="margin-bottom:56px;">
+      <div class="eyebrow" style="justify-content:center">Plazas limitadas</div>
+      <h2>Estamos seleccionando los<br>primeros Partners Oficiales.</h2>
+    </div>
+
+    <form class="form-wrap reveal" id="meetingForm">
+      <div class="form-grid">
+        <div class="field"><label>Nombre <span>*</span></label><input type="text" required name="nombre"></div>
+        <div class="field"><label>Empresa / Tienda <span>*</span></label><input type="text" required name="empresa"></div>
+        <div class="field"><label>Email <span>*</span></label><input type="email" required name="email"></div>
+        <div class="field"><label>Teléfono <span>*</span></label><input type="tel" required name="telefono"></div>
+        <div class="field full"><label>Mensaje (opcional)</label><textarea name="mensaje" rows="3" placeholder="Cuéntenos brevemente sobre su negocio..."></textarea></div>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary" id="submitBtn">Solicitar reunión</button>
+        <span class="form-note">Le contactaremos en menos de 48h laborables para agendar la reunión.</span>
+      </div>
+
+      <div class="success-block" id="successBlock">
+        <svg><use href="#i-check"/></svg>
+        <p>Solicitud recibida. Nuestro equipo se pondrá en contacto para agendar su reunión.<br>Mientras tanto, puede descargar el dossier completo del programa Partner.</p>
+        <a href="/dossier-hardtocrack-partners.pdf" class="btn btn-ghost" download>
+          <svg class="icon" style="width:16px;height:16px;"><use href="#i-download"/></svg>
+          Descargar dossier PDF
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" style="padding:80px 0;">
+  <div class="container contact-row reveal">
+    <div class="contact-item">
+      <span>Partners</span>
+      <a href="mailto:partners@hardtocrack.com">partners@hardtocrack.com</a>
+    </div>
+    <div class="contact-item">
+      <span>General</span>
+      <a href="mailto:contact@hardtocrack.com">contact@hardtocrack.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (idéntico a partners.hardtocrack.com) ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg class="hex-mark" viewBox="0 0 40 40"><polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="url(#hexgrad)" stroke-width="2"/></svg>
+          <div class="logo-word">HARDTOCRACK</div>
+        </div>
+        <p>Hardware verificado. Privacidad sin concesiones. Red nacional de tiendas Partner especializadas en privacidad digital.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Programa Partner</h5>
+        <a href="#por-que">Por qué colaborar</a>
+        <a href="#programa">Modelos de colaboración</a>
+        <a href="#empezar">Cómo empezar</a>
+      </div>
+      <div class="footer-col">
+        <h5>Recursos</h5>
+        <a href="https://partners.hardtocrack.com">Programa Partner completo</a>
+        <a href="#reunion">Solicitar reunión</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:partners@hardtocrack.com">partners@hardtocrack.com</a>
+        <a href="https://hardtocrack.com">hardtocrack.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HardToCrack. Todos los derechos reservados.</span>
+      <span class="footer-tag">PRIVACY. SECURITY. FREEDOM.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  const form = document.getElementById('meetingForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('successBlock').classList.add('show');
+    document.getElementById('submitBtn').disabled = true;
+    document.getElementById('submitBtn').textContent = 'Solicitud enviada';
+  });
+</script>
+
+</body>
+</html>
