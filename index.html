@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HardToCrack Partners — Google Pixel con GrapheneOS para tu tienda</title>
-<meta name="description" content="Programa de Partners HardToCrack. Incorpora una línea de negocio exclusiva de privacidad digital: Google Pixel preparados con GrapheneOS, sin stock obligatorio y sin conocimientos técnicos.">
+<meta name="description" content="Programa Oficial de Partners HardToCrack para tiendas de telefonía, informática y servicios tecnológicos. Google Pixel preparados con GrapheneOS, soporte integral y una nueva línea de negocio en privacidad digital.">
+<meta name="theme-color" content="#05070a">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://partners.hardtocrack.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HardToCrack Partners — Privacidad digital para su tienda">
+<meta property="og:description" content="Incorpore Google Pixel preparados con GrapheneOS, servicios de privacidad y soporte profesional sin asumir la parte técnica.">
+<meta property="og:url" content="https://partners.hardtocrack.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -596,9 +603,278 @@
     .compare-table{font-size:12px;}
     .diff-table td, .diff-table th{padding:12px;}
   }
+
+/* ========================================================================
+   HARDTOCRACK PARTNERS — PREMIUM REDESIGN V2
+   Visual system aligned with /start: dark glass, cyan→emerald gradients,
+   hexagonal symbolism, restrained motion and stronger conversion hierarchy.
+   ======================================================================== */
+:root{
+  --bg:#040609;
+  --bg-1:#070a0f;
+  --bg-2:#0a1017;
+  --card:#0c131d;
+  --card-2:#080d14;
+  --card-glass:rgba(11,18,27,.78);
+  --border:rgba(159,191,211,.11);
+  --border-2:rgba(166,215,232,.22);
+  --cyan:#19c8f0;
+  --cyan-2:#0c8df2;
+  --green:#45e477;
+  --green-2:#13d6a0;
+  --cyan-dim:rgba(25,200,240,.13);
+  --green-dim:rgba(69,228,119,.12);
+  --grad:linear-gradient(118deg,var(--cyan-2) 0%,var(--cyan) 42%,var(--green) 100%);
+  --grad-soft:linear-gradient(135deg,rgba(25,200,240,.14),rgba(69,228,119,.08));
+  --text:#f1f7fb;
+  --muted:#a3b0bc;
+  --dim:#677481;
+  --radius:18px;
+  --radius-lg:28px;
+  --maxw:1240px;
+  --shadow:0 28px 90px rgba(0,0,0,.48);
+}
+html{scroll-padding-top:92px}
+body{
+  background:
+    radial-gradient(circle at 78% 3%,rgba(25,200,240,.075),transparent 25%),
+    radial-gradient(circle at 12% 30%,rgba(69,228,119,.045),transparent 22%),
+    var(--bg);
+  font-size:16px;
+  line-height:1.68;
+}
+body::selection{background:rgba(25,200,240,.28);color:#fff}
+.page-grid{
+  position:fixed;inset:0;z-index:-5;pointer-events:none;opacity:.34;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:48px 48px;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 58%,transparent 94%);
+  mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 58%,transparent 94%);
+}
+.page-orb{position:fixed;z-index:-4;border-radius:50%;pointer-events:none;filter:blur(18px)}
+.page-orb-cyan{width:620px;height:620px;right:-310px;top:-260px;background:radial-gradient(circle,rgba(25,200,240,.12),transparent 68%)}
+.page-orb-green{width:520px;height:520px;left:-280px;bottom:-270px;background:radial-gradient(circle,rgba(69,228,119,.09),transparent 68%)}
+.scroll-progress{
+  position:fixed;left:0;right:0;top:0;height:2px;z-index:500;
+  transform:scaleX(0);transform-origin:left;background:var(--grad);
+  box-shadow:0 0 18px rgba(25,200,240,.55);
+}
+.container{max-width:var(--maxw);padding-inline:32px}
+section{padding:126px 0}
+.section-head{max-width:790px;margin-bottom:62px}
+.section-head h2{font-size:clamp(32px,4.5vw,52px);letter-spacing:-.015em}
+.section-head p{font-size:17px;max-width:700px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;color:var(--cyan)}
+.divider-line{background:linear-gradient(90deg,transparent,rgba(25,200,240,.22),rgba(69,228,119,.16),transparent)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text}
+header{
+  background:linear-gradient(180deg,rgba(4,6,9,.91),rgba(4,6,9,.72));
+  border-bottom-color:rgba(159,191,211,.1);
+  box-shadow:0 12px 45px rgba(0,0,0,.16);
+}
+nav{height:80px;max-width:var(--maxw);padding-inline:32px}
+.brand-lockup{gap:12px}
+.brand-mark{width:37px;height:42px;object-fit:contain;filter:drop-shadow(0 0 11px rgba(25,200,240,.2))}
+.brand-copy{display:grid;line-height:1}
+.logo-word{font-size:20px;letter-spacing:.055em}
+.logo-word span{color:var(--cyan)}
+.logo-sub{font-size:8.5px;letter-spacing:.2em;color:#71808c;margin-top:6px}
+.nav-links{gap:25px}
+.nav-links a{font-size:11.5px;padding:9px 0}
+.nav-links a::before{
+  content:"";position:absolute;left:50%;right:50%;bottom:-4px;height:1px;background:var(--grad);transition:.2s;
+}
+.nav-links a:hover::before{left:0;right:0}
+.nav-links a.active::after{bottom:-27px;height:2px;box-shadow:0 0 12px rgba(25,200,240,.38)}
+.btn{border-radius:10px;padding:14px 25px;min-height:48px}
+.btn-primary{background:var(--grad);box-shadow:inset 0 1px rgba(255,255,255,.22),0 14px 40px -18px rgba(69,228,119,.72)}
+.btn-primary:hover{box-shadow:inset 0 1px rgba(255,255,255,.22),0 20px 46px -15px rgba(69,228,119,.78)}
+.btn-ghost{background:rgba(255,255,255,.018);backdrop-filter:blur(8px)}
+.hero-premium{
+  min-height:100vh;
+  padding-top:168px!important;
+  padding-bottom:112px!important;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero-premium::before{
+  content:"";position:absolute;inset:80px 0 0;z-index:-2;pointer-events:none;
+  background:
+    linear-gradient(90deg,transparent 0%,rgba(25,200,240,.035) 48%,transparent 100%),
+    radial-gradient(ellipse at 74% 48%,rgba(18,130,170,.1),transparent 32%);
+}
+.hero-beam{position:absolute;width:620px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.16;filter:blur(.2px)}
+.hero-beam-a{right:-80px;top:31%;transform:rotate(-24deg)}
+.hero-beam-b{right:-130px;top:62%;transform:rotate(18deg);background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.hero-grid{grid-template-columns:1.06fr .94fr;gap:72px}
+.hero-copy h1{
+  max-width:760px;font-size:clamp(44px,5.7vw,72px);line-height:1.01;
+  letter-spacing:-.025em;margin-bottom:28px;text-wrap:balance;
+}
+.hero-copy p.lead{font-size:18px;max-width:680px;line-height:1.74}
+.hero-ctas{margin-bottom:46px}
+.hero-stats{
+  max-width:780px;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  background:rgba(8,13,20,.55);
+  backdrop-filter:blur(10px);
+}
+.hero-stats div{padding:17px 17px;border-right:1px solid var(--border)}
+.hero-stats strong{font-size:13.5px;margin-bottom:5px}
+.hero-stats span{font-size:10.5px}
+.founder-note{margin-top:22px;display:flex;align-items:center;gap:10px;color:var(--muted);font:500 11.5px 'JetBrains Mono',monospace}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(69,228,119,.1),0 0 16px rgba(69,228,119,.7)}
+.hex-field{opacity:.3}
+.device-stage{min-height:640px;position:relative;display:grid;place-items:center;perspective:1100px}
+.halo{
+  width:460px;height:510px;position:absolute;
+  clip-path:polygon(25% 2%,75% 2%,100% 50%,75% 98%,25% 98%,0 50%);
+  background:var(--grad);
+  filter:drop-shadow(0 0 42px rgba(25,200,240,.23));
+  opacity:.75;
+}
+.halo::after{content:"";position:absolute;inset:3px;clip-path:inherit;background:linear-gradient(145deg,#071019,#030609)}
+.device-orbit{position:absolute;border:1px solid rgba(25,200,240,.17);border-radius:50%;transform:rotate(-18deg)}
+.orbit-one{width:520px;height:270px}.orbit-two{width:390px;height:560px;border-color:rgba(69,228,119,.12);transform:rotate(28deg)}
+.phone{
+  width:230px;height:470px;border-radius:33px;
+  background:linear-gradient(145deg,#1a222b,#030507 68%);
+  border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 42px 90px rgba(0,0,0,.68),inset 0 0 0 4px #080b10;
+}
+.phone-front{z-index:4;transform:translate(46px,14px) rotate(3deg);padding:9px}
+.phone-back{position:absolute;z-index:2;transform:translate(-88px,-6px) rotate(-4deg)}
+.camera-bar{position:absolute;left:15px;right:15px;top:34px;height:70px;border-radius:24px;background:linear-gradient(90deg,#080b10,#222c35);display:flex;align-items:center;padding:0 19px;gap:13px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.camera-bar i{width:29px;height:29px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#225574,#020408 40%,#000 70%);border:2px solid #303942}
+.camera-bar b{margin-left:auto;width:12px;height:12px;border-radius:50%;background:#d8d3bd;box-shadow:0 0 10px rgba(255,255,255,.3)}
+.pixel-g{position:absolute;inset:auto 0 75px;text-align:center;font:700 42px Inter,sans-serif;color:rgba(255,255,255,.14)}
+.phone-screen{
+  position:relative;height:100%;border-radius:25px;overflow:hidden;
+  background:
+    radial-gradient(circle at 70% 12%,rgba(25,200,240,.18),transparent 38%),
+    radial-gradient(circle at 25% 82%,rgba(69,228,119,.16),transparent 43%),
+    linear-gradient(155deg,#08111a,#03070b 72%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;
+}
+.phone-screen::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.035) 48%,transparent 64%);transform:translateX(-80%);animation:screenShine 8s ease-in-out infinite}
+.screen-time{position:absolute;left:21px;top:18px;font:500 9px 'JetBrains Mono',monospace;color:#dce7ee}
+.screen-logo{width:78px;height:88px;object-fit:contain;margin-bottom:22px;filter:drop-shadow(0 0 18px rgba(25,200,240,.24))}
+.phone-screen h3{font-size:26px;text-transform:none}
+.phone-screen p{font-size:9px;letter-spacing:.13em;margin-top:8px}
+.screen-lock{position:absolute;bottom:27px;display:flex;align-items:center;gap:7px;color:#95a6b2;font:500 9px 'JetBrains Mono',monospace}
+.screen-lock .icon{width:13px;height:13px}
+.float-chip{border-radius:13px;border-color:rgba(167,220,234,.19);box-shadow:0 24px 65px rgba(0,0,0,.44)}
+.chip-a{left:-4%;top:18%}.chip-b{right:-7%;bottom:20%}
+.device-caption{
+  position:absolute;bottom:3%;left:50%;transform:translateX(-50%);
+  display:grid;text-align:center;gap:4px;width:max-content;max-width:100%;
+  color:var(--muted);font-size:12px
+}
+.device-kicker{font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.17em;color:var(--cyan)}
+@keyframes screenShine{0%,55%{transform:translateX(-90%)}72%,100%{transform:translateX(110%)}}
+
+/* Premium section rhythm */
+#por-que,#packs,#rentabilidad,#exclusividad,#formacion,#marketing,#solicitud{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.006),transparent 22%,transparent 78%,rgba(255,255,255,.006)),
+    radial-gradient(circle at 93% 16%,rgba(25,200,240,.035),transparent 24%);
+}
+.card,.pack-card,.case-card,.demo-card,.form-wrap,.zone-visual,.diff-table,.rent-table,.example-box,.cert-flow{
+  background:linear-gradient(180deg,rgba(13,21,31,.91),rgba(7,12,18,.96));
+  border-color:var(--border);
+  box-shadow:0 12px 45px rgba(0,0,0,.15);
+}
+.card,.pack-card,.case-card,.demo-card{overflow:hidden}
+.card::after,.pack-card::after,.case-card::after,.demo-card::after{
+  content:"";position:absolute;inset:auto -15% -55% 35%;height:160px;
+  background:radial-gradient(circle,rgba(25,200,240,.07),transparent 66%);
+  pointer-events:none;
+}
+.card:hover,.pack-card:hover,.case-card:hover,.demo-card:hover{
+  transform:translateY(-4px);border-color:rgba(25,200,240,.24);
+  box-shadow:0 22px 58px rgba(0,0,0,.25);
+}
+.icon-badge{
+  width:50px;height:50px;
+  background:linear-gradient(135deg,rgba(25,200,240,.18),rgba(69,228,119,.1));
+  color:var(--cyan);filter:drop-shadow(0 0 12px rgba(25,200,240,.12))
+}
+.card h3,.case-card h4,.demo-card h4{letter-spacing:.005em}
+.diff-table,.compare-table,.rent-table{border-radius:16px;overflow:hidden}
+.diff-table th,.compare-table th,.rent-table th{background:rgba(4,9,14,.72)}
+.diff-table tr:hover td,.rent-table tr:hover td{background:rgba(25,200,240,.025)}
+.quote-box{border-left:0;padding:30px 32px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(100deg,rgba(25,200,240,.06),rgba(69,228,119,.035))}
+.quote-box::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:2px;background:var(--grad)}
+.pack-card{border-radius:20px}
+.pack-card.featured{border-color:rgba(69,228,119,.37);box-shadow:0 25px 65px rgba(14,86,56,.13)}
+.pack-benefit strong{font-size:34px}
+.flow-wrap .grad-fg{background:#07101a}
+.cert-badge{border-radius:16px;background:linear-gradient(135deg,rgba(25,200,240,.06),rgba(69,228,119,.035))}
+.form-wrap{padding:50px;border-radius:22px;box-shadow:0 32px 100px rgba(0,0,0,.28)}
+.field input,.field select,.field textarea{
+  min-height:51px;background:rgba(4,8,13,.78);border-radius:10px;
+  transition:border-color .18s,box-shadow .18s,background .18s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{box-shadow:0 0 0 4px rgba(25,200,240,.07);background:#060c12}
+.consent-row{
+  grid-column:1/-1;display:flex;align-items:flex-start;gap:11px;margin-top:5px;
+  color:var(--muted);font-size:12.5px
+}
+.consent-row input{margin-top:4px;accent-color:var(--green)}
+.success-msg{border-radius:10px}
+footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
+.footer-lockup .brand-mark{width:43px;height:49px}
+.footer-brand p{margin-top:19px}
+
+/* Better mobile behavior */
+@media (max-width:1080px){
+  .nav-links{gap:16px}
+  .nav-links a{font-size:10.5px}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-copy{max-width:900px}
+  .device-stage{max-width:650px;width:100%;margin-inline:auto}
+  .chip-a{left:5%}.chip-b{right:4%}
+}
+@media (max-width:760px){
+  .container{padding-inline:21px}
+  nav{height:74px;padding-inline:21px}
+  .brand-mark{width:31px;height:36px}
+  .logo-word{font-size:17px}
+  .logo-sub{font-size:7.5px;letter-spacing:.14em}
+  section{padding:84px 0}
+  .hero-premium{padding-top:128px!important}
+  .hero-copy h1{font-size:clamp(39px,12vw,57px)}
+  .hero-copy p.lead{font-size:16.5px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stats div:nth-child(2){border-right:0}
+  .hero-stats div:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .device-stage{min-height:560px;transform:scale(.9)}
+  .chip-a{left:-4%;top:11%}.chip-b{right:-5%;bottom:15%}
+  .form-wrap{padding:27px 20px}
+  .diff-table,.compare-table,.rent-table{display:block;overflow-x:auto;white-space:nowrap}
+}
+@media (max-width:520px){
+  .hero-stats{grid-template-columns:1fr}
+  .hero-stats div{border-right:0!important;border-bottom:1px solid var(--border)}
+  .hero-stats div:last-child{border-bottom:0}
+  .device-stage{min-height:510px;transform:scale(.78);transform-origin:top center;margin-bottom:-90px}
+  .chip-a,.chip-b{display:none}
+  .nav-cta .btn-primary{padding:11px 14px;font-size:10.5px}
+  .footer-lockup .logo-sub{display:none}
+}
+
 </style>
 </head>
 <body>
+<div class="page-grid" aria-hidden="true"></div>
+<div class="page-orb page-orb-cyan" aria-hidden="true"></div>
+<div class="page-orb page-orb-green" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- ============ SVG SPRITE ============ -->
 <svg width="0" height="0" style="position:absolute">
@@ -637,12 +913,12 @@
 <!-- ============ HEADER / NAV ============ -->
 <header>
   <nav>
-    <a href="#inicio" class="logo">
-      <svg class="hex-mark" viewBox="0 0 40 40"><polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="url(#hexgrad)" stroke-width="2"/><defs><linearGradient id="hexgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4e8"/><stop offset="1" stop-color="#4ade80"/></linearGradient></defs><text x="20" y="25" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="13" fill="#eaf1f6">HT</text></svg>
-      <div>
-        <div class="logo-word">HARDTOCRACK</div>
-        <div class="logo-sub">PARTNERS</div>
-      </div>
+    <a href="#inicio" class="logo brand-lockup" aria-label="HardToCrack Partners — Inicio">
+      <img class="brand-mark" src="assets/ht-logo.png" alt="">
+      <span class="brand-copy">
+        <span class="logo-word">HARD<span>TO</span>CRACK</span>
+        <span class="logo-sub">PARTNERS · PRIVACY ECOSYSTEM</span>
+      </span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#por-que" data-nav>Por qué</a>
@@ -654,9 +930,9 @@
       <a href="#faq" data-nav>FAQ</a>
     </div>
     <div class="nav-cta">
-      <a href="#solicitud" class="btn btn-ghost" style="display:none" class="hide-mobile">Contacto</a>
+      <a href="#solicitud" class="btn btn-ghost hide-mobile" style="display:none">Contacto</a>
       <a href="#solicitud" class="btn btn-primary">Ser Partner</a>
-      <button class="burger" id="burgerBtn" aria-label="Abrir menú">
+      <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -677,34 +953,62 @@
 </header>
 
 <!-- ============ 1. INICIO ============ -->
-<section id="inicio">
+<section id="inicio" class="hero-premium">
   <div class="hero-glow"></div>
   <div class="hero-glow-2"></div>
-  <canvas class="hex-field" id="hexCanvas"></canvas>
+  <canvas class="hex-field" id="hexCanvas" aria-hidden="true"></canvas>
+  <div class="hero-beam hero-beam-a" aria-hidden="true"></div>
+  <div class="hero-beam hero-beam-b" aria-hidden="true"></div>
   <div class="container hero-grid">
     <div class="hero-copy reveal">
-      <div class="eyebrow">Programa de Partners — Madrid · Expansión nacional</div>
-      <h1>Su tienda vende.<br><span class="grad-text">Nosotros preparamos</span><br>la tecnología.</h1>
-      <p class="lead">Incorpore una línea de negocio exclusiva de privacidad digital: Google Pixel preparados profesionalmente con GrapheneOS, listos para vender desde el primer día. Sin stock obligatorio. Sin conocimientos técnicos. Sin soporte que gestionar.</p>
+      <div class="eyebrow">Programa oficial de Partners · España</div>
+      <h1>Convierta su tienda en un referente de <span class="grad-text">privacidad digital.</span></h1>
+      <p class="lead">Ofrezca Google Pixel preparados profesionalmente con GrapheneOS, servicios de privacidad y accesorios de alto valor. HardToCrack se ocupa de la instalación, la configuración, el control de calidad y el soporte técnico.</p>
       <div class="hero-ctas">
-        <a href="#solicitud" class="btn btn-primary">Solicitar ser Partner</a>
-        <a href="#proceso" class="btn btn-ghost">Ver cómo funciona</a>
+        <a href="#solicitud" class="btn btn-primary">
+          <svg class="icon" aria-hidden="true"><use href="#i-brief"/></svg>
+          Solicitar una reunión
+        </a>
+        <a href="#por-que" class="btn btn-ghost">
+          Explorar el programa
+          <span aria-hidden="true">↓</span>
+        </a>
       </div>
       <div class="hero-stats">
-        <div><strong>Sin stock<br>obligatorio</strong><span>bajo pedido</span></div>
-        <div><strong>Cero conocimientos<br>técnicos</strong><span>lo hacemos nosotros</span></div>
-        <div><strong>Exclusividad<br>por zona</strong><span>un partner, una zona</span></div>
-        <div><strong>Formación<br>y soporte</strong><span>incluidos</span></div>
+        <div><strong>Sin stock obligatorio</strong><span>Operación bajo pedido</span></div>
+        <div><strong>Sin trabajo técnico</strong><span>Instalamos y verificamos</span></div>
+        <div><strong>Ingresos recurrentes</strong><span>Servicios y renovaciones</span></div>
+        <div><strong>Formación y soporte</strong><span>Acompañamiento continuo</span></div>
+      </div>
+      <div class="founder-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        Selección abierta para los primeros Partners Oficiales.
       </div>
     </div>
-    <div class="video-card reveal">
-      <div class="video-frame">
-        <button class="play-btn" aria-label="Reproducir vídeo de presentación">
-          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg>
-        </button>
-        <div class="video-caption">Programa de Partners · 60 segundos</div>
+
+    <div class="device-stage reveal" aria-label="Google Pixel preparado por HardToCrack con GrapheneOS">
+      <div class="device-orbit orbit-one" aria-hidden="true"></div>
+      <div class="device-orbit orbit-two" aria-hidden="true"></div>
+      <div class="halo" aria-hidden="true"></div>
+      <div class="phone phone-back" aria-hidden="true">
+        <div class="camera-bar"><i></i><i></i><b></b></div>
+        <div class="pixel-g">G</div>
       </div>
-      <div class="video-tagline">PRIVACY. SECURITY. FREEDOM.</div>
+      <div class="phone phone-front">
+        <div class="phone-screen">
+          <span class="screen-time">10:00</span>
+          <img class="screen-logo" src="assets/ht-logo.png" alt="Logotipo HardToCrack">
+          <h3>GrapheneOS</h3>
+          <p>Configurado · verificado · listo</p>
+          <div class="screen-lock"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Dispositivo protegido</div>
+        </div>
+      </div>
+      <div class="float-chip chip-a"><b>Preparación profesional</b>Control de calidad en cada unidad</div>
+      <div class="float-chip chip-b"><b>Venta sin fricción</b>Su tienda vende. Nosotros preparamos.</div>
+      <div class="device-caption">
+        <span class="device-kicker">HARDTOCRACK READY</span>
+        <span>Google Pixel + GrapheneOS + servicios de privacidad</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1237,7 +1541,7 @@
       <div><svg><use href="#i-check"/></svg> Participación activa en la red</div>
     </div>
 
-    <form class="form-wrap reveal" id="partnerForm">
+    <form class="form-wrap reveal" id="partnerForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
       <div class="form-grid">
         <div class="field"><label>Nombre y apellidos <span>*</span></label><input type="text" required name="nombre"></div>
         <div class="field"><label>Nombre de la tienda <span>*</span></label><input type="text" required name="tienda"></div>
@@ -1256,8 +1560,16 @@
         <div class="field full"><label>Zona de interés / exclusividad deseada</label><input type="text" name="zona" placeholder="Ej. Malasaña, Madrid"></div>
         <div class="field full"><label>Mensaje (opcional)</label><textarea name="mensaje" placeholder="Cuéntenos brevemente sobre su tienda..."></textarea></div>
       </div>
+      <input type="hidden" name="utm_source" id="utm_source">
+      <input type="hidden" name="utm_medium" id="utm_medium">
+      <input type="hidden" name="utm_campaign" id="utm_campaign">
+      <input type="hidden" name="_subject" id="formSubject" value="Nueva solicitud Partner HardToCrack">
+      <label class="consent-row">
+        <input type="checkbox" name="consentimiento_privacidad" value="Aceptado" required>
+        <span>Acepto que HardToCrack utilice estos datos únicamente para responder a mi solicitud.</span>
+      </label>
       <div class="form-submit">
-        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+        <button type="submit" class="btn btn-primary" id="submitButton">Enviar solicitud</button>
         <span class="form-note">Le responderemos en menos de 48h laborables.</span>
       </div>
       <div class="success-msg" id="successMsg">
@@ -1277,10 +1589,13 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="logo">
-          <svg class="hex-mark" viewBox="0 0 40 40"><polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="url(#hexgrad2)" stroke-width="2"/><defs><linearGradient id="hexgrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4e8"/><stop offset="1" stop-color="#4ade80"/></linearGradient></defs></svg>
-          <div class="logo-word">HARDTOCRACK</div>
-        </div>
+        <a class="logo brand-lockup footer-lockup" href="#inicio">
+          <img class="brand-mark" src="assets/ht-logo.png" alt="">
+          <span class="brand-copy">
+            <span class="logo-word">HARD<span>TO</span>CRACK</span>
+            <span class="logo-sub">SECURITY · PRIVACY · FREEDOM</span>
+          </span>
+        </a>
         <p>Hardware verificado. Privacidad sin concesiones. Red nacional de tiendas Partner especializadas en privacidad digital.</p>
       </div>
       <div class="footer-col">
@@ -1315,8 +1630,8 @@
   // Mobile menu
   const burger = document.getElementById('burgerBtn');
   const panel = document.getElementById('mobilePanel');
-  burger.addEventListener('click', () => panel.classList.toggle('open'));
-  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+  burger.addEventListener('click', () => { const open = panel.classList.toggle('open'); burger.setAttribute('aria-expanded', String(open)); });
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { panel.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }));
 
   // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
@@ -1348,12 +1663,51 @@
     });
   });
 
-  // Form fake-submit (no backend wired yet)
+  // Formspree-ready submit + attribution
   const form = document.getElementById('partnerForm');
-  form.addEventListener('submit', (e) => {
+  const queryParams = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(key => {
+    const field = document.getElementById(key);
+    if (field) field.value = queryParams.get(key) || '';
+  });
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.getElementById('successMsg').classList.add('show');
-    form.querySelector('button[type="submit"]').disabled = true;
+    const success = document.getElementById('successMsg');
+    const button = document.getElementById('submitButton');
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const shop = form.querySelector('[name="tienda"]').value.trim();
+    const subject = document.getElementById('formSubject');
+    if (subject) subject.value = `Nueva solicitud Partner — ${shop || 'HardToCrack'}`;
+    button.disabled = true;
+    button.textContent = 'Enviando…';
+    try {
+      if (form.action.includes('YOUR_FORM_ID')) {
+        throw new Error('Configure Formspree');
+      }
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!response.ok) throw new Error('No se pudo enviar');
+      form.reset();
+      ['utm_source','utm_medium','utm_campaign'].forEach(key => {
+        const field = document.getElementById(key);
+        if (field) field.value = queryParams.get(key) || '';
+      });
+      success.innerHTML = '<svg class="icon" style="color:var(--green)"><use href="#i-check"/></svg> Solicitud enviada correctamente. Nuestro equipo se pondrá en contacto en breve.';
+      success.classList.add('show');
+    } catch (error) {
+      success.innerHTML = '<svg class="icon" style="color:#ff8f8f"><use href="#i-plus"/></svg> Configure el ID de Formspree o escriba a partners@hardtocrack.com.';
+      success.classList.add('show');
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Enviar solicitud';
+    }
   });
 
   // Ambient hex-grid canvas in hero
@@ -1405,6 +1759,16 @@
   window.addEventListener('resize', () => { resize(); initNodes(); });
   resize(); initNodes();
   if (canvas.offsetParent !== null) animate();
+
+  // Top scroll progress
+  const progress = document.getElementById('scrollProgress');
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  };
+  addEventListener('scroll', updateProgress, { passive: true });
+  addEventListener('resize', updateProgress);
+  updateProgress();
 </script>
 
 </body>
