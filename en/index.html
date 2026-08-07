@@ -1,327 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HardToCrack Partners — Google Pixel with GrapheneOS for your store</title>
-<meta name="description" content="Official HardToCrack Partner Program for phone, computer and tech service stores. Google Pixel devices prepared with GrapheneOS, full support, and a new digital privacy business line.">
-<meta name="theme-color" content="#05070a">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://partners.hardtocrack.com/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HardToCrack Partners — Digital privacy for your store">
-<meta property="og:description" content="Add Google Pixel devices prepared with GrapheneOS, privacy services and professional support — without handling the technical side.">
-<meta property="og:url" content="https://partners.hardtocrack.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #05070a;
-    --bg-1: #080b10;
-    --bg-2: #0c1119;
-    --card: #0e151f;
-    --card-2: #0a0f16;
-    --border: rgba(255,255,255,0.08);
-    --border-2: rgba(255,255,255,0.14);
-    --cyan: #2dd4e8;
-    --green: #4ade80;
-    --cyan-dim: rgba(45,212,232,0.14);
-    --green-dim: rgba(74,222,128,0.14);
-    --grad: linear-gradient(120deg, var(--cyan), var(--green));
-    --text: #eaf1f6;
-    --muted: #93a1ae;
-    --dim: #5c6773;
-    --danger: #ff6b6b;
-    --radius: 14px;
-    --maxw: 1180px;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
-  }
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter',sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-  img{max-width:100%; display:block;}
-  a{color:inherit; text-decoration:none;}
-  ul{list-style:none;}
-  button{font-family:inherit; cursor:pointer;}
 
-  h1,h2,h3,h4{
-    font-family:'Oswald',sans-serif;
-    text-transform:uppercase;
-    font-weight:700;
-    letter-spacing:0.01em;
-    line-height:1.12;
-  }
-  .grad-text{
-    background:var(--grad);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-  .mono{font-family:'JetBrains Mono',monospace;}
-  .eyebrow{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
-    letter-spacing:0.22em;
-    text-transform:uppercase;
-    color:var(--cyan);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:16px;
-    font-weight:500;
-  }
-  .eyebrow::before{
-    content:'';
-    width:26px; height:1px;
-    background:var(--grad);
-    display:inline-block;
-  }
-  .container{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
-  section{position:relative; padding:110px 0;}
-  .section-head{max-width:720px; margin-bottom:56px;}
-  .section-head h2{font-size:clamp(28px,4vw,44px); margin-bottom:18px;}
-  .section-head p{color:var(--muted); font-size:17px; max-width:640px;}
-  .divider-line{
-    height:1px;
-    background:linear-gradient(90deg, transparent, var(--border-2), transparent);
-    max-width:var(--maxw);
-    margin:0 auto;
-  }
-
-  /* ---------- icon sprite ---------- */
-  .icon{width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
-  .icon-lg{width:30px; height:30px;}
-
-  /* ---------- buttons ---------- */
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding:15px 30px;
-    border-radius:8px;
-    font-family:'JetBrains Mono',monospace;
-    font-size:13.5px;
-    font-weight:600;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    border:1px solid transparent;
-    transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{
-    background:var(--grad);
-    color:#04120e;
-  }
-  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 30px -8px rgba(74,222,128,0.45); }
-  .btn-ghost{
-    background:transparent;
-    border-color:var(--border-2);
-    color:var(--text);
-  }
-  .btn-ghost:hover{ border-color:var(--cyan); color:var(--cyan); }
-  .btn:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
-
-  /* ---------- nav ---------- */
-  header{
-    position:fixed; top:0; left:0; right:0; z-index:100;
-    backdrop-filter:blur(14px);
-    background:rgba(5,7,10,0.72);
-    border-bottom:1px solid var(--border);
-  }
-  nav{
-    max-width:var(--maxw); margin:0 auto; padding:0 28px;
-    height:74px; display:flex; align-items:center; justify-content:space-between;
-  }
-  .logo{display:flex; align-items:center; gap:11px;}
-  .hex-mark{width:32px; height:32px; position:relative;}
-  .logo-word{font-family:'Oswald',sans-serif; font-weight:700; font-size:19px; letter-spacing:0.04em;}
-  .logo-word span{color:var(--cyan);}
-  .logo-sub{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.28em; color:var(--dim); margin-top:1px;}
-  .nav-links{display:flex; align-items:center; gap:30px;}
-  .nav-links a{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;
-    color:var(--muted);
-    transition:color .15s ease;
-    position:relative;
-  }
-  .nav-links a:hover, .nav-links a.active{color:var(--text);}
-  .nav-links a.active::after{
-    content:''; position:absolute; left:0; right:0; bottom:-24px; height:2px; background:var(--grad);
-  }
-  .nav-cta{display:flex; align-items:center; gap:18px;}
-  .burger{display:none; width:22px; height:16px; position:relative; background:none; border:none;}
-  .burger span{position:absolute; left:0; right:0; height:2px; background:var(--text); transition:.2s;}
-  .burger span:nth-child(1){top:0;}
-  .burger span:nth-child(2){top:7px;}
-  .burger span:nth-child(3){top:14px;}
-  .mobile-panel{
-    display:none; position:fixed; inset:74px 0 0 0; background:var(--bg); z-index:99;
-    padding:30px 28px; overflow-y:auto;
-  }
-  .mobile-panel.open{display:block;}
-  .mobile-panel a{
-    display:block; padding:16px 0; border-bottom:1px solid var(--border);
-    font-family:'JetBrains Mono',monospace; text-transform:uppercase; font-size:14px; letter-spacing:.05em; color:var(--muted);
-  }
-
-  /* ---------- hero ---------- */
-  #inicio{
-    padding-top:170px; padding-bottom:100px;
-    min-height:100vh;
-    display:flex; align-items:center;
-    position:relative;
-  }
-  .hex-field{
-    position:absolute; inset:0; z-index:0; opacity:0.55;
-    pointer-events:none;
-  }
-  .hero-glow{
-    position:absolute; top:-10%; right:-10%; width:640px; height:640px;
-    background:radial-gradient(circle, rgba(45,212,232,0.16), transparent 65%);
-    z-index:0; pointer-events:none;
-  }
-  .hero-glow-2{
-    position:absolute; bottom:-15%; left:-8%; width:520px; height:520px;
-    background:radial-gradient(circle, rgba(74,222,128,0.13), transparent 65%);
-    z-index:0; pointer-events:none;
-  }
-  .hero-grid{
-    position:relative; z-index:1;
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center;
-  }
-  .hero-copy h1{
-    font-size:clamp(34px,5vw,58px);
-    margin-bottom:24px;
-  }
-  .hero-copy p.lead{
-    color:var(--muted); font-size:18px; max-width:520px; margin-bottom:34px;
-  }
-  .hero-ctas{display:flex; gap:16px; margin-bottom:52px; flex-wrap:wrap;}
-  .hero-stats{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
-    border-top:1px solid var(--border);
-  }
-  .hero-stats div{
-    padding:18px 16px 0 0; border-right:1px solid var(--border);
-  }
-  .hero-stats div:last-child{border-right:none;}
-  .hero-stats strong{
-    display:block; font-family:'Oswald'; font-size:14px; text-transform:uppercase; letter-spacing:.01em; margin-bottom:4px;
-  }
-  .hero-stats span{font-size:12.5px; color:var(--dim); font-family:'JetBrains Mono',monospace;}
-
-  .video-card{
-    background:var(--card);
-    border:1px solid var(--border-2);
-    border-radius:var(--radius);
-    padding:14px;
-    position:relative;
-    overflow:hidden;
-  }
-  .video-frame{
-    aspect-ratio:9/11;
-    border-radius:8px;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(45,212,232,0.18), transparent 55%),
-      radial-gradient(circle at 75% 80%, rgba(74,222,128,0.16), transparent 55%),
-      #060a0f;
-    position:relative;
-    display:flex; align-items:center; justify-content:center;
-    border:1px solid var(--border);
-  }
-  .play-btn{
-    width:64px; height:64px; border-radius:50%;
-    background:var(--grad);
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 0 0 8px rgba(74,222,128,0.08);
-  }
-  .play-btn svg{width:22px; height:22px; fill:#04120e; margin-left:3px;}
-  .video-caption{
-    position:absolute; bottom:26px; left:0; right:0; text-align:center;
-    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
-  }
-  .video-tagline{
-    padding:16px 6px 4px;
-    font-size:13px; color:var(--dim); text-align:center; font-family:'JetBrains Mono',monospace; letter-spacing:.03em;
-  }
-
-  /* ---------- generic card ---------- */
-  .card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:28px;
-    position:relative;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .card:hover{ border-color:var(--border-2); }
-  .card-top-line{
-    position:absolute; top:0; left:24px; right:24px; height:2px;
-    background:var(--grad);
-    border-radius:2px;
-    opacity:0; transition:opacity .2s ease;
-  }
-  .card:hover .card-top-line{opacity:1;}
-  .icon-badge{
-    width:46px; height:46px;
-    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
-    background:var(--cyan-dim);
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:18px;
-    color:var(--cyan);
-  }
-  .card h3{font-size:18px; margin-bottom:10px; letter-spacing:0.01em;}
-  .card p{color:var(--muted); font-size:14.5px;}
-
-  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
-  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
-  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
-
-  /* ---------- por que / diff table ---------- */
-  .diff-table{
-    width:100%; border-collapse:collapse; margin-top:10px;
-    background:var(--card-2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
-  }
-  .diff-table th, .diff-table td{
-    padding:16px 20px; text-align:left; font-size:14.5px; border-bottom:1px solid var(--border);
-  }
-  .diff-table th{
-    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); font-weight:500;
-  }
-  .diff-table td.no{color:var(--danger);}
-  .diff-table td.yes{color:var(--green);}
-  .diff-table tr:last-child td{border-bottom:none;}
-  .cell-icon{display:inline-flex; align-items:center; gap:8px;}
-
-  .quote-box{
-    margin-top:48px;
-    border-left:2px solid var(--green);
-    padding:6px 0 6px 26px;
-  }
-  .quote-box p{font-family:'Oswald'; text-transform:uppercase; font-size:clamp(18px,2.4vw,26px); letter-spacing:.01em; color:var(--text);}
-  .quote-box p span{color:var(--green);}
-
-  /* ---------- packs ---------- */
-  .pack-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:32px 28px;
-    display:flex; flex-direction:column;
-    position:relative;
-  }
-  .pack-card.featured{
-    border-color:rgba(74,222,128,0.4);
     background:linear-gradient(180deg, rgba(74,222,128,0.05), var(--card) 30%);
   }
   .pack-badge{
@@ -868,6 +545,34 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
   .footer-lockup .logo-sub{display:none}
 }
 
+
+
+/* ---------- language switcher ---------- */
+.lang-switcher{
+  display:flex;align-items:center;gap:6px;flex-shrink:0;
+  padding:7px 10px;border:1px solid rgba(255,255,255,.11);border-radius:9px;
+  background:rgba(255,255,255,.025);backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px rgba(255,255,255,.025);
+  font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.075em;
+}
+.lang-switcher a{color:var(--dim);transition:color .18s,text-shadow .18s}
+.lang-switcher a:hover{color:var(--cyan)}
+.lang-switcher a.active{color:#fff;text-shadow:0 0 12px rgba(25,200,240,.5)}
+.lang-switcher .lang-separator{color:rgba(255,255,255,.16);user-select:none}
+.mobile-lang-switcher{display:none}
+@media (max-width:1080px){
+  .lang-switcher{padding:6px 8px;gap:4px;font-size:9.5px}
+}
+@media (max-width:760px){
+  header nav > .lang-switcher{display:flex;margin-left:auto;margin-right:10px}
+  .mobile-lang-switcher{display:flex;width:max-content;margin:0 0 14px 0;padding:8px 10px}
+  .mobile-panel .mobile-lang-switcher a{display:inline;padding:0;border:0;font-size:10.5px;color:var(--dim)}
+  .mobile-panel .mobile-lang-switcher a.active{color:#fff}
+  .mobile-panel .mobile-lang-switcher .lang-separator{padding:0 2px}
+}
+@media (max-width:520px){
+  header nav > .lang-switcher{font-size:9px;padding:5px 7px;gap:3px;margin-right:7px}
+}
 </style>
 </head>
 <body>
@@ -929,6 +634,7 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
       <a href="#garantia" data-nav>Guarantee</a>
       <a href="#faq" data-nav>FAQ</a>
     </div>
+    <div class="lang-switcher" aria-label="Language selector"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link active" hreflang="en" lang="en" aria-current="page">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a></div>
     <div class="nav-cta">
       <a href="#solicitud" class="btn btn-ghost hide-mobile" style="display:none">Contact</a>
       <a href="#solicitud" class="btn btn-primary">Become a Partner</a>
@@ -938,6 +644,7 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
     </div>
   </nav>
   <div class="mobile-panel" id="mobilePanel">
+    <div class="lang-switcher mobile-lang-switcher" aria-label="Language selector"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link active" hreflang="en" lang="en" aria-current="page">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a></div>
     <a href="#por-que">Why become a Partner</a>
     <a href="#productos">Products</a>
     <a href="#packs">Packs</a>
