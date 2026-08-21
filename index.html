@@ -868,6 +868,35 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
   .footer-lockup .logo-sub{display:none}
 }
 
+
+
+/* ---------- selector de idioma ---------- */
+.lang-switcher{
+  display:flex;align-items:center;gap:6px;flex-shrink:0;
+  padding:7px 10px;border:1px solid rgba(255,255,255,.11);border-radius:9px;
+  background:rgba(255,255,255,.025);backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px rgba(255,255,255,.025);
+  font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.075em;
+}
+.lang-switcher a{color:var(--dim);transition:color .18s,text-shadow .18s}
+.lang-switcher a:hover{color:var(--cyan)}
+.lang-switcher a.active{color:#fff;text-shadow:0 0 12px rgba(25,200,240,.5)}
+.lang-switcher .lang-separator{color:rgba(255,255,255,.16);user-select:none}
+.mobile-lang-switcher{display:none}
+@media (max-width:1080px){
+  .lang-switcher{padding:6px 8px;gap:4px;font-size:9.5px}
+}
+@media (max-width:760px){
+  header nav > .lang-switcher{display:flex;margin-left:auto;margin-right:10px}
+  .mobile-lang-switcher{display:flex;width:max-content;margin:0 0 14px 0;padding:8px 10px}
+  .mobile-panel .mobile-lang-switcher a{display:inline;padding:0;border:0;font-size:10.5px;color:var(--dim)}
+  .mobile-panel .mobile-lang-switcher a.active{color:#fff}
+  .mobile-panel .mobile-lang-switcher .lang-separator{padding:0 2px}
+}
+@media (max-width:520px){
+  header nav > .lang-switcher{font-size:9px;padding:5px 7px;gap:3px;margin-right:7px}
+}
+
 </style>
 </head>
 <body>
@@ -929,6 +958,7 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
       <a href="#garantia" data-nav>Garantía</a>
       <a href="#faq" data-nav>FAQ</a>
     </div>
+    <div class="lang-switcher" aria-label="Selector de idioma"><a href="/" class="lang-link active" hreflang="es" lang="es" aria-current="page">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link" hreflang="en" lang="en">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a></div>
     <div class="nav-cta">
       <a href="#solicitud" class="btn btn-ghost hide-mobile" style="display:none">Contacto</a>
       <a href="#solicitud" class="btn btn-primary">Ser Partner</a>
@@ -938,6 +968,7 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
     </div>
   </nav>
   <div class="mobile-panel" id="mobilePanel">
+    <div class="lang-switcher mobile-lang-switcher" aria-label="Selector de idioma"><a href="/" class="lang-link active" hreflang="es" lang="es" aria-current="page">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link" hreflang="en" lang="en">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a></div>
     <a href="#por-que">Por qué ser Partner</a>
     <a href="#productos">Productos</a>
     <a href="#packs">Packs</a>
