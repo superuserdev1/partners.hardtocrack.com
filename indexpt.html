@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HardToCrack Partners — Google Pixel com GrapheneOS para a sua loja</title>
+<meta name="description" content="Programa Oficial de Partners HardToCrack para lojas de telecomunicações, informática e serviços tecnológicos. Google Pixel preparados com GrapheneOS, suporte integral e uma nova linha de negócio em privacidade digital.">
+<meta name="theme-color" content="#05070a">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://partners.hardtocrack.com/pt/">
+<link rel="alternate" hreflang="es" href="https://partners.hardtocrack.com/">
+<link rel="alternate" hreflang="en" href="https://partners.hardtocrack.com/en/">
+<link rel="alternate" hreflang="nl" href="https://partners.hardtocrack.com/nl/">
+<link rel="alternate" hreflang="pt" href="https://partners.hardtocrack.com/pt/">
+<link rel="alternate" hreflang="x-default" href="https://partners.hardtocrack.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HardToCrack Partners — Privacidade digital para a sua loja">
+<meta property="og:description" content="Integre Google Pixel preparados com GrapheneOS, serviços de privacidade e suporte profissional sem assumir a parte técnica.">
+<meta property="og:url" content="https://partners.hardtocrack.com/pt/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #05070a;
+    --bg-1: #080b10;
+    --bg-2: #0c1119;
+    --card: #0e151f;
+    --card-2: #0a0f16;
+    --border: rgba(255,255,255,0.08);
+    --border-2: rgba(255,255,255,0.14);
+    --cyan: #2dd4e8;
+    --green: #4ade80;
+    --cyan-dim: rgba(45,212,232,0.14);
+    --green-dim: rgba(74,222,128,0.14);
+    --grad: linear-gradient(120deg, var(--cyan), var(--green));
+    --text: #eaf1f6;
+    --muted: #93a1ae;
+    --dim: #5c6773;
+    --danger: #ff6b6b;
+    --radius: 14px;
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer;}
+
+  h1,h2,h3,h4{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0.01em;
+    line-height:1.12;
+  }
+  .grad-text{
+    background:var(--grad);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--cyan);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:'';
+    width:26px; height:1px;
+    background:var(--grad);
+    display:inline-block;
+  }
+  .container{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  section{position:relative; padding:110px 0;}
+  .section-head{max-width:720px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px,4vw,44px); margin-bottom:18px;}
+  .section-head p{color:var(--muted); font-size:17px; max-width:640px;}
+  .divider-line{
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--border-2), transparent);
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+
+  /* ---------- icon sprite ---------- */
+  .icon{width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
+  .icon-lg{width:30px; height:30px;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 30px;
+    border-radius:8px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    border:1px solid transparent;
+    transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--grad);
+    color:#04120e;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 30px -8px rgba(74,222,128,0.45); }
+  .btn-ghost{
+    background:transparent;
+    border-color:var(--border-2);
+    color:var(--text);
+  }
+  .btn-ghost:hover{ border-color:var(--cyan); color:var(--cyan); }
+  .btn:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    backdrop-filter:blur(14px);
+    background:rgba(5,7,10,0.72);
+    border-bottom:1px solid var(--border);
+  }
+  nav{
+    max-width:var(--maxw); margin:0 auto; padding:0 28px;
+    height:74px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{display:flex; align-items:center; gap:11px;}
+  .hex-mark{width:32px; height:32px; position:relative;}
+  .logo-word{font-family:'Oswald',sans-serif; font-weight:700; font-size:19px; letter-spacing:0.04em;}
+  .logo-word span{color:var(--cyan);}
+  .logo-sub{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.28em; color:var(--dim); margin-top:1px;}
+  .nav-links{display:flex; align-items:center; gap:30px;}
+  .nav-links a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;
+    color:var(--muted);
+    transition:color .15s ease;
+    position:relative;
+  }
+  .nav-links a:hover, .nav-links a.active{color:var(--text);}
+  .nav-links a.active::after{
+    content:''; position:absolute; left:0; right:0; bottom:-24px; height:2px; background:var(--grad);
+  }
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .burger{display:none; width:22px; height:16px; position:relative; background:none; border:none;}
+  .burger span{position:absolute; left:0; right:0; height:2px; background:var(--text); transition:.2s;}
+  .burger span:nth-child(1){top:0;}
+  .burger span:nth-child(2){top:7px;}
+  .burger span:nth-child(3){top:14px;}
+  .mobile-panel{
+    display:none; position:fixed; inset:74px 0 0 0; background:var(--bg); z-index:99;
+    padding:30px 28px; overflow-y:auto;
+  }
+  .mobile-panel.open{display:block;}
+  .mobile-panel a{
+    display:block; padding:16px 0; border-bottom:1px solid var(--border);
+    font-family:'JetBrains Mono',monospace; text-transform:uppercase; font-size:14px; letter-spacing:.05em; color:var(--muted);
+  }
+
+  /* ---------- hero ---------- */
+  #inicio{
+    padding-top:170px; padding-bottom:100px;
+    min-height:100vh;
+    display:flex; align-items:center;
+    position:relative;
+  }
+  .hex-field{
+    position:absolute; inset:0; z-index:0; opacity:0.55;
+    pointer-events:none;
+  }
+  .hero-glow{
+    position:absolute; top:-10%; right:-10%; width:640px; height:640px;
+    background:radial-gradient(circle, rgba(45,212,232,0.16), transparent 65%);
+    z-index:0; pointer-events:none;
+  }
+  .hero-glow-2{
+    position:absolute; bottom:-15%; left:-8%; width:520px; height:520px;
+    background:radial-gradient(circle, rgba(74,222,128,0.13), transparent 65%);
+    z-index:0; pointer-events:none;
+  }
+  .hero-grid{
+    position:relative; z-index:1;
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center;
+  }
+  .hero-copy h1{
+    font-size:clamp(34px,5vw,58px);
+    margin-bottom:24px;
+  }
+  .hero-copy p.lead{
+    color:var(--muted); font-size:18px; max-width:520px; margin-bottom:34px;
+  }
+  .hero-ctas{display:flex; gap:16px; margin-bottom:52px; flex-wrap:wrap;}
+  .hero-stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+    border-top:1px solid var(--border);
+  }
+  .hero-stats div{
+    padding:18px 16px 0 0; border-right:1px solid var(--border);
+  }
+  .hero-stats div:last-child{border-right:none;}
+  .hero-stats strong{
+    display:block; font-family:'Oswald'; font-size:14px; text-transform:uppercase; letter-spacing:.01em; margin-bottom:4px;
+  }
+  .hero-stats span{font-size:12.5px; color:var(--dim); font-family:'JetBrains Mono',monospace;}
+
+  .video-card{
+    background:var(--card);
+    border:1px solid var(--border-2);
+    border-radius:var(--radius);
+    padding:14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .video-frame{
+    aspect-ratio:9/11;
+    border-radius:8px;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(45,212,232,0.18), transparent 55%),
+      radial-gradient(circle at 75% 80%, rgba(74,222,128,0.16), transparent 55%),
+      #060a0f;
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--border);
+  }
+  .play-btn{
+    width:64px; height:64px; border-radius:50%;
+    background:var(--grad);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 0 8px rgba(74,222,128,0.08);
+  }
+  .play-btn svg{width:22px; height:22px; fill:#04120e; margin-left:3px;}
+  .video-caption{
+    position:absolute; bottom:26px; left:0; right:0; text-align:center;
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+  }
+  .video-tagline{
+    padding:16px 6px 4px;
+    font-size:13px; color:var(--dim); text-align:center; font-family:'JetBrains Mono',monospace; letter-spacing:.03em;
+  }
+
+  /* ---------- generic card ---------- */
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:28px;
+    position:relative;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .card:hover{ border-color:var(--border-2); }
+  .card-top-line{
+    position:absolute; top:0; left:24px; right:24px; height:2px;
+    background:var(--grad);
+    border-radius:2px;
+    opacity:0; transition:opacity .2s ease;
+  }
+  .card:hover .card-top-line{opacity:1;}
+  .icon-badge{
+    width:46px; height:46px;
+    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+    background:var(--cyan-dim);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+    color:var(--cyan);
+  }
+  .card h3{font-size:18px; margin-bottom:10px; letter-spacing:0.01em;}
+  .card p{color:var(--muted); font-size:14.5px;}
+
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+
+  /* ---------- por que / diff table ---------- */
+  .diff-table{
+    width:100%; border-collapse:collapse; margin-top:10px;
+    background:var(--card-2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
+  }
+  .diff-table th, .diff-table td{
+    padding:16px 20px; text-align:left; font-size:14.5px; border-bottom:1px solid var(--border);
+  }
+  .diff-table th{
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); font-weight:500;
+  }
+  .diff-table td.no{color:var(--danger);}
+  .diff-table td.yes{color:var(--green);}
+  .diff-table tr:last-child td{border-bottom:none;}
+  .cell-icon{display:inline-flex; align-items:center; gap:8px;}
+
+  .quote-box{
+    margin-top:48px;
+    border-left:2px solid var(--green);
+    padding:6px 0 6px 26px;
+  }
+  .quote-box p{font-family:'Oswald'; text-transform:uppercase; font-size:clamp(18px,2.4vw,26px); letter-spacing:.01em; color:var(--text);}
+  .quote-box p span{color:var(--green);}
+
+  /* ---------- packs ---------- */
+  .pack-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:32px 28px;
+    display:flex; flex-direction:column;
+    position:relative;
+  }
+  .pack-card.featured{
+    border-color:rgba(74,222,128,0.4);
+    background:linear-gradient(180deg, rgba(74,222,128,0.05), var(--card) 30%);
+  }
+  .pack-badge{
+    position:absolute; top:-13px; left:28px;
+    background:var(--grad); color:#04120e;
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700;
+    padding:5px 12px; border-radius:20px; letter-spacing:.06em; text-transform:uppercase;
+  }
+  .pack-name{font-size:22px; margin-bottom:6px;}
+  .pack-tag{color:var(--muted); font-size:14px; margin-bottom:22px;}
+  .pack-list{margin-bottom:26px; flex-grow:1;}
+  .pack-list li{
+    display:flex; align-items:flex-start; gap:10px; font-size:14.5px; color:var(--text);
+    padding:8px 0; border-bottom:1px solid var(--border);
+  }
+  .pack-list li:last-child{border-bottom:none;}
+  .pack-list svg{width:16px; height:16px; color:var(--green); margin-top:3px; flex-shrink:0;}
+  .pack-benefit{
+    border-top:1px solid var(--border); padding-top:18px;
+    display:flex; align-items:baseline; justify-content:space-between;
+  }
+  .pack-benefit span{font-family:'JetBrains Mono',monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim);}
+  .pack-benefit strong{font-family:'Oswald'; font-size:30px; color:var(--green);}
+
+  .compare-table{width:100%; border-collapse:collapse; margin-top:56px;}
+  .compare-table th, .compare-table td{padding:16px 18px; text-align:center; border:1px solid var(--border); font-size:14px;}
+  .compare-table th{font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan); background:var(--card-2);}
+  .compare-table td:first-child, .compare-table th:first-child{text-align:left; color:var(--muted); font-size:13.5px;}
+  .compare-table .stars{color:var(--green); letter-spacing:2px;}
+
+  /* ---------- proceso ---------- */
+  .flow{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:0; position:relative; margin-top:20px;
+  }
+  .flow::before{
+    content:''; position:absolute; top:33px; left:10%; right:10%; height:1px;
+    background:linear-gradient(90deg, var(--cyan), var(--green));
+    opacity:0.35; z-index:0;
+  }
+  .flow-step{position:relative; z-index:1; padding:0 14px; text-align:left;}
+  .flow-node{
+    width:66px; height:66px;
+    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+    background:var(--bg-1);
+    border:1px solid var(--border-2);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px;
+    font-family:'JetBrains Mono',monospace; font-weight:600; font-size:20px;
+    background-image:var(--grad);
+    -webkit-background-clip:border-box;
+  }
+  .flow-node-inner{
+    width:56px; height:56px;
+    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+    background:var(--bg-1);
+    display:flex; align-items:center; justify-content:center;
+    position:relative; left:5px; top:5px;
+  }
+  .flow-wrap{position:relative; width:66px; height:66px;}
+  .flow-wrap .grad-bg{
+    position:absolute; inset:0;
+    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+    background:var(--grad);
+  }
+  .flow-wrap .grad-fg{
+    position:absolute; inset:2px;
+    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+    background:#070b10;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'JetBrains Mono',monospace; color:var(--green); font-weight:600; font-size:19px;
+  }
+  .flow-step h4{font-size:15px; margin-bottom:8px; letter-spacing:.01em;}
+  .flow-step p{color:var(--muted); font-size:13.5px;}
+  .flow-note{
+    margin-top:40px; display:flex; align-items:center; gap:12px;
+    font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--dim);
+  }
+  .flow-note svg{color:var(--green); width:18px; height:18px;}
+
+  /* ---------- rentabilidad ---------- */
+  .rent-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:24px;}
+  .rent-table{width:100%; border-collapse:collapse; background:var(--card-2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;}
+  .rent-table th, .rent-table td{padding:14px 18px; text-align:left; font-size:14px; border-bottom:1px solid var(--border);}
+  .rent-table th{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--dim); font-weight:500;}
+  .rent-table tr:last-child td{border-bottom:none;}
+  .rent-table td.price{font-family:'JetBrains Mono',monospace; color:var(--green); font-weight:600; text-align:right;}
+  .example-box{
+    background:linear-gradient(135deg, rgba(45,212,232,0.06), rgba(74,222,128,0.06));
+    border:1px solid var(--border-2); border-radius:var(--radius); padding:28px; margin-top:8px;
+  }
+  .example-box .eyebrow{margin-bottom:14px;}
+  .example-row{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border); font-size:14.5px;}
+  .example-row.total{border-bottom:none; padding-top:16px;}
+  .example-row.total span:first-child{font-family:'Oswald'; text-transform:uppercase; font-size:15px;}
+  .example-row.total span:last-child{font-family:'JetBrains Mono',monospace; font-size:26px; color:var(--green); font-weight:600;}
+  .reason-strip{display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-top:48px;}
+  .reason-strip div{text-align:left;}
+  .reason-strip svg{color:var(--cyan); margin-bottom:10px;}
+  .reason-strip p{font-size:13.5px; color:var(--muted);}
+
+  /* ---------- garantia ---------- */
+  .cert-flow{display:flex; flex-wrap:wrap; gap:0; margin-top:30px; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;}
+  .cert-step{
+    flex:1; min-width:130px; padding:22px 18px; border-right:1px solid var(--border); background:var(--card-2);
+  }
+  .cert-step:last-child{border-right:none;}
+  .cert-step .num{font-family:'JetBrains Mono',monospace; color:var(--cyan); font-size:12px; margin-bottom:10px;}
+  .cert-step p{font-size:13px; color:var(--muted);}
+  .cert-badge{
+    margin-top:44px; display:inline-flex; align-items:center; gap:14px;
+    border:1px solid var(--border-2); border-radius:var(--radius); padding:18px 28px;
+    background:var(--card);
+  }
+  .cert-badge .hex-mark{width:38px; height:38px;}
+  .cert-badge div p:first-child{font-family:'Oswald'; font-size:15px; letter-spacing:.05em;}
+  .cert-badge div p:last-child{font-size:12.5px; color:var(--dim); font-family:'JetBrains Mono',monospace;}
+
+  /* ---------- exclusividad ---------- */
+  .zone-wrap{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;}
+  .zone-visual{
+    aspect-ratio:1/1; border-radius:var(--radius); border:1px solid var(--border);
+    background:
+      radial-gradient(circle at 50% 50%, rgba(74,222,128,0.10), transparent 60%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 40px),
+      var(--bg-1);
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .zone-hex{
+    width:120px; height:120px;
+    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+    border:2px solid var(--green);
+    background:rgba(74,222,128,0.08);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    box-shadow:0 0 60px rgba(74,222,128,0.25);
+  }
+  .zone-hex span{font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--green); line-height:1.4;}
+  .zone-dot{
+    position:absolute; width:14px; height:14px; border-radius:50%; background:var(--bg-2); border:1px solid var(--border-2);
+  }
+  .zone-tag{
+    display:flex; align-items:center; gap:8px; padding:9px 0; font-size:13.5px; color:var(--muted); border-bottom:1px solid var(--border);
+  }
+  .zone-tag:last-child{border-bottom:none;}
+  .zone-tag svg{width:16px; height:16px; color:var(--cyan);}
+  .criteria-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
+  .criteria-pill{
+    border:1px solid var(--border-2); border-radius:20px; padding:7px 16px; font-size:12.5px; color:var(--muted);
+    font-family:'JetBrains Mono',monospace;
+  }
+
+  /* ---------- kit ---------- */
+  .kit-row{display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-bottom:50px;}
+  .kit-item{text-align:left;}
+  .kit-item .icon-badge{width:44px; height:44px; margin-bottom:14px;}
+  .kit-item h4{font-size:14.5px; margin-bottom:6px;}
+  .kit-item p{font-size:13px; color:var(--muted);}
+  .demo-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .demo-card{border:1px solid var(--border); border-radius:var(--radius); padding:24px; background:var(--card-2);}
+  .demo-card h4{font-size:15.5px; margin-bottom:10px; color:var(--cyan);}
+  .demo-card p{font-size:13.5px; color:var(--muted);}
+
+  /* ---------- formacion ---------- */
+  .train-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+
+  /* ---------- casos de uso ---------- */
+  .cases-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+  .case-card{
+    border:1px solid var(--border); border-radius:var(--radius); padding:22px; background:var(--card);
+    text-align:left;
+  }
+  .case-card .icon-badge{margin-bottom:14px; width:42px; height:42px;}
+  .case-card h4{font-size:15px; margin-bottom:8px;}
+  .case-card p{font-size:13px; color:var(--muted);}
+
+  /* ---------- marketing ---------- */
+  .mkt-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--border);}
+  .faq-q{
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding:22px 4px; width:100%; background:none; border:none; text-align:left;
+    color:var(--text); font-family:'Oswald'; font-size:16.5px; text-transform:uppercase; letter-spacing:.01em;
+  }
+  .faq-q svg{width:18px; height:18px; color:var(--cyan); flex-shrink:0; transition:transform .2s ease;}
+  .faq-item.open .faq-q svg{transform:rotate(45deg);}
+  .faq-a{
+    max-height:0; overflow:hidden; transition:max-height .25s ease;
+  }
+  .faq-item.open .faq-a{max-height:280px;}
+  .faq-a p{padding:0 4px 22px; color:var(--muted); font-size:14.5px; max-width:760px;}
+
+  /* ---------- solicitud / form ---------- */
+  .req-list{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:56px;}
+  .req-list div{display:flex; align-items:center; gap:10px; font-size:13.5px; color:var(--muted);}
+  .req-list svg{width:16px; height:16px; color:var(--green); flex-shrink:0;}
+  .form-wrap{
+    background:var(--card); border:1px solid var(--border-2); border-radius:var(--radius); padding:44px;
+  }
+  .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .field{display:flex; flex-direction:column; gap:8px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--dim);}
+  .field label span{color:var(--green);}
+  .field input, .field select, .field textarea{
+    background:var(--bg-1); border:1px solid var(--border-2); border-radius:8px; padding:13px 14px;
+    color:var(--text); font-family:'Inter'; font-size:14.5px;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:var(--cyan);
+  }
+  .field textarea{resize:vertical; min-height:90px;}
+  .form-submit{margin-top:30px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+  .form-note{font-size:12.5px; color:var(--dim);}
+  .success-msg{
+    display:none; margin-top:24px; padding:16px 20px; border:1px solid rgba(74,222,128,0.4);
+    background:rgba(74,222,128,0.07); border-radius:8px; font-size:14px; color:var(--green);
+    align-items:center; gap:10px;
+  }
+  .success-msg.show{display:flex;}
+  .phase2-note{
+    margin-top:28px; padding-top:28px; border-top:1px solid var(--border);
+    display:flex; align-items:center; gap:14px; color:var(--dim); font-size:13px;
+  }
+  .phase2-note svg{color:var(--cyan); flex-shrink:0;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--bg-1); border-top:1px solid var(--border); padding:64px 0 30px;}
+  .footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:50px;}
+  .footer-brand p{color:var(--dim); font-size:13.5px; margin-top:16px; max-width:280px;}
+  .footer-col h5{font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); margin-bottom:16px;}
+  .footer-col a{display:block; color:var(--muted); font-size:14px; padding:6px 0; transition:color .15s;}
+  .footer-col a:hover{color:var(--cyan);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; padding-top:26px; border-top:1px solid var(--border);
+    font-size:12.5px; color:var(--dim); flex-wrap:wrap; gap:12px;
+  }
+  .footer-tag{font-family:'JetBrains Mono',monospace; letter-spacing:.05em;}
+
+  /* ---------- reveal animation ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.visible{opacity:1; transform:translateY(0);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1024px){
+    .grid-4{grid-template-columns:repeat(2,1fr);}
+    .grid-3{grid-template-columns:repeat(2,1fr);}
+    .hero-grid{grid-template-columns:1fr; gap:50px;}
+    .video-card{max-width:340px;}
+    .zone-wrap{grid-template-columns:1fr;}
+    .cases-grid{grid-template-columns:repeat(2,1fr);}
+    .demo-grid{grid-template-columns:1fr;}
+    .train-grid{grid-template-columns:1fr 1fr;}
+    .mkt-grid{grid-template-columns:1fr 1fr;}
+    .rent-grid{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+    .reason-strip{grid-template-columns:repeat(2,1fr);}
+    .kit-row{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:760px){
+    .nav-links, .nav-cta .btn-ghost{display:none;}
+    .burger{display:block;}
+    section{padding:76px 0;}
+    #inicio{padding-top:130px;}
+    .grid-2, .grid-3, .grid-4{grid-template-columns:1fr;}
+    .flow{grid-template-columns:1fr; gap:34px;}
+    .flow::before{display:none;}
+    .hero-stats{grid-template-columns:1fr 1fr;}
+    .hero-stats div{padding-bottom:14px;}
+    .cert-flow{flex-direction:column;}
+    .cert-step{border-right:none; border-bottom:1px solid var(--border);}
+    .req-list{grid-template-columns:1fr 1fr;}
+    .form-grid{grid-template-columns:1fr;}
+    .cases-grid{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr;}
+    .compare-table{font-size:12px;}
+    .diff-table td, .diff-table th{padding:12px;}
+  }
+
+/* ========================================================================
+   HARDTOCRACK PARTNERS — PREMIUM REDESIGN V2
+   Visual system aligned with /start: dark glass, cyan→emerald gradients,
+   hexagonal symbolism, restrained motion and stronger conversion hierarchy.
+   ======================================================================== */
+:root{
+  --bg:#040609;
+  --bg-1:#070a0f;
+  --bg-2:#0a1017;
+  --card:#0c131d;
+  --card-2:#080d14;
+  --card-glass:rgba(11,18,27,.78);
+  --border:rgba(159,191,211,.11);
+  --border-2:rgba(166,215,232,.22);
+  --cyan:#19c8f0;
+  --cyan-2:#0c8df2;
+  --green:#45e477;
+  --green-2:#13d6a0;
+  --cyan-dim:rgba(25,200,240,.13);
+  --green-dim:rgba(69,228,119,.12);
+  --grad:linear-gradient(118deg,var(--cyan-2) 0%,var(--cyan) 42%,var(--green) 100%);
+  --grad-soft:linear-gradient(135deg,rgba(25,200,240,.14),rgba(69,228,119,.08));
+  --text:#f1f7fb;
+  --muted:#a3b0bc;
+  --dim:#677481;
+  --radius:18px;
+  --radius-lg:28px;
+  --maxw:1240px;
+  --shadow:0 28px 90px rgba(0,0,0,.48);
+}
+html{scroll-padding-top:92px}
+body{
+  background:
+    radial-gradient(circle at 78% 3%,rgba(25,200,240,.075),transparent 25%),
+    radial-gradient(circle at 12% 30%,rgba(69,228,119,.045),transparent 22%),
+    var(--bg);
+  font-size:16px;
+  line-height:1.68;
+}
+body::selection{background:rgba(25,200,240,.28);color:#fff}
+.page-grid{
+  position:fixed;inset:0;z-index:-5;pointer-events:none;opacity:.34;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:48px 48px;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 58%,transparent 94%);
+  mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 58%,transparent 94%);
+}
+.page-orb{position:fixed;z-index:-4;border-radius:50%;pointer-events:none;filter:blur(18px)}
+.page-orb-cyan{width:620px;height:620px;right:-310px;top:-260px;background:radial-gradient(circle,rgba(25,200,240,.12),transparent 68%)}
+.page-orb-green{width:520px;height:520px;left:-280px;bottom:-270px;background:radial-gradient(circle,rgba(69,228,119,.09),transparent 68%)}
+.scroll-progress{
+  position:fixed;left:0;right:0;top:0;height:2px;z-index:500;
+  transform:scaleX(0);transform-origin:left;background:var(--grad);
+  box-shadow:0 0 18px rgba(25,200,240,.55);
+}
+.container{max-width:var(--maxw);padding-inline:32px}
+section{padding:126px 0}
+.section-head{max-width:790px;margin-bottom:62px}
+.section-head h2{font-size:clamp(32px,4.5vw,52px);letter-spacing:-.015em}
+.section-head p{font-size:17px;max-width:700px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;color:var(--cyan)}
+.divider-line{background:linear-gradient(90deg,transparent,rgba(25,200,240,.22),rgba(69,228,119,.16),transparent)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text}
+header{
+  background:linear-gradient(180deg,rgba(4,6,9,.91),rgba(4,6,9,.72));
+  border-bottom-color:rgba(159,191,211,.1);
+  box-shadow:0 12px 45px rgba(0,0,0,.16);
+}
+nav{height:80px;max-width:var(--maxw);padding-inline:32px}
+.brand-lockup{gap:12px}
+.brand-mark{width:37px;height:42px;object-fit:contain;filter:drop-shadow(0 0 11px rgba(25,200,240,.2))}
+.brand-copy{display:grid;line-height:1}
+.logo-word{font-size:20px;letter-spacing:.055em}
+.logo-word span{color:var(--cyan)}
+.logo-sub{font-size:8.5px;letter-spacing:.2em;color:#71808c;margin-top:6px}
+.nav-links{gap:25px}
+.nav-links a{font-size:11.5px;padding:9px 0}
+.nav-links a::before{
+  content:"";position:absolute;left:50%;right:50%;bottom:-4px;height:1px;background:var(--grad);transition:.2s;
+}
+.nav-links a:hover::before{left:0;right:0}
+.nav-links a.active::after{bottom:-27px;height:2px;box-shadow:0 0 12px rgba(25,200,240,.38)}
+.btn{border-radius:10px;padding:14px 25px;min-height:48px}
+.btn-primary{background:var(--grad);box-shadow:inset 0 1px rgba(255,255,255,.22),0 14px 40px -18px rgba(69,228,119,.72)}
+.btn-primary:hover{box-shadow:inset 0 1px rgba(255,255,255,.22),0 20px 46px -15px rgba(69,228,119,.78)}
+.btn-ghost{background:rgba(255,255,255,.018);backdrop-filter:blur(8px)}
+.hero-premium{
+  min-height:100vh;
+  padding-top:168px!important;
+  padding-bottom:112px!important;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero-premium::before{
+  content:"";position:absolute;inset:80px 0 0;z-index:-2;pointer-events:none;
+  background:
+    linear-gradient(90deg,transparent 0%,rgba(25,200,240,.035) 48%,transparent 100%),
+    radial-gradient(ellipse at 74% 48%,rgba(18,130,170,.1),transparent 32%);
+}
+.hero-beam{position:absolute;width:620px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.16;filter:blur(.2px)}
+.hero-beam-a{right:-80px;top:31%;transform:rotate(-24deg)}
+.hero-beam-b{right:-130px;top:62%;transform:rotate(18deg);background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.hero-grid{grid-template-columns:1.06fr .94fr;gap:72px}
+.hero-copy h1{
+  max-width:760px;font-size:clamp(44px,5.7vw,72px);line-height:1.01;
+  letter-spacing:-.025em;margin-bottom:28px;text-wrap:balance;
+}
+.hero-copy p.lead{font-size:18px;max-width:680px;line-height:1.74}
+.hero-ctas{margin-bottom:46px}
+.hero-stats{
+  max-width:780px;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  background:rgba(8,13,20,.55);
+  backdrop-filter:blur(10px);
+}
+.hero-stats div{padding:17px 17px;border-right:1px solid var(--border)}
+.hero-stats strong{font-size:13.5px;margin-bottom:5px}
+.hero-stats span{font-size:10.5px}
+.founder-note{margin-top:22px;display:flex;align-items:center;gap:10px;color:var(--muted);font:500 11.5px 'JetBrains Mono',monospace}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(69,228,119,.1),0 0 16px rgba(69,228,119,.7)}
+.hex-field{opacity:.3}
+.device-stage{min-height:640px;position:relative;display:grid;place-items:center;perspective:1100px}
+.halo{
+  width:460px;height:510px;position:absolute;
+  clip-path:polygon(25% 2%,75% 2%,100% 50%,75% 98%,25% 98%,0 50%);
+  background:var(--grad);
+  filter:drop-shadow(0 0 42px rgba(25,200,240,.23));
+  opacity:.75;
+}
+.halo::after{content:"";position:absolute;inset:3px;clip-path:inherit;background:linear-gradient(145deg,#071019,#030609)}
+.device-orbit{position:absolute;border:1px solid rgba(25,200,240,.17);border-radius:50%;transform:rotate(-18deg)}
+.orbit-one{width:520px;height:270px}.orbit-two{width:390px;height:560px;border-color:rgba(69,228,119,.12);transform:rotate(28deg)}
+.phone{
+  width:230px;height:470px;border-radius:33px;
+  background:linear-gradient(145deg,#1a222b,#030507 68%);
+  border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 42px 90px rgba(0,0,0,.68),inset 0 0 0 4px #080b10;
+}
+.phone-front{z-index:4;transform:translate(46px,14px) rotate(3deg);padding:9px}
+.phone-back{position:absolute;z-index:2;transform:translate(-88px,-6px) rotate(-4deg)}
+.camera-bar{position:absolute;left:15px;right:15px;top:34px;height:70px;border-radius:24px;background:linear-gradient(90deg,#080b10,#222c35);display:flex;align-items:center;padding:0 19px;gap:13px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.camera-bar i{width:29px;height:29px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#225574,#020408 40%,#000 70%);border:2px solid #303942}
+.camera-bar b{margin-left:auto;width:12px;height:12px;border-radius:50%;background:#d8d3bd;box-shadow:0 0 10px rgba(255,255,255,.3)}
+.pixel-g{position:absolute;inset:auto 0 75px;text-align:center;font:700 42px Inter,sans-serif;color:rgba(255,255,255,.14)}
+.phone-screen{
+  position:relative;height:100%;border-radius:25px;overflow:hidden;
+  background:
+    radial-gradient(circle at 70% 12%,rgba(25,200,240,.18),transparent 38%),
+    radial-gradient(circle at 25% 82%,rgba(69,228,119,.16),transparent 43%),
+    linear-gradient(155deg,#08111a,#03070b 72%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;
+}
+.phone-screen::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.035) 48%,transparent 64%);transform:translateX(-80%);animation:screenShine 8s ease-in-out infinite}
+.screen-time{position:absolute;left:21px;top:18px;font:500 9px 'JetBrains Mono',monospace;color:#dce7ee}
+.screen-logo{width:78px;height:88px;object-fit:contain;margin-bottom:22px;filter:drop-shadow(0 0 18px rgba(25,200,240,.24))}
+.phone-screen h3{font-size:26px;text-transform:none}
+.phone-screen p{font-size:9px;letter-spacing:.13em;margin-top:8px}
+.screen-lock{position:absolute;bottom:27px;display:flex;align-items:center;gap:7px;color:#95a6b2;font:500 9px 'JetBrains Mono',monospace}
+.screen-lock .icon{width:13px;height:13px}
+.float-chip{border-radius:13px;border-color:rgba(167,220,234,.19);box-shadow:0 24px 65px rgba(0,0,0,.44)}
+.chip-a{left:-4%;top:18%}.chip-b{right:-7%;bottom:20%}
+.device-caption{
+  position:absolute;bottom:3%;left:50%;transform:translateX(-50%);
+  display:grid;text-align:center;gap:4px;width:max-content;max-width:100%;
+  color:var(--muted);font-size:12px
+}
+.device-kicker{font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.17em;color:var(--cyan)}
+@keyframes screenShine{0%,55%{transform:translateX(-90%)}72%,100%{transform:translateX(110%)}}
+
+/* Premium section rhythm */
+#por-que,#packs,#rentabilidad,#exclusividad,#formacion,#marketing,#solicitud{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.006),transparent 22%,transparent 78%,rgba(255,255,255,.006)),
+    radial-gradient(circle at 93% 16%,rgba(25,200,240,.035),transparent 24%);
+}
+.card,.pack-card,.case-card,.demo-card,.form-wrap,.zone-visual,.diff-table,.rent-table,.example-box,.cert-flow{
+  background:linear-gradient(180deg,rgba(13,21,31,.91),rgba(7,12,18,.96));
+  border-color:var(--border);
+  box-shadow:0 12px 45px rgba(0,0,0,.15);
+}
+.card,.pack-card,.case-card,.demo-card{overflow:hidden}
+.card::after,.pack-card::after,.case-card::after,.demo-card::after{
+  content:"";position:absolute;inset:auto -15% -55% 35%;height:160px;
+  background:radial-gradient(circle,rgba(25,200,240,.07),transparent 66%);
+  pointer-events:none;
+}
+.card:hover,.pack-card:hover,.case-card:hover,.demo-card:hover{
+  transform:translateY(-4px);border-color:rgba(25,200,240,.24);
+  box-shadow:0 22px 58px rgba(0,0,0,.25);
+}
+.icon-badge{
+  width:50px;height:50px;
+  background:linear-gradient(135deg,rgba(25,200,240,.18),rgba(69,228,119,.1));
+  color:var(--cyan);filter:drop-shadow(0 0 12px rgba(25,200,240,.12))
+}
+.card h3,.case-card h4,.demo-card h4{letter-spacing:.005em}
+.diff-table,.compare-table,.rent-table{border-radius:16px;overflow:hidden}
+.diff-table th,.compare-table th,.rent-table th{background:rgba(4,9,14,.72)}
+.diff-table tr:hover td,.rent-table tr:hover td{background:rgba(25,200,240,.025)}
+.quote-box{border-left:0;padding:30px 32px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(100deg,rgba(25,200,240,.06),rgba(69,228,119,.035))}
+.quote-box::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:2px;background:var(--grad)}
+.pack-card{border-radius:20px}
+.pack-card.featured{border-color:rgba(69,228,119,.37);box-shadow:0 25px 65px rgba(14,86,56,.13)}
+.pack-benefit strong{font-size:34px}
+.flow-wrap .grad-fg{background:#07101a}
+.cert-badge{border-radius:16px;background:linear-gradient(135deg,rgba(25,200,240,.06),rgba(69,228,119,.035))}
+.form-wrap{padding:50px;border-radius:22px;box-shadow:0 32px 100px rgba(0,0,0,.28)}
+.field input,.field select,.field textarea{
+  min-height:51px;background:rgba(4,8,13,.78);border-radius:10px;
+  transition:border-color .18s,box-shadow .18s,background .18s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{box-shadow:0 0 0 4px rgba(25,200,240,.07);background:#060c12}
+.consent-row{
+  grid-column:1/-1;display:flex;align-items:flex-start;gap:11px;margin-top:5px;
+  color:var(--muted);font-size:12.5px
+}
+.consent-row input{margin-top:4px;accent-color:var(--green)}
+.success-msg{border-radius:10px}
+footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
+.footer-lockup .brand-mark{width:43px;height:49px}
+.footer-brand p{margin-top:19px}
+
+/* Better mobile behavior */
+@media (max-width:1080px){
+  .nav-links{gap:16px}
+  .nav-links a{font-size:10.5px}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-copy{max-width:900px}
+  .device-stage{max-width:650px;width:100%;margin-inline:auto}
+  .chip-a{left:5%}.chip-b{right:4%}
+}
+@media (max-width:760px){
+  .container{padding-inline:21px}
+  nav{height:74px;padding-inline:21px}
+  .brand-mark{width:31px;height:36px}
+  .logo-word{font-size:17px}
+  .logo-sub{font-size:7.5px;letter-spacing:.14em}
+  section{padding:84px 0}
+  .hero-premium{padding-top:128px!important}
+  .hero-copy h1{font-size:clamp(39px,12vw,57px)}
+  .hero-copy p.lead{font-size:16.5px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stats div:nth-child(2){border-right:0}
+  .hero-stats div:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .device-stage{min-height:560px;transform:scale(.9)}
+  .chip-a{left:-4%;top:11%}.chip-b{right:-5%;bottom:15%}
+  .form-wrap{padding:27px 20px}
+  .diff-table,.compare-table,.rent-table{display:block;overflow-x:auto;white-space:nowrap}
+}
+@media (max-width:520px){
+  .hero-stats{grid-template-columns:1fr}
+  .hero-stats div{border-right:0!important;border-bottom:1px solid var(--border)}
+  .hero-stats div:last-child{border-bottom:0}
+  .device-stage{min-height:510px;transform:scale(.78);transform-origin:top center;margin-bottom:-90px}
+  .chip-a,.chip-b{display:none}
+  .nav-cta .btn-primary{padding:11px 14px;font-size:10.5px}
+  .footer-lockup .logo-sub{display:none}
+}
+
+
+
+/* ---------- selector de idioma ---------- */
+.lang-switcher{
+  display:flex;align-items:center;gap:6px;flex-shrink:0;
+  padding:7px 10px;border:1px solid rgba(255,255,255,.11);border-radius:9px;
+  background:rgba(255,255,255,.025);backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px rgba(255,255,255,.025);
+  font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.075em;
+}
+.lang-switcher a{color:var(--dim);transition:color .18s,text-shadow .18s}
+.lang-switcher a:hover{color:var(--cyan)}
+.lang-switcher a.active{color:#fff;text-shadow:0 0 12px rgba(25,200,240,.5)}
+.lang-switcher .lang-separator{color:rgba(255,255,255,.16);user-select:none}
+.mobile-lang-switcher{display:none}
+@media (max-width:1080px){
+  .lang-switcher{padding:6px 8px;gap:4px;font-size:9.5px}
+}
+@media (max-width:760px){
+  header nav > .lang-switcher{display:flex;margin-left:auto;margin-right:10px}
+  .mobile-lang-switcher{display:flex;width:max-content;margin:0 0 14px 0;padding:8px 10px}
+  .mobile-panel .mobile-lang-switcher a{display:inline;padding:0;border:0;font-size:10.5px;color:var(--dim)}
+  .mobile-panel .mobile-lang-switcher a.active{color:#fff}
+  .mobile-panel .mobile-lang-switcher .lang-separator{padding:0 2px}
+}
+@media (max-width:520px){
+  header nav > .lang-switcher{font-size:9px;padding:5px 7px;gap:3px;margin-right:7px}
+}
+
+</style>
+</head>
+<body>
+<div class="page-grid" aria-hidden="true"></div>
+<div class="page-orb page-orb-cyan" aria-hidden="true"></div>
+<div class="page-orb page-orb-green" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ============ SVG SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute">
+<defs>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 018 0v4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v9l9 5 9-5V8"/><line x1="12" y1="13" x2="12" y2="22"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2z"/><path d="M13 10h5l3 3v3h-8z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M3 12l4-3 4 2 3-2 4 3"/><path d="M3 12v6h18v-6"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 0.7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6-4.4-4.1 6-0.7z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.4 7-12.5A7 7 0 105 9.5C5 14.6 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.4"/></symbol>
+<symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.4"/><rect x="17" y="13" width="4" height="6" rx="1.4"/></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4-10-4z"/><path d="M6 11v5c2 1.6 10 1.6 12 0v-5"/></symbol>
+<symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4h3l6 4V6l-6 4H3z"/><path d="M15 9a3 3 0 010 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.5a16 16 0 0120 0"/><path d="M5.5 12.5a11 11 0 0113 0"/><path d="M9 16.5a5.5 5.5 0 016 0"/><circle cx="12" cy="20" r="1"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 5-6 8-6s6.5 1.5 8 6"/></symbol>
+<symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.3 2.3-2.4-2.4z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M6 6h12M4 8l3-3 3 3-3 5-3-5zM14 8l3-3 3 3-3 5-3-5z"/></symbol>
+<symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2 7 4-14 2 7h6"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></symbol>
+<symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></symbol>
+<symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2l2.4 2.4H18v3.6L20.4 10.5 18 12.9V16.5H14.4L12 19l-2.4-2.5H6V12.9L3.6 10.5 6 8V4.4H9.6z"/><circle cx="12" cy="10.5" r="2.4"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h13l-3 4 3 4H5"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="1.5"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+</defs>
+</svg>
+
+<!-- ============ HEADER / NAV ============ -->
+<header>
+  <nav>
+    <a href="#inicio" class="logo brand-lockup" aria-label="HardToCrack Partners — Inicio">
+      <img class="brand-mark" src="/assets/ht-logo.png" alt="">
+      <span class="brand-copy">
+        <span class="logo-word">HARD<span>TO</span>CRACK</span>
+        <span class="logo-sub">PARTNERS · PRIVACY ECOSYSTEM</span>
+      </span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#por-que" data-nav>Porquê</a>
+      <a href="#productos" data-nav>Produtos</a>
+      <a href="#packs" data-nav>Packs</a>
+      <a href="#proceso" data-nav>Processo</a>
+      <a href="#rentabilidad" data-nav>Rentabilidade</a>
+      <a href="#garantia" data-nav>Garantia</a>
+      <a href="#faq" data-nav>FAQ</a>
+    </div>
+    <div class="lang-switcher" aria-label="Seletor de idioma"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link" hreflang="en" lang="en">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a><span class="lang-separator" aria-hidden="true">/</span><a href="/pt/" class="lang-link active" hreflang="pt" lang="pt" aria-current="page">PT</a></div>
+    <div class="nav-cta">
+      <a href="#solicitud" class="btn btn-ghost hide-mobile" style="display:none">Contacto</a>
+      <a href="#solicitud" class="btn btn-primary">Ser Partner</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="lang-switcher mobile-lang-switcher" aria-label="Seletor de idioma"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link" hreflang="en" lang="en">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a><span class="lang-separator" aria-hidden="true">/</span><a href="/pt/" class="lang-link active" hreflang="pt" lang="pt" aria-current="page">PT</a></div>
+    <a href="#por-que">Porquê ser Partner</a>
+    <a href="#productos">Produtos</a>
+    <a href="#packs">Packs</a>
+    <a href="#proceso">Como funciona</a>
+    <a href="#rentabilidad">Rentabilidade</a>
+    <a href="#garantia">Garantia</a>
+    <a href="#exclusividad">Exclusividade</a>
+    <a href="#kit">Kit Partner</a>
+    <a href="#casos">Casos de utilização</a>
+    <a href="#faq">FAQ</a>
+    <a href="#solicitud" style="color:#4ade80;">Candidatar-se a Partner →</a>
+  </div>
+</header>
+
+<!-- ============ 1. INICIO ============ -->
+<section id="inicio" class="hero-premium">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <canvas class="hex-field" id="hexCanvas" aria-hidden="true"></canvas>
+  <div class="hero-beam hero-beam-a" aria-hidden="true"></div>
+  <div class="hero-beam hero-beam-b" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Programa oficial de Partners · Espanha</div>
+      <h1>Transforme a sua loja numa referência em <span class="grad-text">privacidade digital.</span></h1>
+      <p class="lead">Ofereça Google Pixel preparados profissionalmente com GrapheneOS, serviços de privacidade e acessórios de elevado valor. A HardToCrack trata da instalação, configuração, controlo de qualidade e suporte técnico.</p>
+      <div class="hero-ctas">
+        <a href="#solicitud" class="btn btn-primary">
+          <svg class="icon" aria-hidden="true"><use href="#i-brief"/></svg>
+          Solicitar uma reunião
+        </a>
+        <a href="#por-que" class="btn btn-ghost">
+          Explorar o programa
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>Sem stock obrigatório</strong><span>Operação por encomenda</span></div>
+        <div><strong>Sem trabalho técnico</strong><span>Instalamos e verificamos</span></div>
+        <div><strong>Receitas recorrentes</strong><span>Serviços e renovações</span></div>
+        <div><strong>Formação e suporte</strong><span>Acompanhamento contínuo</span></div>
+      </div>
+      <div class="founder-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        Seleção aberta para os primeiros Partners Oficiais.
+      </div>
+    </div>
+
+    <div class="device-stage reveal" aria-label="Google Pixel preparado pela HardToCrack con GrapheneOS">
+      <div class="device-orbit orbit-one" aria-hidden="true"></div>
+      <div class="device-orbit orbit-two" aria-hidden="true"></div>
+      <div class="halo" aria-hidden="true"></div>
+      <div class="phone phone-back" aria-hidden="true">
+        <div class="camera-bar"><i></i><i></i><b></b></div>
+        <div class="pixel-g">G</div>
+      </div>
+      <div class="phone phone-front">
+        <div class="phone-screen">
+          <span class="screen-time">10:00</span>
+          <img class="screen-logo" src="/assets/ht-logo.png" alt="Logótipo HardToCrack">
+          <h3>GrapheneOS</h3>
+          <p>Configurado · verificado · pronto</p>
+          <div class="screen-lock"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Dispositivo protegido</div>
+        </div>
+      </div>
+      <div class="float-chip chip-a"><b>Preparação profissional</b>Controlo de qualidade em cada unidade</div>
+      <div class="float-chip chip-b"><b>Venda sem fricção</b>A sua loja vende. Nós preparamos.</div>
+      <div class="device-caption">
+        <span class="device-kicker">HARDTOCRACK READY</span>
+        <span>Google Pixel + GrapheneOS + serviços de privacidade</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 2. POR QUÉ SER PARTNER ============ -->
+<section id="por-que">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">O mercado</div>
+      <h2>A privacidade já não é um nicho.<br>É uma decisão de compra.</h2>
+      <p>Todos os dias mais utilizadores procuram uma alternativa real aos smartphones que recolhem dados por defeito. O GrapheneOS consolidou-se como um dos sistemas operativos móveis mais seguros do mundo — e, até agora, quase nenhuma loja física o oferece.</p>
+    </div>
+
+    <div class="grid-3 reveal">
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-pulse"/></svg></div>
+        <h3>Um mercado em crescimento</h3>
+        <p>A preocupação com a privacidade digital deixou de ser apenas para especialistas. Profissionais, empresas e particulares procuram ativamente soluções reais, não promessas de marketing.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div>
+        <h3>O GrapheneOS ganha terreno</h3>
+        <p>Reconhecido como um dos sistemas operativos móveis mais seguros disponíveis, o GrapheneOS combina hardening real com compatibilidade com as aplicações Android que já utiliza.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-star"/></svg></div>
+        <h3>Quase zero concorrência no retalho</h3>
+        <p>Enquanto todas as lojas vendem o mesmo catálogo aos mesmos preços, praticamente nenhuma oferece dispositivos preparados com privacidade real de origem.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:60px;" class="reveal">
+      <table class="diff-table">
+        <thead>
+          <tr><th>Smartphone convencional</th><th></th><th>Google Pixel preparado pela HardToCrack</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="no">Rastreio e recolha de dados por defeito</td><td><svg class="icon" style="width:16px;height:16px;color:var(--dim)"><use href="#i-plus" style="transform:rotate(45deg)"/></svg></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Você decide que dados partilha</td></tr>
+          <tr><td class="no">Permissões amplas e difíceis de controlar</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Controlo granular de cada permissão</td></tr>
+          <tr><td class="no">Um único perfil para tudo</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Perfis independentes e isolados</td></tr>
+          <tr><td class="no">Atualizações irregulares e lentas</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Atualizações frequentes e focadas na segurança</td></tr>
+          <tr><td class="no">Serviços em segundo plano que consomem dados</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Controlo total sobre ligações e aplicações</td></tr>
+          <tr><td class="no">Sem preparação específica</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Instalado, configurado e verificado por especialistas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="quote-box reveal">
+      <p>Não vendemos apenas um smartphone.<br><span>Vendemos privacidade.</span></p>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 3. PRODUCTOS ============ -->
+<section id="productos">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Catálogo</div>
+      <h2>Um ecossistema completo,<br>não um produto isolado</h2>
+      <p>A HardToCrack reúne hardware, sistema operativo, configuração profissional e serviços de privacidade numa única solução. A sua loja não vende apenas mais um telefone — oferece um ecossistema.</p>
+    </div>
+    <div class="grid-4 reveal">
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-phone"/></svg></div>
+        <h3>Google Pixel</h3>
+        <p>Dispositivos novos e recondicionados premium, com IMEI verificado e hardware revisto antes da preparação.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div>
+        <h3>GrapheneOS</h3>
+        <p>Instalação profissional, verificação do sistema e atualização para a última versão estável disponível.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-tool"/></svg></div>
+        <h3>Configuração Premium</h3>
+        <p>Perfis de utilizador, instalação de aplicações, definições de privacidade e otimização à medida do cliente.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-lock"/></svg></div>
+        <h3>VPN Mullvad</h3>
+        <p>Ligação cifrada sem registo de atividade. Disponível em planos de 6 e 12 meses.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-mail"/></svg></div>
+        <h3>Proton</h3>
+        <p>Email, calendário e armazenamento com cifragem de ponta a ponta através do Proton Plus.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-wifi"/></svg></div>
+        <h3>eSIM · SIM UE</h3>
+        <p>Conectividade internacional imediata ou uma linha europeia independente, sem depender de um único operador.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-user"/></svg></div>
+        <h3>SimpleLogin · Threema</h3>
+        <p>Aliases de email ilimitados e mensagens cifradas sem associar número de telefone nem dados pessoais.</p>
+      </div>
+      <div class="card">
+        <div class="card-top-line"></div>
+        <div class="icon-badge"><svg class="icon"><use href="#i-box"/></svg></div>
+        <h3>Accesorios HardToCrack</h3>
+        <p>Película antiespião, bolsa Faraday, carregador Google 30W, cabo USB-C e capa oficial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 4. PACKS ============ -->
+<section id="packs">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Níveis de serviço</div>
+      <h2>Uma solução para cada cliente</h2>
+      <p>Nem todos os clientes procuram o mesmo nível de privacidade. Três packs claros, com um benefício direto e transparente para a sua loja em cada venda.</p>
+    </div>
+
+    <div class="grid-3 reveal">
+      <div class="pack-card">
+        <div class="pack-name">Essential</div>
+        <div class="pack-tag">A forma mais simples de começar.</div>
+        <ul class="pack-list">
+          <li><svg><use href="#i-check"/></svg> Instalação profissional do GrapheneOS</li>
+          <li><svg><use href="#i-check"/></svg> Verificação do sistema</li>
+          <li><svg><use href="#i-check"/></svg> Configuração inicial de segurança</li>
+          <li><svg><use href="#i-check"/></svg> Última versão estável instalada</li>
+          <li><svg><use href="#i-check"/></svg> Dispositivo pronto a utilizar</li>
+        </ul>
+        <div class="pack-benefit"><span>Benefício da loja</span><strong>50€</strong></div>
+      </div>
+
+      <div class="pack-card featured">
+        <div class="pack-badge">★ Mais procurado</div>
+        <div class="pack-name">Privacy</div>
+        <div class="pack-tag">A experiência recomendada.</div>
+        <ul class="pack-list">
+          <li><svg><use href="#i-check"/></svg> Tudo do Essential, mais:</li>
+          <li><svg><use href="#i-check"/></svg> Configuração Premium</li>
+          <li><svg><use href="#i-check"/></svg> Mullvad VPN — 6 meses</li>
+          <li><svg><use href="#i-check"/></svg> eSIM de dados 50GB · 180 dias</li>
+          <li><svg><use href="#i-check"/></svg> Threema · personalização e otimização</li>
+        </ul>
+        <div class="pack-benefit"><span>Benefício da loja</span><strong>70€</strong></div>
+      </div>
+
+      <div class="pack-card">
+        <div class="pack-name">Elite</div>
+        <div class="pack-tag">A solução mais completa.</div>
+        <ul class="pack-list">
+          <li><svg><use href="#i-check"/></svg> Tudo do Privacy, mais:</li>
+          <li><svg><use href="#i-check"/></svg> Mullvad VPN — 12 meses</li>
+          <li><svg><use href="#i-check"/></svg> Proton Plus — 12 meses</li>
+          <li><svg><use href="#i-check"/></svg> SimpleLogin Premium — 12 meses</li>
+          <li><svg><use href="#i-check"/></svg> Domínio próprio (1 ano) · assistência prioritária</li>
+        </ul>
+        <div class="pack-benefit"><span>Benefício da loja</span><strong>95€</strong></div>
+      </div>
+    </div>
+
+    <table class="compare-table reveal">
+      <thead>
+        <tr><th>&nbsp;</th><th>Essential</th><th>Privacy</th><th>Elite</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Nível de privacidade</td><td class="stars">★☆☆</td><td class="stars">★★★</td><td class="stars">★★★★★</td></tr>
+        <tr><td>Serviços incluídos</td><td>Básicos</td><td>Avançados</td><td>Completos</td></tr>
+        <tr><td>Utilizador ideal</td><td>Está a começar com GrapheneOS</td><td>Privacidade no dia a dia</td><td>Profissionais e proteção máxima</td></tr>
+        <tr><td>Benefício para a sua loja</td><td>50€</td><td>70€</td><td>95€</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 5. CÓMO FUNCIONA ============ -->
+<section id="proceso">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Como funciona</div>
+      <h2>Um processo que a sua loja<br>não tem de gerir</h2>
+      <p>A sua equipa concentra-se em vender. Nós tratamos de toda a preparação técnica, do início ao fim.</p>
+    </div>
+
+    <div class="flow reveal">
+      <div class="flow-step">
+        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">01</div></div>
+        <h4>A loja aconselha</h4>
+        <p>A sua equipa apresenta os dispositivos e ajuda o cliente a escolher o pack. Não são necessários conhecimentos técnicos.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">02</div></div>
+        <h4>O cliente encomenda</h4>
+        <p>A loja regista a encomenda no Portal de Partners. Cada encomenda fica identificada para gestão e cálculo das comissões.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">03</div></div>
+        <h4>A HardToCrack prepara</h4>
+        <p>Verificação do hardware, instalação do GrapheneOS, configuração contratada, instalação dos serviços e controlo de qualidade.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">04</div></div>
+        <h4>Envio seguro</h4>
+        <p>O dispositivo é enviado para a loja através de transporte segurado e com rastreio.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">05</div></div>
+        <h4>Entrega ao cliente</h4>
+        <p>A loja entrega o dispositivo pronto a utilizar. A HardToCrack continua a prestar suporte sempre que necessário.</p>
+      </div>
+    </div>
+
+    <div class="flow-note reveal">
+      <svg class="icon"><use href="#i-check"/></svg>
+      Sem instalações na loja · sem ferramentas técnicas · sem riscos durante o processo
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 6. RENTABILIDAD ============ -->
+<section id="rentabilidad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Benefícios económicos</div>
+      <h2>Rentabilidadee desde<br>a primeira venda</h2>
+      <p>Cada venda gera uma margem direta para a sua loja, sem instalações técnicas nem custos de preparação suportados pelo seu negócio.</p>
+    </div>
+
+    <div class="rent-grid reveal">
+      <table class="rent-table">
+        <thead><tr><th>Benefício por pack</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Essential</td><td class="price">50 €</td></tr>
+          <tr><td>Privacy</td><td class="price">70 €</td></tr>
+          <tr><td>Elite</td><td class="price">95 €</td></tr>
+          <tr><td>Pack de acessórios</td><td class="price">20 €</td></tr>
+        </tbody>
+      </table>
+      <table class="rent-table">
+        <thead><tr><th>Comissão por serviço adicional</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Configuração Premium</td><td class="price">20 €</td></tr>
+          <tr><td>Mullvad VPN</td><td class="price">6M: (10 €)  12M: (15 €) </td></tr>
+          <tr><td>Proton Plus 12M</td><td class="price">15 €</td></tr>
+          <tr><td>SimpleLogin Premium 12M</td><td class="price">10 €</td></tr>
+          <tr><td>eSIM</td><td class="price">10 €</td></tr>
+          <tr><td>Dominio propio</td><td class="price">8 €</td></tr>
+          <tr><td>SIM Europeia</td><td class="price">8 €</td></tr>
+          <tr><td>Licença Threema</td><td class="price">6 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example-box reveal">
+      <div class="eyebrow" style="margin-bottom:16px;">Exemplo de uma venda</div>
+      <div class="example-row"><span>Pack Privacy</span><span class="mono">80 €</span></div>
+      <div class="example-row"><span>Accesorios HardToCrack</span><span class="mono">20 €</span></div>
+      <div class="example-row total"><span>Benefício total para a loja</span><span>100 €</span></div>
+    </div>
+
+    <div class="reason-strip reveal">
+      <div><svg class="icon"><use href="#i-check"/></svg><p>Sem investimento em formação técnica</p></div>
+      <div><svg class="icon"><use href="#i-check"/></svg><p>Sem tempo de instalação</p></div>
+      <div><svg class="icon"><use href="#i-check"/></svg><p>Sem ferramentas nem equipamentos</p></div>
+      <div><svg class="icon"><use href="#i-check"/></svg><p>Margens claras e transparentes</p></div>
+      <div><svg class="icon"><use href="#i-check"/></svg><p>Receitas recorrentes com renovações</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 7. GARANTÍA ============ -->
+<section id="garantia">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Qualidade</div>
+      <h2>Cada dispositivo,<br>certificado antes de sair</h2>
+      <p>Na HardToCrack não enviamos dispositivos sem revisão. Cada Google Pixel passa por um protocolo interno de inspeção, preparação e verificação antes de chegar à sua loja.</p>
+    </div>
+
+    <div class="cert-flow reveal">
+      <div class="cert-step"><div class="num">01</div><p>Receção do dispositivo</p></div>
+      <div class="cert-step"><div class="num">02</div><p>Diagnóstico técnico e IMEI</p></div>
+      <div class="cert-step"><div class="num">03</div><p>Instalación de GrapheneOS</p></div>
+      <div class="cert-step"><div class="num">04</div><p>Configuração do serviço contratado</p></div>
+      <div class="cert-step"><div class="num">05</div><p>Verificação completa</p></div>
+      <div class="cert-step"><div class="num">06</div><p>Certificação HardToCrack</p></div>
+      <div class="cert-step"><div class="num">07</div><p>Embalamento e envio</p></div>
+    </div>
+
+    <div class="cert-badge reveal">
+      <svg class="hex-mark" viewBox="0 0 40 40"><polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="url(#hexgrad)" stroke-width="2"/></svg>
+      <div>
+        <p>HardToCrack Certified</p>
+        <p>Hardware revisto · IMEI verificado · Instalação verificada · Última versão estável</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 8. EXCLUSIVIDAD ============ -->
+<section id="exclusividad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Território</div>
+      <h2>Uma zona. Um Partner.</h2>
+      <p>Não procuramos ter dezenas de distribuidores na mesma cidade. Procuramos construir uma rede reduzida de lojas especializadas, com proteção real contra nova concorrência na mesma zona.</p>
+    </div>
+
+    <div class="zone-wrap reveal">
+      <div class="zone-visual">
+        <div class="zone-hex"><span>A SUA LOJA<br>PARTNER<br>EXCLUSIVA</span></div>
+        <div class="zone-dot" style="top:18%; left:22%;"></div>
+        <div class="zone-dot" style="top:70%; left:16%;"></div>
+        <div class="zone-dot" style="top:24%; left:78%;"></div>
+        <div class="zone-dot" style="top:76%; left:74%;"></div>
+      </div>
+      <div>
+        <h3 style="font-size:20px; margin-bottom:18px;">Critérios de delimitação da zona</h3>
+        <div class="criteria-row">
+          <span class="criteria-pill">Bairro</span>
+          <span class="criteria-pill">Distrito</span>
+          <span class="criteria-pill">Centro comercial</span>
+          <span class="criteria-pill">Localidade</span>
+          <span class="criteria-pill">Código postal</span>
+          <span class="criteria-pill">Zona comercial específica</span>
+        </div>
+        <p style="color:var(--muted); font-size:14px; margin:22px 0 26px;">A delimitação depende da densidade populacional, do número de estabelecimentos, do potencial de vendas, da distância a outros Partners e do acordo comercial alcançado.</p>
+        <h3 style="font-size:20px; margin-bottom:14px;">Compromisso do Partner</h3>
+        <div class="zone-tag"><svg><use href="#i-check"/></svg> Cuidado com a imagem da marca</div>
+        <div class="zone-tag"><svg><use href="#i-check"/></svg> Atendimento ao cliente</div>
+        <div class="zone-tag"><svg><use href="#i-check"/></svg> Cumprimento dos procedimentos</div>
+        <div class="zone-tag"><svg><use href="#i-check"/></svg> Participação ativa na rede</div>
+        <div class="zone-tag"><svg><use href="#i-check"/></svg> Volume mínimo acordado (quando aplicável)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 9. KIT PARTNER ============ -->
+<section id="kit">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Material de ponto de venda</div>
+      <h2>Tudo o que precisa<br>para começar a vender</h2>
+      <p>Incluímos o material comercial necessário para que o seu balcão se destaque, informe e converta, sem custos de design ou produção para si.</p>
+    </div>
+
+    <div class="kit-row reveal">
+      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-monitor"/></svg></div><h4>Display de balcão</h4><p>Expositor A5 para o balcão.</p></div>
+      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-doc"/></svg></div><h4>Catálogos e folhetos</h4><p>Informação clara sobre packs e serviços.</p></div>
+      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-mail"/></svg></div><h4>Cartões com QR</h4><p>Acesso direto a contacto e suporte.</p></div>
+      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-badge"/></svg></div><h4>Placa Partner Oficial</h4><p>Certificado visível para o cliente.</p></div>
+      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-globe"/></svg></div><h4>Material digital</h4><p>Banners, fotografias e imagens para redes sociais.</p></div>
+    </div>
+
+    <h3 style="font-size:20px; margin-bottom:20px;" class="reveal">Pixel de demonstração</h3>
+    <div class="demo-grid reveal">
+      <div class="demo-card"><h4>Depósito</h4><p>A HardToCrack cede-lhe um Pixel de demonstração para exposição na loja, sem investimento inicial.</p></div>
+      <div class="demo-card"><h4>Compra com desconto</h4><p>Adquira o seu terminal de demonstração em condições exclusivas e mantenha-o como parte do seu património.</p></div>
+      <div class="demo-card"><h4>Financiado com as primeiras vendas</h4><p>O próprio dispositivo é amortizado com as comissões geradas nas primeiras operações.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 10. FORMACIÓN Y SOPORTE ============ -->
+<section id="formacion">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Suporte</div>
+      <h2>Formação para vender<br>com confiança</h2>
+      <p>Não precisa de ser técnico. Formamo-lo a si e à sua equipa para apresentar o GrapheneOS e os packs com confiança desde o primeiro dia.</p>
+    </div>
+    <div class="train-grid reveal">
+      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-cap"/></svg></div><h3>Formação inicial</h3><p>O que é o GrapheneOS, como funcionam os packs e como identificar o cliente ideal.</p></div>
+      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-doc"/></svg></div><h3>Guia de vendas</h3><p>Argumentário, respostas a objeções frequentes e guião de conversa sugerido.</p></div>
+      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-headset"/></svg></div><h3>Suporte contínuo</h3><p>Email, tickets através do Portal Partner, videochamada e chat prioritário.</p></div>
+    </div>
+    <div class="flow-note reveal" style="margin-top:32px;">
+      <svg class="icon"><use href="#i-check"/></svg>
+      Ao concluir a formação, a sua equipa recebe o Certificado de Partner Oficial HardToCrack
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 11. CASOS DE USO ============ -->
+<section id="casos">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Perfil de cliente</div>
+      <h2>A quem vende a sua loja?</h2>
+      <p>Qualquer pessoa que valorize a sua privacidade é um cliente potencial. Estes perfis costumam ser os primeiros a decidir.</p>
+    </div>
+    <div class="cases-grid reveal">
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-scale"/></svg></div><h4>Advogados</h4><p>Sigilo profissional e comunicações com clientes.</p></div>
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div><h4>Médicos</h4><p>Proteção de dados dos pacientes.</p></div>
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-mic"/></svg></div><h4>Jornalistas</h4><p>Proteção de fontes e comunicações.</p></div>
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-brief"/></svg></div><h4>Empresários</h4><p>Confidencialidade da informação corporativa.</p></div>
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-badge"/></svg></div><h4>Forças de segurança</h4><p>Dispositivos pessoais sem exposição desnecessária.</p></div>
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-flag"/></svg></div><h4>Ativistas</h4><p>Proteção contra vigilância e censura.</p></div>
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-eye"/></svg></div><h4>Utilizadores preocupados com a sua privacidade</h4><p>Público em geral que quer recuperar o controlo dos seus dados.</p></div>
+      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-user"/></svg></div><h4>E o seu cliente habitual</h4><p>Qualquer pessoa que procure um dispositivo premium e diferente.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 12. MARKETING ============ -->
+<section id="marketing">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Visibilidade</div>
+      <h2>Os seus clientes vão encontrá-lo</h2>
+      <p>Não fornecemos apenas dispositivos. Ajudamos a gerar procura através de uma estratégia de marketing unificada para toda a rede de Partners.</p>
+    </div>
+    <div class="mkt-grid reveal">
+      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-mega"/></svg></div><h3>Campanhas online</h3><p>Publicidade digital para atrair clientes interessados em privacidade e segurança.</p></div>
+      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-globe"/></svg></div><h3>Site oficial</h3><p>Catálogo, packs e formulário de contacto centralizados em hardtocrack.com.</p></div>
+      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-pin"/></svg></div><h3>Mapa de distribuidores</h3><p>Os seus clientes encontram-no facilmente como Partner Oficial na sua zona.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 13. FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <h2>Tudo o que precisa de saber<br>antes de começar</h2>
+      <p>Estas são as dúvidas mais habituais dos nossos colaboradores. A sua equipa terá acesso a uma lista ampliada no Portal Partner.</p>
+    </div>
+
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">Preciso de conhecimentos técnicos sobre GrapheneOS? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Não. A A HardToCrack prepara completamente cada dispositivo e fornece toda a formação comercial necessária para a sua equipa.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quem instala o GrapheneOS? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>A HardToCrack. Toda a instalação, configuração, verificação e certificação é realizada exclusivamente pela nossa equipa técnica.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quem presta o suporte técnico ao cliente final? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>A HardToCrack. Tratamos de qualquer incidente relacionado com GrapheneOS, configuração, atualizações, migrações e garantia. A sua loja mantém a relação comercial com o cliente.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Tenho de comprar stock? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Não necessariamente. Pode trabalhar por encomenda sem imobilizar capital, com um pequeno stock de exposição, ou com stock próprio se o volume de vendas o justificar.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Os dispositivos têm garantia? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Sim. Todos os equipamentos são revistos, certificados e entregues com garantia de acordo com a legislação aplicável.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso vender acessórios e serviços adicionais? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Sim. VPN, eSIM, domínios, email privado, acessórios de privacidade e futuras soluções do ecossistema HardToCrack.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Existe exclusividade territorial? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Sim, dependendo da disponibilidade e das condições acordadas para cada zona comercial.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Recebo material comercial? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Sim. Terá acesso a cartazes, expositores, imagens, fichas de produto e recursos para redes sociais.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">É possível utilizar aplicações bancárias no GrapheneOS? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Sim, a grande maioria das aplicações Android funciona normalmente. Quando uma aplicação requer Serviços Google, pode ser instalada num perfil isolado sem privilégios especiais sobre o sistema.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">O que acontece com a câmara, o microfone e o GPS? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>O cliente decide que permissões concede a cada aplicação, com controlo granular por sensor e por aplicação.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quanto tempo demora a preparação e o envio? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>O prazo depende do pack contratado; é comunicado no Portal Partner ao confirmar cada encomenda, juntamente com o rastreio do envio.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como são calculadas e pagas as comissões? <svg><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><p>Cada encomenda fica identificada no Portal Partner, onde a sua loja pode consultar o benefício gerado por cada venda e serviço.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider-line"></div></div>
+
+<!-- ============ 14. SOLICITUD DE ALTA ============ -->
+<section id="solicitud">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Próximos passos</div>
+      <h2>Candidate-se a Partner Oficial</h2>
+      <p>Preencha o formulário e a nossa equipa entrará em contacto para conhecer o seu negócio e avaliar a zona de exclusividade disponível.</p>
+    </div>
+
+    <div class="req-list reveal">
+      <div><svg><use href="#i-check"/></svg> Cuidado com a imagem da marca</div>
+      <div><svg><use href="#i-check"/></svg> Espaço visível no balcão</div>
+      <div><svg><use href="#i-check"/></svg> Atendimento ao cliente</div>
+      <div><svg><use href="#i-check"/></svg> Participação ativa na rede</div>
+    </div>
+
+    <form class="form-wrap reveal" id="partnerForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+      <div class="form-grid">
+        <div class="field"><label>Nome e apelidos <span>*</span></label><input type="text" required name="nombre"></div>
+        <div class="field"><label>Nome da loja <span>*</span></label><input type="text" required name="tienda"></div>
+        <div class="field full"><label>Morada <span>*</span></label><input type="text" required name="direccion"></div>
+        <div class="field"><label>Cidade <span>*</span></label><input type="text" required name="ciudad"></div>
+        <div class="field"><label>Telefone <span>*</span></label><input type="tel" required name="telefono"></div>
+        <div class="field"><label>Email <span>*</span></label><input type="email" required name="email"></div>
+        <div class="field"><label>Site (opcional)</label><input type="url" name="web"></div>
+        <div class="field"><label>Número de lojas</label>
+          <select name="num_tiendas">
+            <option value="1">1 loja</option>
+            <option value="2-3">2–3 lojas</option>
+            <option value="4+">4 ou mais</option>
+          </select>
+        </div>
+        <div class="field full"><label>Zona de interesse / exclusividade pretendida</label><input type="text" name="zona" placeholder="Ex. Malasaña, Madrid"></div>
+        <div class="field full"><label>Mensagem (opcional)</label><textarea name="mensaje" placeholder="Conte-nos brevemente sobre a sua loja..."></textarea></div>
+      </div>
+      <input type="hidden" name="utm_source" id="utm_source">
+      <input type="hidden" name="utm_medium" id="utm_medium">
+      <input type="hidden" name="utm_campaign" id="utm_campaign">
+      <input type="hidden" name="_subject" id="formSubject" value="Novo pedido de Partner HardToCrack">
+      <label class="consent-row">
+        <input type="checkbox" name="consentimiento_privacidad" value="Aceite" required>
+        <span>Aceito que a HardToCrack utilize estes dados apenas para responder ao meu pedido.</span>
+      </label>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary" id="submitButton">Enviar pedido</button>
+        <span class="form-note">Responderemos em menos de 48 horas úteis.</span>
+      </div>
+      <div class="success-msg" id="successMsg">
+        <svg class="icon" style="color:var(--green)"><use href="#i-check"/></svg>
+        Pedido recebido. A nossa equipa entrará em contacto brevemente.
+      </div>
+      <div class="phase2-note">
+        <svg class="icon"><use href="#i-lock"/></svg>
+        Em breve: acesso privado para Partners com gestão de encomendas, comissões e material comercial.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo brand-lockup footer-lockup" href="#inicio">
+          <img class="brand-mark" src="/assets/ht-logo.png" alt="">
+          <span class="brand-copy">
+            <span class="logo-word">HARD<span>TO</span>CRACK</span>
+            <span class="logo-sub">SECURITY · PRIVACY · FREEDOM</span>
+          </span>
+        </a>
+        <p>Hardware verificado. Privacidade sem concessões. Rede nacional de lojas Partner especializadas em privacidade digital.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Programa Partner</h5>
+        <a href="#por-que">Porquê ser Partner</a>
+        <a href="#packs">Packs e preços</a>
+        <a href="#rentabilidad">Rentabilidade</a>
+        <a href="#faq">Perguntas frequentes</a>
+      </div>
+      <div class="footer-col">
+        <h5>Recursos</h5>
+        <a href="#garantia">Garantia de qualidade</a>
+        <a href="#exclusividad">Exclusividadee de zona</a>
+        <a href="#kit">Kit Partner</a>
+        <a href="#formacion">Formação e suporte</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:partners@hardtocrack.com">partners@hardtocrack.com</a>
+        <a href="https://hardtocrack.com">hardtocrack.com</a>
+        <a href="#solicitud">Candidatar-se a Partner</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HardToCrack. Todos os direitos reservados. Green Lizard.</span>
+      <span class="footer-tag">PRIVACY. SECURITY. FREEDOM.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const burger = document.getElementById('burgerBtn');
+  const panel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', () => { const open = panel.classList.toggle('open'); burger.setAttribute('aria-expanded', String(open)); });
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { panel.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Active nav link on scroll
+  const navA = document.querySelectorAll('[data-nav]');
+  const sections = Array.from(navA).map(a => document.querySelector(a.getAttribute('href')));
+  const navIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navA.forEach(a => a.classList.remove('active'));
+        const match = document.querySelector(`[data-nav][href="#${entry.target.id}"]`);
+        if (match) match.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  sections.forEach(s => { if (s) navIO.observe(s); });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Formspree-ready submit + attribution
+  const form = document.getElementById('partnerForm');
+  const queryParams = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(key => {
+    const field = document.getElementById(key);
+    if (field) field.value = queryParams.get(key) || '';
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const success = document.getElementById('successMsg');
+    const button = document.getElementById('submitButton');
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const shop = form.querySelector('[name="tienda"]').value.trim();
+    const subject = document.getElementById('formSubject');
+    if (subject) subject.value = `Novo pedido de Partner — ${shop || 'HardToCrack'}`;
+    button.disabled = true;
+    button.textContent = 'A enviar…';
+    try {
+      if (form.action.includes('YOUR_FORM_ID')) {
+        throw new Error('Configure o Formspree');
+      }
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!response.ok) throw new Error('Não foi possível enviar');
+      form.reset();
+      ['utm_source','utm_medium','utm_campaign'].forEach(key => {
+        const field = document.getElementById(key);
+        if (field) field.value = queryParams.get(key) || '';
+      });
+      success.innerHTML = '<svg class="icon" style="color:var(--green)"><use href="#i-check"/></svg> Pedido enviado com sucesso. A nossa equipa entrará em contacto brevemente.';
+      success.classList.add('show');
+    } catch (error) {
+      success.innerHTML = '<svg class="icon" style="color:#ff8f8f"><use href="#i-plus"/></svg> Configure o ID do Formspree ou escreva para partners@hardtocrack.com.';
+      success.classList.add('show');
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Enviar pedido';
+    }
+  });
+
+  // Ambient hex-grid canvas in hero
+  const canvas = document.getElementById('hexCanvas');
+  const ctx = canvas.getContext('2d');
+  let w, h, nodes = [];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function resize() {
+    w = canvas.width = canvas.offsetWidth;
+    h = canvas.height = canvas.offsetHeight;
+  }
+  function initNodes() {
+    nodes = [];
+    const cols = Math.ceil(w / 90) + 1;
+    const rows = Math.ceil(h / 90) + 1;
+    for (let i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        nodes.push({
+          x: i * 90 + (j % 2 ? 45 : 0),
+          y: j * 78,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+    }
+  }
+  function drawHex(x, y, r, alpha) {
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+      const angle = Math.PI / 3 * i - Math.PI / 6;
+      const px = x + r * Math.cos(angle);
+      const py = y + r * Math.sin(angle);
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = `rgba(45,212,232,${alpha})`;
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+  let t = 0;
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+    nodes.forEach(n => {
+      const alpha = 0.05 + 0.05 * Math.sin(t * 0.01 + n.phase);
+      drawHex(n.x, n.y, 26, Math.max(alpha, 0.02));
+    });
+    if (!reduceMotion) { t++; requestAnimationFrame(animate); }
+  }
+  window.addEventListener('resize', () => { resize(); initNodes(); });
+  resize(); initNodes();
+  if (canvas.offsetParent !== null) animate();
+
+  // Top scroll progress
+  const progress = document.getElementById('scrollProgress');
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  };
+  addEventListener('scroll', updateProgress, { passive: true });
+  addEventListener('resize', updateProgress);
+  updateProgress();
+</script>
+
+</body>
+</html>
