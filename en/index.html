@@ -1,4 +1,331 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HardToCrack Partners — Google Pixel met GrapheneOS voor uw winkel</title>
+<meta content="Officieel HardToCrack Partnerprogramma voor telefoon-, computer- en technologieservicewinkels. Google Pixel-toestellen met GrapheneOS, volledige ondersteuning en een nieuwe zakelijke lijn voor digitale privacy." name="description"/>
+<meta content="#05070a" name="theme-color"/>
+<meta content="index,follow" name="robots"/>
+<link rel="canonical" href="https://partners.hardtocrack.com/nl/">
+<link rel="alternate" hreflang="es" href="https://partners.hardtocrack.com/">
+<link rel="alternate" hreflang="en" href="https://partners.hardtocrack.com/en/">
+<link rel="alternate" hreflang="nl" href="https://partners.hardtocrack.com/nl/">
+<link rel="alternate" hreflang="x-default" href="https://partners.hardtocrack.com/">
+<meta content="website" property="og:type"/>
+<meta content="HardToCrack Partners — Digitale privacy voor uw winkel" property="og:title"/>
+<meta content="Voeg Google Pixel-toestellen met GrapheneOS, privacydiensten en professionele ondersteuning toe — zonder dat u de technische kant hoeft te beheren." property="og:description"/>
+<meta property="og:url" content="https://partners.hardtocrack.com/nl/">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg: #05070a;
+    --bg-1: #080b10;
+    --bg-2: #0c1119;
+    --card: #0e151f;
+    --card-2: #0a0f16;
+    --border: rgba(255,255,255,0.08);
+    --border-2: rgba(255,255,255,0.14);
+    --cyan: #2dd4e8;
+    --green: #4ade80;
+    --cyan-dim: rgba(45,212,232,0.14);
+    --green-dim: rgba(74,222,128,0.14);
+    --grad: linear-gradient(120deg, var(--cyan), var(--green));
+    --text: #eaf1f6;
+    --muted: #93a1ae;
+    --dim: #5c6773;
+    --danger: #ff6b6b;
+    --radius: 14px;
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer;}
 
+  h1,h2,h3,h4{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0.01em;
+    line-height:1.12;
+  }
+  .grad-text{
+    background:var(--grad);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--cyan);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:'';
+    width:26px; height:1px;
+    background:var(--grad);
+    display:inline-block;
+  }
+  .container{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  section{position:relative; padding:110px 0;}
+  .section-head{max-width:720px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px,4vw,44px); margin-bottom:18px;}
+  .section-head p{color:var(--muted); font-size:17px; max-width:640px;}
+  .divider-line{
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--border-2), transparent);
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+
+  /* ---------- icon sprite ---------- */
+  .icon{width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
+  .icon-lg{width:30px; height:30px;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 30px;
+    border-radius:8px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13.5px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    border:1px solid transparent;
+    transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--grad);
+    color:#04120e;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 30px -8px rgba(74,222,128,0.45); }
+  .btn-ghost{
+    background:transparent;
+    border-color:var(--border-2);
+    color:var(--text);
+  }
+  .btn-ghost:hover{ border-color:var(--cyan); color:var(--cyan); }
+  .btn:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    backdrop-filter:blur(14px);
+    background:rgba(5,7,10,0.72);
+    border-bottom:1px solid var(--border);
+  }
+  nav{
+    max-width:var(--maxw); margin:0 auto; padding:0 28px;
+    height:74px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{display:flex; align-items:center; gap:11px;}
+  .hex-mark{width:32px; height:32px; position:relative;}
+  .logo-word{font-family:'Oswald',sans-serif; font-weight:700; font-size:19px; letter-spacing:0.04em;}
+  .logo-word span{color:var(--cyan);}
+  .logo-sub{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.28em; color:var(--dim); margin-top:1px;}
+  .nav-links{display:flex; align-items:center; gap:30px;}
+  .nav-links a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;
+    color:var(--muted);
+    transition:color .15s ease;
+    position:relative;
+  }
+  .nav-links a:hover, .nav-links a.active{color:var(--text);}
+  .nav-links a.active::after{
+    content:''; position:absolute; left:0; right:0; bottom:-24px; height:2px; background:var(--grad);
+  }
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .burger{display:none; width:22px; height:16px; position:relative; background:none; border:none;}
+  .burger span{position:absolute; left:0; right:0; height:2px; background:var(--text); transition:.2s;}
+  .burger span:nth-child(1){top:0;}
+  .burger span:nth-child(2){top:7px;}
+  .burger span:nth-child(3){top:14px;}
+  .mobile-panel{
+    display:none; position:fixed; inset:74px 0 0 0; background:var(--bg); z-index:99;
+    padding:30px 28px; overflow-y:auto;
+  }
+  .mobile-panel.open{display:block;}
+  .mobile-panel a{
+    display:block; padding:16px 0; border-bottom:1px solid var(--border);
+    font-family:'JetBrains Mono',monospace; text-transform:uppercase; font-size:14px; letter-spacing:.05em; color:var(--muted);
+  }
+
+  /* ---------- hero ---------- */
+  #inicio{
+    padding-top:170px; padding-bottom:100px;
+    min-height:100vh;
+    display:flex; align-items:center;
+    position:relative;
+  }
+  .hex-field{
+    position:absolute; inset:0; z-index:0; opacity:0.55;
+    pointer-events:none;
+  }
+  .hero-glow{
+    position:absolute; top:-10%; right:-10%; width:640px; height:640px;
+    background:radial-gradient(circle, rgba(45,212,232,0.16), transparent 65%);
+    z-index:0; pointer-events:none;
+  }
+  .hero-glow-2{
+    position:absolute; bottom:-15%; left:-8%; width:520px; height:520px;
+    background:radial-gradient(circle, rgba(74,222,128,0.13), transparent 65%);
+    z-index:0; pointer-events:none;
+  }
+  .hero-grid{
+    position:relative; z-index:1;
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center;
+  }
+  .hero-copy h1{
+    font-size:clamp(34px,5vw,58px);
+    margin-bottom:24px;
+  }
+  .hero-copy p.lead{
+    color:var(--muted); font-size:18px; max-width:520px; margin-bottom:34px;
+  }
+  .hero-ctas{display:flex; gap:16px; margin-bottom:52px; flex-wrap:wrap;}
+  .hero-stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+    border-top:1px solid var(--border);
+  }
+  .hero-stats div{
+    padding:18px 16px 0 0; border-right:1px solid var(--border);
+  }
+  .hero-stats div:last-child{border-right:none;}
+  .hero-stats strong{
+    display:block; font-family:'Oswald'; font-size:14px; text-transform:uppercase; letter-spacing:.01em; margin-bottom:4px;
+  }
+  .hero-stats span{font-size:12.5px; color:var(--dim); font-family:'JetBrains Mono',monospace;}
+
+  .video-card{
+    background:var(--card);
+    border:1px solid var(--border-2);
+    border-radius:var(--radius);
+    padding:14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .video-frame{
+    aspect-ratio:9/11;
+    border-radius:8px;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(45,212,232,0.18), transparent 55%),
+      radial-gradient(circle at 75% 80%, rgba(74,222,128,0.16), transparent 55%),
+      #060a0f;
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--border);
+  }
+  .play-btn{
+    width:64px; height:64px; border-radius:50%;
+    background:var(--grad);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 0 8px rgba(74,222,128,0.08);
+  }
+  .play-btn svg{width:22px; height:22px; fill:#04120e; margin-left:3px;}
+  .video-caption{
+    position:absolute; bottom:26px; left:0; right:0; text-align:center;
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+  }
+  .video-tagline{
+    padding:16px 6px 4px;
+    font-size:13px; color:var(--dim); text-align:center; font-family:'JetBrains Mono',monospace; letter-spacing:.03em;
+  }
+
+  /* ---------- generic card ---------- */
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:28px;
+    position:relative;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .card:hover{ border-color:var(--border-2); }
+  .card-top-line{
+    position:absolute; top:0; left:24px; right:24px; height:2px;
+    background:var(--grad);
+    border-radius:2px;
+    opacity:0; transition:opacity .2s ease;
+  }
+  .card:hover .card-top-line{opacity:1;}
+  .icon-badge{
+    width:46px; height:46px;
+    clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+    background:var(--cyan-dim);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+    color:var(--cyan);
+  }
+  .card h3{font-size:18px; margin-bottom:10px; letter-spacing:0.01em;}
+  .card p{color:var(--muted); font-size:14.5px;}
+
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+
+  /* ---------- por que / diff table ---------- */
+  .diff-table{
+    width:100%; border-collapse:collapse; margin-top:10px;
+    background:var(--card-2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
+  }
+  .diff-table th, .diff-table td{
+    padding:16px 20px; text-align:left; font-size:14.5px; border-bottom:1px solid var(--border);
+  }
+  .diff-table th{
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); font-weight:500;
+  }
+  .diff-table td.no{color:var(--danger);}
+  .diff-table td.yes{color:var(--green);}
+  .diff-table tr:last-child td{border-bottom:none;}
+  .cell-icon{display:inline-flex; align-items:center; gap:8px;}
+
+  .quote-box{
+    margin-top:48px;
+    border-left:2px solid var(--green);
+    padding:6px 0 6px 26px;
+  }
+  .quote-box p{font-family:'Oswald'; text-transform:uppercase; font-size:clamp(18px,2.4vw,26px); letter-spacing:.01em; color:var(--text);}
+  .quote-box p span{color:var(--green);}
+
+  /* ---------- packs ---------- */
+  .pack-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:32px 28px;
+    display:flex; flex-direction:column;
+    position:relative;
+  }
+  .pack-card.featured{
+    border-color:rgba(74,222,128,0.4);
     background:linear-gradient(180deg, rgba(74,222,128,0.05), var(--card) 30%);
   }
   .pack-badge{
@@ -576,762 +903,710 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
 </style>
 </head>
 <body>
-<div class="page-grid" aria-hidden="true"></div>
-<div class="page-orb page-orb-cyan" aria-hidden="true"></div>
-<div class="page-orb page-orb-green" aria-hidden="true"></div>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
+<div aria-hidden="true" class="page-grid"></div>
+<div aria-hidden="true" class="page-orb page-orb-cyan"></div>
+<div aria-hidden="true" class="page-orb page-orb-green"></div>
+<div aria-hidden="true" class="scroll-progress" id="scrollProgress"></div>
 <!-- ============ SVG SPRITE ============ -->
-<svg width="0" height="0" style="position:absolute">
+<svg height="0" style="position:absolute" width="0">
 <defs>
-<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z"/></symbol>
-<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 018 0v4"/></symbol>
-<symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
-<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v9l9 5 9-5V8"/><line x1="12" y1="13" x2="12" y2="22"/></symbol>
-<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2z"/><path d="M13 10h5l3 3v3h-8z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></symbol>
-<symbol id="i-hand" viewBox="0 0 24 24"><path d="M3 12l4-3 4 2 3-2 4 3"/><path d="M3 12v6h18v-6"/></symbol>
-<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 0.7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6-4.4-4.1 6-0.7z"/></symbol>
-<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.4 7-12.5A7 7 0 105 9.5C5 14.6 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.4"/></symbol>
-<symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.4"/><rect x="17" y="13" width="4" height="6" rx="1.4"/></symbol>
-<symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4-10-4z"/><path d="M6 11v5c2 1.6 10 1.6 12 0v-5"/></symbol>
-<symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4h3l6 4V6l-6 4H3z"/><path d="M15 9a3 3 0 010 6"/></symbol>
-<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
-<symbol id="i-plus" viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></symbol>
-<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.5a16 16 0 0120 0"/><path d="M5.5 12.5a11 11 0 0113 0"/><path d="M9 16.5a5.5 5.5 0 016 0"/><circle cx="12" cy="20" r="1"/></symbol>
-<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
-<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></symbol>
-<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 5-6 8-6s6.5 1.5 8 6"/></symbol>
-<symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.3 2.3-2.4-2.4z"/></symbol>
-<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></symbol>
-<symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M6 6h12M4 8l3-3 3 3-3 5-3-5zM14 8l3-3 3 3-3 5-3-5z"/></symbol>
-<symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2 7 4-14 2 7h6"/></symbol>
-<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></symbol>
-<symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></symbol>
-<symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2l2.4 2.4H18v3.6L20.4 10.5 18 12.9V16.5H14.4L12 19l-2.4-2.5H6V12.9L3.6 10.5 6 8V4.4H9.6z"/><circle cx="12" cy="10.5" r="2.4"/></symbol>
-<symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h13l-3 4 3 4H5"/></symbol>
-<symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol>
-<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></symbol>
-<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="1.5"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+<symbol id="i-shield" viewbox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z"></path></symbol>
+<symbol id="i-lock" viewbox="0 0 24 24"><rect height="9" rx="1.5" width="14" x="5" y="11"></rect><path d="M8 11V7a4 4 0 018 0v4"></path></symbol>
+<symbol id="i-phone" viewbox="0 0 24 24"><rect height="20" rx="2" width="10" x="7" y="2"></rect><line x1="11" x2="13" y1="18" y2="18"></line></symbol>
+<symbol id="i-box" viewbox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5z"></path><path d="M3 8v9l9 5 9-5V8"></path><line x1="12" x2="12" y1="13" y2="22"></line></symbol>
+<symbol id="i-truck" viewbox="0 0 24 24"><path d="M2 6h11v10H2z"></path><path d="M13 10h5l3 3v3h-8z"></path><circle cx="6" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></symbol>
+<symbol id="i-hand" viewbox="0 0 24 24"><path d="M3 12l4-3 4 2 3-2 4 3"></path><path d="M3 12v6h18v-6"></path></symbol>
+<symbol id="i-star" viewbox="0 0 24 24"><path d="M12 3l2.6 5.6 6 0.7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6-4.4-4.1 6-0.7z"></path></symbol>
+<symbol id="i-pin" viewbox="0 0 24 24"><path d="M12 22s7-7.4 7-12.5A7 7 0 105 9.5C5 14.6 12 22 12 22z"></path><circle cx="12" cy="9.5" r="2.4"></circle></symbol>
+<symbol id="i-headset" viewbox="0 0 24 24"><path d="M4 13v-1a8 8 0 0116 0v1"></path><rect height="6" rx="1.4" width="4" x="3" y="13"></rect><rect height="6" rx="1.4" width="4" x="17" y="13"></rect></symbol>
+<symbol id="i-cap" viewbox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4-10-4z"></path><path d="M6 11v5c2 1.6 10 1.6 12 0v-5"></path></symbol>
+<symbol id="i-mega" viewbox="0 0 24 24"><path d="M3 10v4h3l6 4V6l-6 4H3z"></path><path d="M15 9a3 3 0 010 6"></path></symbol>
+<symbol id="i-check" viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></symbol>
+<symbol id="i-plus" viewbox="0 0 24 24"><line x1="12" x2="12" y1="4" y2="20"></line><line x1="4" x2="20" y1="12" y2="12"></line></symbol>
+<symbol id="i-wifi" viewbox="0 0 24 24"><path d="M2 8.5a16 16 0 0120 0"></path><path d="M5.5 12.5a11 11 0 0113 0"></path><path d="M9 16.5a5.5 5.5 0 016 0"></path><circle cx="12" cy="20" r="1"></circle></symbol>
+<symbol id="i-mail" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M3 6l9 7 9-7"></path></symbol>
+<symbol id="i-globe" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"></path></symbol>
+<symbol id="i-user" viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4.5 5-6 8-6s6.5 1.5 8 6"></path></symbol>
+<symbol id="i-tool" viewbox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.3 2.3-2.4-2.4z"></path></symbol>
+<symbol id="i-eye" viewbox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"></path><circle cx="12" cy="12" r="2.6"></circle></symbol>
+<symbol id="i-scale" viewbox="0 0 24 24"><path d="M12 3v18M6 6h12M4 8l3-3 3 3-3 5-3-5zM14 8l3-3 3 3-3 5-3-5z"></path></symbol>
+<symbol id="i-pulse" viewbox="0 0 24 24"><path d="M3 12h4l2 7 4-14 2 7h6"></path></symbol>
+<symbol id="i-mic" viewbox="0 0 24 24"><rect height="11" rx="3" width="6" x="9" y="2"></rect><path d="M5 11a7 7 0 0014 0M12 18v3"></path></symbol>
+<symbol id="i-brief" viewbox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="7"></rect><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"></path></symbol>
+<symbol id="i-badge" viewbox="0 0 24 24"><path d="M12 2l2.4 2.4H18v3.6L20.4 10.5 18 12.9V16.5H14.4L12 19l-2.4-2.5H6V12.9L3.6 10.5 6 8V4.4H9.6z"></path><circle cx="12" cy="10.5" r="2.4"></circle></symbol>
+<symbol id="i-flag" viewbox="0 0 24 24"><path d="M5 21V4"></path><path d="M5 4h13l-3 4 3 4H5"></path></symbol>
+<symbol id="i-map" viewbox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"></path><path d="M9 4v14M15 6v14"></path></symbol>
+<symbol id="i-doc" viewbox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"></path><path d="M15 2v5h5"></path></symbol>
+<symbol id="i-monitor" viewbox="0 0 24 24"><rect height="13" rx="1.5" width="20" x="2" y="4"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></symbol>
 </defs>
 </svg>
-
 <!-- ============ HEADER / NAV ============ -->
 <header>
-  <nav>
-    <a href="#inicio" class="logo brand-lockup" aria-label="HardToCrack Partners — Home">
-      <img class="brand-mark" src="assets/ht-logo.png" alt="">
-      <span class="brand-copy">
-        <span class="logo-word">HARD<span>TO</span>CRACK</span>
-        <span class="logo-sub">PARTNERS · PRIVACY ECOSYSTEM</span>
-      </span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#por-que" data-nav>Why</a>
-      <a href="#productos" data-nav>Products</a>
-      <a href="#packs" data-nav>Packs</a>
-      <a href="#proceso" data-nav>Process</a>
-      <a href="#rentabilidad" data-nav>Profitability</a>
-      <a href="#garantia" data-nav>Guarantee</a>
-      <a href="#faq" data-nav>FAQ</a>
-    </div>
-    <div class="lang-switcher" aria-label="Language selector"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link active" hreflang="en" lang="en" aria-current="page">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a></div>
+<nav>
+<a aria-label="HardToCrack Partners — Home" class="logo brand-lockup" href="#inicio">
+<img alt="" class="brand-mark" src="/assets/ht-logo.png"/>
+<span class="brand-copy">
+<span class="logo-word">HARD<span>TO</span>CRACK</span>
+<span class="logo-sub">PARTNERS · PRIVACY-ECOSYSTEEM</span>
+</span>
+</a>
+<div class="nav-links" id="navLinks">
+<a data-nav="" href="#por-que">Waarom</a>
+<a data-nav="" href="#productos">Producten</a>
+<a data-nav="" href="#packs">Pakketten</a>
+<a data-nav="" href="#proceso">Proces</a>
+<a data-nav="" href="#rentabilidad">Rendement</a>
+<a data-nav="" href="#garantia">Garantie</a>
+<a data-nav="" href="#faq">FAQ</a>
+</div>
+<div class="lang-switcher" aria-label="Taalkeuze"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link" hreflang="en" lang="en">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link active" hreflang="nl" lang="nl" aria-current="page">NL</a></div>
     <div class="nav-cta">
-      <a href="#solicitud" class="btn btn-ghost hide-mobile" style="display:none">Contact</a>
-      <a href="#solicitud" class="btn btn-primary">Become a Partner</a>
-      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-panel" id="mobilePanel">
-    <div class="lang-switcher mobile-lang-switcher" aria-label="Language selector"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link active" hreflang="en" lang="en" aria-current="page">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link" hreflang="nl" lang="nl">NL</a></div>
-    <a href="#por-que">Why become a Partner</a>
-    <a href="#productos">Products</a>
-    <a href="#packs">Packs</a>
-    <a href="#proceso">How it works</a>
-    <a href="#rentabilidad">Profitability</a>
-    <a href="#garantia">Guarantee</a>
-    <a href="#exclusividad">Exclusivity</a>
-    <a href="#kit">Partner Kit</a>
-    <a href="#casos">Use cases</a>
-    <a href="#faq">FAQ</a>
-    <a href="#solicitud" style="color:#4ade80;">Apply to become a Partner →</a>
-  </div>
+<a class="btn btn-ghost hide-mobile" href="#solicitud" style="display:none">Contact</a>
+<a class="btn btn-primary" href="#solicitud">Word Partner</a>
+<button aria-controls="mobilePanel" aria-expanded="false" aria-label="Menu openen" class="burger" id="burgerBtn">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<div class="mobile-panel" id="mobilePanel">
+    <div class="lang-switcher mobile-lang-switcher" aria-label="Taalkeuze"><a href="/" class="lang-link" hreflang="es" lang="es">ES</a><span class="lang-separator" aria-hidden="true">/</span><a href="/en/" class="lang-link" hreflang="en" lang="en">EN</a><span class="lang-separator" aria-hidden="true">/</span><a href="/nl/" class="lang-link active" hreflang="nl" lang="nl" aria-current="page">NL</a></div>
+<a href="#por-que">Waarom Partner worden</a>
+<a href="#productos">Producten</a>
+<a href="#packs">Pakketten</a>
+<a href="#proceso">Hoe het werkt</a>
+<a href="#rentabilidad">Rendement</a>
+<a href="#garantia">Garantie</a>
+<a href="#exclusividad">Exclusiviteit</a>
+<a href="#kit">Partnerkit</a>
+<a href="#casos">Toepassingen</a>
+<a href="#faq">FAQ</a>
+<a href="#solicitud" style="color:#4ade80;">Meld u aan als Partner →</a>
+</div>
 </header>
-
 <!-- ============ 1. HOME ============ -->
-<section id="inicio" class="hero-premium">
-  <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-  <canvas class="hex-field" id="hexCanvas" aria-hidden="true"></canvas>
-  <div class="hero-beam hero-beam-a" aria-hidden="true"></div>
-  <div class="hero-beam hero-beam-b" aria-hidden="true"></div>
-  <div class="container hero-grid">
-    <div class="hero-copy reveal">
-      <div class="eyebrow">Official Partner Program · Spain</div>
-      <h1>Turn your store into a benchmark for <span class="grad-text">digital privacy.</span></h1>
-      <p class="lead">Offer Google Pixel devices professionally prepared with GrapheneOS, privacy services and high-value accessories. HardToCrack handles installation, configuration, quality control and technical support.</p>
-      <div class="hero-ctas">
-        <a href="#solicitud" class="btn btn-primary">
-          <svg class="icon" aria-hidden="true"><use href="#i-brief"/></svg>
-          Request a meeting
+<section class="hero-premium" id="inicio">
+<div class="hero-glow"></div>
+<div class="hero-glow-2"></div>
+<canvas aria-hidden="true" class="hex-field" id="hexCanvas"></canvas>
+<div aria-hidden="true" class="hero-beam hero-beam-a"></div>
+<div aria-hidden="true" class="hero-beam hero-beam-b"></div>
+<div class="container hero-grid">
+<div class="hero-copy reveal">
+<div class="eyebrow">Officieel Partnerprogramma · Spanje</div>
+<h1>Maak van uw winkel een referentiepunt voor <span class="grad-text">digitale privacy.</span></h1>
+<p class="lead">Bied Google Pixel-toestellen aan die professioneel zijn voorbereid met GrapheneOS, privacydiensten en hoogwaardige accessoires. HardToCrack verzorgt installatie, configuratie, kwaliteitscontrole en technische ondersteuning.</p>
+<div class="hero-ctas">
+<a class="btn btn-primary" href="#solicitud">
+<svg aria-hidden="true" class="icon"><use href="#i-brief"></use></svg>
+          Plan een gesprek
         </a>
-        <a href="#por-que" class="btn btn-ghost">
-          Explore the program
+<a class="btn btn-ghost" href="#por-que">
+          Ontdek het programma
           <span aria-hidden="true">↓</span>
-        </a>
+</a>
+</div>
+<div class="hero-stats">
+<div><strong>Geen verplichte voorraad</strong><span>Werken op bestelling</span></div>
+<div><strong>Geen technisch werk</strong><span>Wij installeren en verifiëren</span></div>
+<div><strong>Terugkerende omzet</strong><span>Diensten en verlengingen</span></div>
+<div><strong>Training en ondersteuning</strong><span>Doorlopende begeleiding</span></div>
+</div>
+<div class="founder-note">
+<span aria-hidden="true" class="status-dot"></span>
+        De selectie voor de eerste Officiële Partners is geopend.
       </div>
-      <div class="hero-stats">
-        <div><strong>No mandatory stock</strong><span>Made-to-order operation</span></div>
-        <div><strong>No technical work</strong><span>We install and verify</span></div>
-        <div><strong>Recurring revenue</strong><span>Services and renewals</span></div>
-        <div><strong>Training and support</strong><span>Ongoing guidance</span></div>
-      </div>
-      <div class="founder-note">
-        <span class="status-dot" aria-hidden="true"></span>
-        Open selection for the first Official Partners.
-      </div>
-    </div>
-
-    <div class="device-stage reveal" aria-label="Google Pixel prepared by HardToCrack with GrapheneOS">
-      <div class="device-orbit orbit-one" aria-hidden="true"></div>
-      <div class="device-orbit orbit-two" aria-hidden="true"></div>
-      <div class="halo" aria-hidden="true"></div>
-      <div class="phone phone-back" aria-hidden="true">
-        <div class="camera-bar"><i></i><i></i><b></b></div>
-        <div class="pixel-g">G</div>
-      </div>
-      <div class="phone phone-front">
-        <div class="phone-screen">
-          <span class="screen-time">10:00</span>
-          <img class="screen-logo" src="assets/ht-logo.png" alt="HardToCrack logo">
-          <h3>GrapheneOS</h3>
-          <p>Configured · verified · ready</p>
-          <div class="screen-lock"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Device protected</div>
-        </div>
-      </div>
-      <div class="float-chip chip-a"><b>Professional preparation</b>Quality control on every unit</div>
-      <div class="float-chip chip-b"><b>Frictionless selling</b>Your store sells. We prepare.</div>
-      <div class="device-caption">
-        <span class="device-kicker">HARDTOCRACK READY</span>
-        <span>Google Pixel + GrapheneOS + privacy services</span>
-      </div>
-    </div>
-  </div>
+</div>
+<div aria-label="Google Pixel prepared by HardToCrack with GrapheneOS" class="device-stage reveal">
+<div aria-hidden="true" class="device-orbit orbit-one"></div>
+<div aria-hidden="true" class="device-orbit orbit-two"></div>
+<div aria-hidden="true" class="halo"></div>
+<div aria-hidden="true" class="phone phone-back">
+<div class="camera-bar"><i></i><i></i><b></b></div>
+<div class="pixel-g">G</div>
+</div>
+<div class="phone phone-front">
+<div class="phone-screen">
+<span class="screen-time">10:00</span>
+<img alt="HardToCrack logo" class="screen-logo" src="/assets/ht-logo.png"/>
+<h3>GrapheneOS</h3>
+<p>Geconfigureerd · geverifieerd · klaar</p>
+<div class="screen-lock"><svg aria-hidden="true" class="icon"><use href="#i-lock"></use></svg> Toestel beveiligd</div>
+</div>
+</div>
+<div class="float-chip chip-a"><b>Professionele voorbereiding</b>Kwaliteitscontrole op elk toestel</div>
+<div class="float-chip chip-b"><b>Verkopen zonder gedoe</b>Uw winkel verkoopt. Wij bereiden voor.</div>
+<div class="device-caption">
+<span class="device-kicker">HARDTOCRACK READY</span>
+<span>Google Pixel + GrapheneOS + privacydiensten</span>
+</div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 2. WHY BECOME A PARTNER ============ -->
 <section id="por-que">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">The market</div>
-      <h2>Privacy is no longer a niche.<br>It's a purchasing decision.</h2>
-      <p>Every day, more users look for a real alternative to smartphones that collect data by default. GrapheneOS has established itself as one of the most secure mobile operating systems in the world — and until now, almost no physical store offers it.</p>
-    </div>
-
-    <div class="grid-3 reveal">
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-pulse"/></svg></div>
-        <h3>A growing market</h3>
-        <p>Concern about digital privacy is no longer just for experts. Professionals, businesses and individuals are actively seeking real solutions, not marketing promises.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div>
-        <h3>GrapheneOS is gaining ground</h3>
-        <p>Recognized as one of the most secure mobile operating systems available, GrapheneOS combines real hardening with compatibility for the Android apps you already use.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-star"/></svg></div>
-        <h3>Zero competition in retail</h3>
-        <p>While every store sells the same catalog at the same prices, practically none offer devices prepared with real privacy out of the box.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:60px;" class="reveal">
-      <table class="diff-table">
-        <thead>
-          <tr><th>Conventional smartphone</th><th></th><th>Google Pixel prepared by HardToCrack</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="no">Tracking and data collection by default</td><td><svg class="icon" style="width:16px;height:16px;color:var(--dim)"><use href="#i-plus" style="transform:rotate(45deg)"/></svg></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> You decide what data you share</td></tr>
-          <tr><td class="no">Broad, hard-to-control permissions</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Granular control over every permission</td></tr>
-          <tr><td class="no">A single profile for everything</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Independent, isolated profiles</td></tr>
-          <tr><td class="no">Irregular, slow updates</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Frequent, security-focused updates</td></tr>
-          <tr><td class="no">Background services that consume data</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Full control over connections and apps</td></tr>
-          <tr><td class="no">No specific preparation</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"/></svg> Installed, configured and verified by experts</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="quote-box reveal">
-      <p>We don't just sell a smartphone.<br><span>We sell privacy.</span></p>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">De markt</div>
+<h2>Privacy is geen niche meer.<br/>Het is een aankoopbeslissing.</h2>
+<p>Elke dag zoeken meer gebruikers naar een echt alternatief voor smartphones die standaard gegevens verzamelen. GrapheneOS heeft zich ontwikkeld tot een van de veiligste mobiele besturingssystemen ter wereld — en tot nu toe biedt vrijwel geen fysieke winkel het aan.</p>
+</div>
+<div class="grid-3 reveal">
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-pulse"></use></svg></div>
+<h3>Een groeiende markt</h3>
+<p>Zorgen over digitale privacy zijn allang niet meer alleen voor experts. Professionals, bedrijven en particulieren zoeken actief naar echte oplossingen, niet naar marketingbeloften.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-shield"></use></svg></div>
+<h3>GrapheneOS wint terrein</h3>
+<p>GrapheneOS geldt als een van de veiligste mobiele besturingssystemen en combineert echte hardening met compatibiliteit voor de Android-apps die u al gebruikt.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-star"></use></svg></div>
+<h3>Nauwelijks concurrentie in retail</h3>
+<p>Terwijl vrijwel elke winkel dezelfde catalogus tegen vergelijkbare prijzen verkoopt, biedt bijna niemand toestellen die direct uit de doos op echte privacy zijn voorbereid.</p>
+</div>
+</div>
+<div class="reveal" style="margin-top:60px;">
+<table class="diff-table">
+<thead>
+<tr><th>Conventionele smartphone</th><th></th><th>Google Pixel voorbereid door HardToCrack</th></tr>
+</thead>
+<tbody>
+<tr><td class="no">Standaard tracking en gegevensverzameling</td><td><svg class="icon" style="width:16px;height:16px;color:var(--dim)"><use href="#i-plus" style="transform:rotate(45deg)"></use></svg></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"></use></svg> U bepaalt welke gegevens u deelt</td></tr>
+<tr><td class="no">Brede, moeilijk te beheren machtigingen</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"></use></svg> Gedetailleerde controle over elke machtiging</td></tr>
+<tr><td class="no">Eén profiel voor alles</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"></use></svg> Onafhankelijke, geïsoleerde profielen</td></tr>
+<tr><td class="no">Onregelmatige, trage updates</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"></use></svg> Frequente updates met focus op beveiliging</td></tr>
+<tr><td class="no">Achtergrondservices die gegevens verbruiken</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"></use></svg> Volledige controle over verbindingen en apps</td></tr>
+<tr><td class="no">Geen specifieke voorbereiding</td><td></td><td class="yes cell-icon"><svg class="icon" style="width:16px;height:16px;color:var(--green)"><use href="#i-check"></use></svg> Door experts geïnstalleerd, geconfigureerd en geverifieerd</td></tr>
+</tbody>
+</table>
+</div>
+<div class="quote-box reveal">
+<p>We verkopen niet zomaar een smartphone.<br/><span>We verkopen privacy.</span></p>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 3. PRODUCTS ============ -->
 <section id="productos">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Catalog</div>
-      <h2>A complete ecosystem,<br>not a standalone product</h2>
-      <p>HardToCrack brings together hardware, operating system, professional configuration and privacy services in a single solution. Your store isn't selling just another phone — it's offering an ecosystem.</p>
-    </div>
-    <div class="grid-4 reveal">
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-phone"/></svg></div>
-        <h3>Google Pixel</h3>
-        <p>New and premium refurbished devices, with verified IMEI and hardware checked before preparation.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div>
-        <h3>GrapheneOS</h3>
-        <p>Professional installation, system verification and update to the latest available stable version.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-tool"/></svg></div>
-        <h3>Premium Configuration</h3>
-        <p>User profiles, app installation, privacy settings and optimization tailored to the customer.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-lock"/></svg></div>
-        <h3>Mullvad VPN</h3>
-        <p>Encrypted connection with no activity logs. Available in 6 and 12-month plans.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-mail"/></svg></div>
-        <h3>Proton</h3>
-        <p>End-to-end encrypted email, calendar and storage with Proton Plus.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-wifi"/></svg></div>
-        <h3>eSIM · EU SIM</h3>
-        <p>Instant international connectivity or an independent European line, without depending on a single carrier.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-user"/></svg></div>
-        <h3>SimpleLogin · Threema</h3>
-        <p>Unlimited email aliases and encrypted messaging without linking a phone number or personal data.</p>
-      </div>
-      <div class="card">
-        <div class="card-top-line"></div>
-        <div class="icon-badge"><svg class="icon"><use href="#i-box"/></svg></div>
-        <h3>HardToCrack Accessories</h3>
-        <p>Privacy screen protector, Faraday bag, 30W Google charger, USB-C cable and official case.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Catalogus</div>
+<h2>Een compleet ecosysteem,<br/>geen losstaand product</h2>
+<p>HardToCrack brengt hardware, besturingssysteem, professionele configuratie en privacydiensten samen in één oplossing. Uw winkel verkoopt niet zomaar een telefoon — u biedt een compleet ecosysteem.</p>
+</div>
+<div class="grid-4 reveal">
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-phone"></use></svg></div>
+<h3>Google Pixel</h3>
+<p>Nieuwe en premium refurbished toestellen, met geverifieerde IMEI en gecontroleerde hardware vóór de voorbereiding.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-shield"></use></svg></div>
+<h3>GrapheneOS</h3>
+<p>Professionele installatie, systeemverificatie en update naar de nieuwste beschikbare stabiele versie.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-tool"></use></svg></div>
+<h3>Premiumconfiguratie</h3>
+<p>Gebruikersprofielen, app-installatie, privacy-instellingen en optimalisatie afgestemd op de klant.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-lock"></use></svg></div>
+<h3>Mullvad VPN</h3>
+<p>Versleutelde verbinding zonder activiteitenlogs. Beschikbaar in abonnementen van 6 en 12 maanden.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-mail"></use></svg></div>
+<h3>Proton</h3>
+<p>End-to-end versleutelde e-mail, agenda en opslag met Proton Plus.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-wifi"></use></svg></div>
+<h3>eSIM · EU-sim</h3>
+<p>Directe internationale connectiviteit of een onafhankelijke Europese lijn, zonder afhankelijk te zijn van één provider.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-user"></use></svg></div>
+<h3>SimpleLogin · Threema</h3>
+<p>Onbeperkte e-mailaliassen en versleutelde berichten zonder koppeling aan telefoonnummer of persoonsgegevens.</p>
+</div>
+<div class="card">
+<div class="card-top-line"></div>
+<div class="icon-badge"><svg class="icon"><use href="#i-box"></use></svg></div>
+<h3>HardToCrack-accessoires</h3>
+<p>Privacy-screenprotector, Faraday-tas, 30W Google-lader, USB-C-kabel en officiële hoes.</p>
+</div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 4. PACKS ============ -->
 <section id="packs">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Service tiers</div>
-      <h2>A solution for every customer</h2>
-      <p>Not every customer wants the same level of privacy. Three clear packs, with a direct, transparent benefit for your store on every sale.</p>
-    </div>
-
-    <div class="grid-3 reveal">
-      <div class="pack-card">
-        <div class="pack-name">Essential</div>
-        <div class="pack-tag">The simplest way to get started.</div>
-        <ul class="pack-list">
-          <li><svg><use href="#i-check"/></svg> Professional GrapheneOS installation</li>
-          <li><svg><use href="#i-check"/></svg> System verification</li>
-          <li><svg><use href="#i-check"/></svg> Initial security configuration</li>
-          <li><svg><use href="#i-check"/></svg> Latest stable version installed</li>
-          <li><svg><use href="#i-check"/></svg> Device ready to use</li>
-        </ul>
-        <div class="pack-benefit"><span>Store benefit</span><strong>€50</strong></div>
-      </div>
-
-      <div class="pack-card featured">
-        <div class="pack-badge">★ Most requested</div>
-        <div class="pack-name">Privacy</div>
-        <div class="pack-tag">The recommended experience.</div>
-        <ul class="pack-list">
-          <li><svg><use href="#i-check"/></svg> Everything in Essential, plus:</li>
-          <li><svg><use href="#i-check"/></svg> Premium Configuration</li>
-          <li><svg><use href="#i-check"/></svg> Mullvad VPN — 6 months</li>
-          <li><svg><use href="#i-check"/></svg> 50GB data eSIM · 180 days</li>
-          <li><svg><use href="#i-check"/></svg> Threema · personalization and optimization</li>
-        </ul>
-        <div class="pack-benefit"><span>Store benefit</span><strong>€70</strong></div>
-      </div>
-
-      <div class="pack-card">
-        <div class="pack-name">Elite</div>
-        <div class="pack-tag">The most complete solution.</div>
-        <ul class="pack-list">
-          <li><svg><use href="#i-check"/></svg> Everything in Privacy, plus:</li>
-          <li><svg><use href="#i-check"/></svg> Mullvad VPN — 12 months</li>
-          <li><svg><use href="#i-check"/></svg> Proton Plus — 12 months</li>
-          <li><svg><use href="#i-check"/></svg> SimpleLogin Premium — 12 months</li>
-          <li><svg><use href="#i-check"/></svg> Own domain (1 year) · priority assistance</li>
-        </ul>
-        <div class="pack-benefit"><span>Store benefit</span><strong>€95</strong></div>
-      </div>
-    </div>
-
-    <table class="compare-table reveal">
-      <thead>
-        <tr><th>&nbsp;</th><th>Essential</th><th>Privacy</th><th>Elite</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Privacy level</td><td class="stars">★☆☆</td><td class="stars">★★★</td><td class="stars">★★★★★</td></tr>
-        <tr><td>Included services</td><td>Basic</td><td>Advanced</td><td>Complete</td></tr>
-        <tr><td>Ideal user</td><td>New to GrapheneOS</td><td>Everyday privacy</td><td>Professionals & maximum protection</td></tr>
-        <tr><td>Benefit for your store</td><td>€60</td><td>€80</td><td>€95</td></tr>
-      </tbody>
-    </table>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Serviceniveaus</div>
+<h2>Een oplossing voor iedere klant</h2>
+<p>Niet iedere klant wil hetzelfde privacyniveau. Drie duidelijke pakketten, met bij elke verkoop een direct en transparant voordeel voor uw winkel.</p>
+</div>
+<div class="grid-3 reveal">
+<div class="pack-card">
+<div class="pack-name">Essential</div>
+<div class="pack-tag">De eenvoudigste manier om te beginnen.</div>
+<ul class="pack-list">
+<li><svg><use href="#i-check"></use></svg> Professionele GrapheneOS-installatie</li>
+<li><svg><use href="#i-check"></use></svg> Systeemverificatie</li>
+<li><svg><use href="#i-check"></use></svg> Initiële beveiligingsconfiguratie</li>
+<li><svg><use href="#i-check"></use></svg> Nieuwste stabiele versie geïnstalleerd</li>
+<li><svg><use href="#i-check"></use></svg> Toestel gebruiksklaar</li>
+</ul>
+<div class="pack-benefit"><span>Voordeel voor de winkel</span><strong>€50</strong></div>
+</div>
+<div class="pack-card featured">
+<div class="pack-badge">★ Meest gekozen</div>
+<div class="pack-name">Privacy</div>
+<div class="pack-tag">De aanbevolen ervaring.</div>
+<ul class="pack-list">
+<li><svg><use href="#i-check"></use></svg> Alles van Essential, plus:</li>
+<li><svg><use href="#i-check"></use></svg> Premiumconfiguratie</li>
+<li><svg><use href="#i-check"></use></svg> Mullvad VPN — 6 maanden</li>
+<li><svg><use href="#i-check"></use></svg> 50 GB data-eSIM · 180 dagen</li>
+<li><svg><use href="#i-check"></use></svg> Threema · personalisatie en optimalisatie</li>
+</ul>
+<div class="pack-benefit"><span>Voordeel voor de winkel</span><strong>€70</strong></div>
+</div>
+<div class="pack-card">
+<div class="pack-name">Elite</div>
+<div class="pack-tag">De meest complete oplossing.</div>
+<ul class="pack-list">
+<li><svg><use href="#i-check"></use></svg> Alles van Privacy, plus:</li>
+<li><svg><use href="#i-check"></use></svg> Mullvad VPN — 12 maanden</li>
+<li><svg><use href="#i-check"></use></svg> Proton Plus — 12 maanden</li>
+<li><svg><use href="#i-check"></use></svg> SimpleLogin Premium — 12 maanden</li>
+<li><svg><use href="#i-check"></use></svg> Eigen domein (1 jaar) · prioriteitsondersteuning</li>
+</ul>
+<div class="pack-benefit"><span>Voordeel voor de winkel</span><strong>€95</strong></div>
+</div>
+</div>
+<table class="compare-table reveal">
+<thead>
+<tr><th> </th><th>Essential</th><th>Privacy</th><th>Elite</th></tr>
+</thead>
+<tbody>
+<tr><td>Privacyniveau</td><td class="stars">★☆☆</td><td class="stars">★★★</td><td class="stars">★★★★★</td></tr>
+<tr><td>Inbegrepen diensten</td><td>Basis</td><td>Geavanceerd</td><td>Compleet</td></tr>
+<tr><td>Ideale gebruiker</td><td>Nieuw met GrapheneOS</td><td>Dagelijkse privacy</td><td>Professionals &amp; maximale bescherming</td></tr>
+<tr><td>Voordeel voor uw winkel</td><td>€50</td><td>€70</td><td>€95</td></tr>
+</tbody>
+</table>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 5. HOW IT WORKS ============ -->
 <section id="proceso">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">How it works</div>
-      <h2>A process your store<br>doesn't have to manage</h2>
-      <p>Your team focuses on selling. We handle all the technical preparation, from start to finish.</p>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Hoe het werkt</div>
+<h2>Een proces dat uw winkel<br/>niet zelf hoeft te beheren</h2>
+<p>Uw team richt zich op verkoop. Wij verzorgen de volledige technische voorbereiding, van begin tot eind.</p>
+</div>
+<div class="flow reveal">
+<div class="flow-step">
+<div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">01</div></div>
+<h4>De winkel adviseert</h4>
+<p>Uw team presenteert de toestellen en helpt de klant een pakket te kiezen. Technische kennis is niet nodig.</p>
+</div>
+<div class="flow-step">
+<div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">02</div></div>
+<h4>De klant bestelt</h4>
+<p>De winkel registreert de bestelling in het Partnerportaal. Elke bestelling wordt gevolgd voor beheer en commissieberekening.</p>
+</div>
+<div class="flow-step">
+<div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">03</div></div>
+<h4>HardToCrack bereidt voor</h4>
+<p>Hardwareverificatie, GrapheneOS-installatie, afgesproken configuratie, inrichting van diensten en kwaliteitscontrole.</p>
+</div>
+<div class="flow-step">
+<div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">04</div></div>
+<h4>Veilige verzending</h4>
+<p>Het toestel wordt verzekerd en met tracking naar de winkel verzonden.</p>
+</div>
+<div class="flow-step">
+<div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">05</div></div>
+<h4>Overdracht aan de klant</h4>
+<p>De winkel overhandigt het gebruiksklare toestel. HardToCrack blijft ondersteuning bieden wanneer dat nodig is.</p>
+</div>
+</div>
+<div class="flow-note reveal">
+<svg class="icon"><use href="#i-check"></use></svg>
+      Geen installatie in de winkel · geen technische tools · geen risico tijdens het proces
     </div>
-
-    <div class="flow reveal">
-      <div class="flow-step">
-        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">01</div></div>
-        <h4>The store advises</h4>
-        <p>Your team presents the devices and helps the customer choose a pack. No technical knowledge required.</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">02</div></div>
-        <h4>The customer orders</h4>
-        <p>The store logs the order in the Partner Portal. Every order is tracked for management and commission calculation.</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">03</div></div>
-        <h4>HardToCrack prepares</h4>
-        <p>Hardware verification, GrapheneOS installation, contracted configuration, service setup and quality control.</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">04</div></div>
-        <h4>Secure shipping</h4>
-        <p>The device is shipped to the store via insured, tracked transport.</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-wrap"><div class="grad-bg"></div><div class="grad-fg">05</div></div>
-        <h4>Delivery to the customer</h4>
-        <p>The store hands over the ready-to-use device. HardToCrack continues providing support whenever needed.</p>
-      </div>
-    </div>
-
-    <div class="flow-note reveal">
-      <svg class="icon"><use href="#i-check"/></svg>
-      No in-store installation · no technical tools · no risk during the process
-    </div>
-  </div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 6. PROFITABILITY ============ -->
 <section id="rentabilidad">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Financial benefits</div>
-      <h2>Profitability from<br>the first sale</h2>
-      <p>Every sale generates a direct margin for your store, with no technical installation or preparation costs on your end.</p>
-    </div>
-
-    <div class="rent-grid reveal">
-      <table class="rent-table">
-        <thead><tr><th>Benefit per pack</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>Essential</td><td class="price">€50</td></tr>
-          <tr><td>Privacy</td><td class="price">€70</td></tr>
-          <tr><td>Elite</td><td class="price">€95</td></tr>
-          <tr><td>Accessory pack</td><td class="price">€15</td></tr>
-      </table>
-      <table class="rent-table">
-        <thead><tr><th>Commission per additional service</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>Premium Configuration</td><td class="price">€25</td></tr>
-          <tr><td>Mullvad VPN</td><td class="price">€20</td></tr>
-          <tr><td>Proton Plus</td><td class="price">€15</td></tr>
-          <tr><td>SimpleLogin Premium</td><td class="price">€10</td></tr>
-          <tr><td>eSIM</td><td class="price">€10</td></tr>
-          <tr><td>Own domain</td><td class="price">€8</td></tr>
-          <tr><td>EU SIM</td><td class="price">€8</td></tr>
-          <tr><td>Threema</td><td class="price">€6</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="example-box reveal">
-      <div class="eyebrow" style="margin-bottom:16px;">Sample sale</div>
-      <div class="example-row"><span>Privacy Pack</span><span class="mono">€70</span></div>
-      <div class="example-row"><span>HardToCrack Accessories</span><span class="mono">€15</span></div>
-      <div class="example-row total"><span>Total benefit for the store</span><span>€85</span></div>
-    </div>
-
-    <div class="reason-strip reveal">
-      <div><svg class="icon"><use href="#i-check"/></svg><p>No investment in technical training</p></div>
-      <div><svg class="icon"><use href="#i-check"/></svg><p>No installation time</p></div>
-      <div><svg class="icon"><use href="#i-check"/></svg><p>No tools or equipment</p></div>
-      <div><svg class="icon"><use href="#i-check"/></svg><p>Clear, transparent margins</p></div>
-      <div><svg class="icon"><use href="#i-check"/></svg><p>Recurring revenue from renewals</p></div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Financiële voordelen</div>
+<h2>Rendement vanaf<br/>de eerste verkoop</h2>
+<p>Elke verkoop levert uw winkel direct marge op, zonder kosten voor technische installatie of voorbereiding aan uw kant.</p>
+</div>
+<div class="rent-grid reveal">
+<table class="rent-table">
+<thead><tr><th>Voordeel per pakket</th><th></th></tr></thead>
+<tbody>
+<tr><td>Essential</td><td class="price">€50</td></tr>
+<tr><td>Privacy</td><td class="price">€70</td></tr>
+<tr><td>Elite</td><td class="price">€95</td></tr>
+<tr><td>Accessoirepakket</td><td class="price">€15</td></tr>
+</tbody></table>
+<table class="rent-table">
+<thead><tr><th>Commissie per extra dienst</th><th></th></tr></thead>
+<tbody>
+<tr><td>Premiumconfiguratie</td><td class="price">€20</td></tr>
+<tr><td>Mullvad VPN</td><td class="price">(6M €10) (12M €15)</td></tr>
+<tr><td>Proton Plus 12M</td><td class="price">€15</td></tr>
+<tr><td>SimpleLogin Premium 12M</td><td class="price">€10</td></tr>
+<tr><td>eSIM</td><td class="price">€10</td></tr>
+<tr><td>Eigen domein</td><td class="price">€8</td></tr>
+<tr><td>EU-sim</td><td class="price">€8</td></tr>
+<tr><td>Threema</td><td class="price">€6</td></tr>
+</tbody>
+</table>
+</div>
+<div class="example-box reveal">
+<div class="eyebrow" style="margin-bottom:16px;">Voorbeeldverkoop</div>
+<div class="example-row"><span>Privacy-pakket</span><span class="mono">€70</span></div>
+<div class="example-row"><span>HardToCrack-accessoires</span><span class="mono">€15</span></div>
+<div class="example-row total"><span>Totaal voordeel voor de winkel</span><span>€85</span></div>
+</div>
+<div class="reason-strip reveal">
+<div><svg class="icon"><use href="#i-check"></use></svg><p>Geen investering in technische training</p></div>
+<div><svg class="icon"><use href="#i-check"></use></svg><p>Geen installatietijd</p></div>
+<div><svg class="icon"><use href="#i-check"></use></svg><p>Geen gereedschap of apparatuur</p></div>
+<div><svg class="icon"><use href="#i-check"></use></svg><p>Duidelijke, transparante marges</p></div>
+<div><svg class="icon"><use href="#i-check"></use></svg><p>Terugkerende omzet uit verlengingen</p></div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 7. GUARANTEE ============ -->
 <section id="garantia">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Quality</div>
-      <h2>Every device,<br>certified before it ships</h2>
-      <p>At HardToCrack, we never ship an unchecked device. Every Google Pixel goes through an internal inspection, preparation and verification protocol before reaching your store.</p>
-    </div>
-
-    <div class="cert-flow reveal">
-      <div class="cert-step"><div class="num">01</div><p>Device intake</p></div>
-      <div class="cert-step"><div class="num">02</div><p>Technical diagnostics & IMEI check</p></div>
-      <div class="cert-step"><div class="num">03</div><p>GrapheneOS installation</p></div>
-      <div class="cert-step"><div class="num">04</div><p>Configuration of the contracted service</p></div>
-      <div class="cert-step"><div class="num">05</div><p>Full verification</p></div>
-      <div class="cert-step"><div class="num">06</div><p>HardToCrack certification</p></div>
-      <div class="cert-step"><div class="num">07</div><p>Packaging & shipping</p></div>
-    </div>
-
-    <div class="cert-badge reveal">
-      <svg class="hex-mark" viewBox="0 0 40 40"><polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="url(#hexgrad)" stroke-width="2"/></svg>
-      <div>
-        <p>HardToCrack Certified</p>
-        <p>Hardware inspected · IMEI verified · Installation checked · Latest stable version</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Kwaliteit</div>
+<h2>Elk toestel,<br/>gecertificeerd vóór verzending</h2>
+<p>Bij HardToCrack verzenden we nooit een ongecontroleerd toestel. Elke Google Pixel doorloopt intern een inspectie-, voorbereidings- en verificatieprotocol voordat hij uw winkel bereikt.</p>
+</div>
+<div class="cert-flow reveal">
+<div class="cert-step"><div class="num">01</div><p>Ontvangst toestel</p></div>
+<div class="cert-step"><div class="num">02</div><p>Technische diagnose &amp; IMEI-controle</p></div>
+<div class="cert-step"><div class="num">03</div><p>GrapheneOS installation</p></div>
+<div class="cert-step"><div class="num">04</div><p>Configuratie van de gekozen dienst</p></div>
+<div class="cert-step"><div class="num">05</div><p>Volledige verificatie</p></div>
+<div class="cert-step"><div class="num">06</div><p>HardToCrack-certificering</p></div>
+<div class="cert-step"><div class="num">07</div><p>Verpakking &amp; verzending</p></div>
+</div>
+<div class="cert-badge reveal">
+<svg class="hex-mark" viewbox="0 0 40 40"><polygon fill="none" points="20,2 35,11 35,29 20,38 5,29 5,11" stroke="url(#hexgrad)" stroke-width="2"></polygon></svg>
+<div>
+<p>HardToCrack Certified</p>
+<p>Hardware gecontroleerd · IMEI geverifieerd · Installatie gecontroleerd · Nieuwste stabiele versie</p>
+</div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 8. EXCLUSIVITY ============ -->
 <section id="exclusividad">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Territory</div>
-      <h2>One zone. One Partner.</h2>
-      <p>We're not looking to have dozens of distributors in the same city. We want to build a small network of specialized stores, with real protection against new competitors in the same area.</p>
-    </div>
-
-    <div class="zone-wrap reveal">
-      <div class="zone-visual">
-        <div class="zone-hex"><span>YOUR STORE<br>EXCLUSIVE<br>PARTNER</span></div>
-        <div class="zone-dot" style="top:18%; left:22%;"></div>
-        <div class="zone-dot" style="top:70%; left:16%;"></div>
-        <div class="zone-dot" style="top:24%; left:78%;"></div>
-        <div class="zone-dot" style="top:76%; left:74%;"></div>
-      </div>
-      <div>
-        <h3 style="font-size:20px; margin-bottom:18px;">Zone boundary criteria</h3>
-        <div class="criteria-row">
-          <span class="criteria-pill">Neighborhood</span>
-          <span class="criteria-pill">District</span>
-          <span class="criteria-pill">Shopping center</span>
-          <span class="criteria-pill">Town/City</span>
-          <span class="criteria-pill">Postal code</span>
-          <span class="criteria-pill">Specific commercial area</span>
-        </div>
-        <p style="color:var(--muted); font-size:14px; margin:22px 0 26px;">The boundary depends on population density, number of businesses, sales potential, distance to other Partners, and the commercial agreement reached.</p>
-        <h3 style="font-size:20px; margin-bottom:14px;">Partner commitment</h3>
-        <div class="zone-tag"><svg><use href="#i-check"/></svg> Care for brand image</div>
-        <div class="zone-tag"><svg><use href="#i-check"/></svg> Customer service</div>
-        <div class="zone-tag"><svg><use href="#i-check"/></svg> Compliance with procedures</div>
-        <div class="zone-tag"><svg><use href="#i-check"/></svg> Active participation in the network</div>
-        <div class="zone-tag"><svg><use href="#i-check"/></svg> Agreed minimum volume (where applicable)</div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Regio</div>
+<h2>Eén zone. Eén Partner.</h2>
+<p>We willen geen tientallen distributeurs in dezelfde stad. We bouwen een klein netwerk van gespecialiseerde winkels, met echte bescherming tegen nieuwe concurrenten in hetzelfde gebied.</p>
+</div>
+<div class="zone-wrap reveal">
+<div class="zone-visual">
+<div class="zone-hex"><span>UW WINKEL<br/>EXCLUSIEF<br/>PARTNER</span></div>
+<div class="zone-dot" style="top:18%; left:22%;"></div>
+<div class="zone-dot" style="top:70%; left:16%;"></div>
+<div class="zone-dot" style="top:24%; left:78%;"></div>
+<div class="zone-dot" style="top:76%; left:74%;"></div>
+</div>
+<div>
+<h3 style="font-size:20px; margin-bottom:18px;">Criteria voor zonegrenzen</h3>
+<div class="criteria-row">
+<span class="criteria-pill">Buurt</span>
+<span class="criteria-pill">Stadsdeel</span>
+<span class="criteria-pill">Winkelcentrum</span>
+<span class="criteria-pill">Plaats/Stad</span>
+<span class="criteria-pill">Postcode</span>
+<span class="criteria-pill">Specifiek winkelgebied</span>
+</div>
+<p style="color:var(--muted); font-size:14px; margin:22px 0 26px;">De afbakening hangt af van bevolkingsdichtheid, aantal bedrijven, verkooppotentieel, afstand tot andere Partners en de gemaakte commerciële afspraken.</p>
+<h3 style="font-size:20px; margin-bottom:14px;">Verplichtingen van de Partner</h3>
+<div class="zone-tag"><svg><use href="#i-check"></use></svg> Zorg voor het merkimago</div>
+<div class="zone-tag"><svg><use href="#i-check"></use></svg> Klantenservice</div>
+<div class="zone-tag"><svg><use href="#i-check"></use></svg> Naleving van procedures</div>
+<div class="zone-tag"><svg><use href="#i-check"></use></svg> Actieve deelname aan het netwerk</div>
+<div class="zone-tag"><svg><use href="#i-check"></use></svg> Afgesproken minimumvolume (indien van toepassing)</div>
+</div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 9. KIT PARTNER ============ -->
 <section id="kit">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Point-of-sale material</div>
-      <h2>Everything you need<br>to start selling</h2>
-      <p>We include all the marketing material your counter needs to stand out, inform and convert — at no design or production cost to you.</p>
-    </div>
-
-    <div class="kit-row reveal">
-      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-monitor"/></svg></div><h4>Countertop display</h4><p>A5 stand for the counter.</p></div>
-      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-doc"/></svg></div><h4>Catalogs and brochures</h4><p>Clear information on packs and services.</p></div>
-      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-mail"/></svg></div><h4>QR cards</h4><p>Direct access to contact and support.</p></div>
-      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-badge"/></svg></div><h4>Official Partner plaque</h4><p>Visible certification for the customer.</p></div>
-      <div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-globe"/></svg></div><h4>Digital assets</h4><p>Banners, photos and images for social media.</p></div>
-    </div>
-
-    <h3 style="font-size:20px; margin-bottom:20px;" class="reveal">Demo Pixel</h3>
-    <div class="demo-grid reveal">
-      <div class="demo-card"><h4>Deposit</h4><p>HardToCrack lends you a demo Pixel for your in-store display, with no upfront investment.</p></div>
-      <div class="demo-card"><h4>Discounted purchase</h4><p>Buy your demo unit on exclusive terms and keep it as part of your assets.</p></div>
-      <div class="demo-card"><h4>Financed by your first sales</h4><p>The device pays for itself through the commissions from your first sales.</p></div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Materiaal voor verkooppunt</div>
+<h2>Alles wat u nodig hebt<br/>om te starten met verkopen</h2>
+<p>Wij leveren al het marketingmateriaal dat uw balie nodig heeft om op te vallen, te informeren en te converteren — zonder ontwerp- of productiekosten voor u.</p>
+</div>
+<div class="kit-row reveal">
+<div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-monitor"></use></svg></div><h4>Baliedisplay</h4><p>A5-standaard voor op de balie.</p></div>
+<div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-doc"></use></svg></div><h4>Catalogi en brochures</h4><p>Duidelijke informatie over pakketten en diensten.</p></div>
+<div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-mail"></use></svg></div><h4>QR-kaarten</h4><p>Directe toegang tot contact en ondersteuning.</p></div>
+<div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-badge"></use></svg></div><h4>Officiële Partnerplaquette</h4><p>Zichtbare certificering voor de klant.</p></div>
+<div class="kit-item"><div class="icon-badge"><svg class="icon"><use href="#i-globe"></use></svg></div><h4>Digitale middelen</h4><p>Banners, foto’s en beelden voor sociale media.</p></div>
+</div>
+<h3 class="reveal" style="font-size:20px; margin-bottom:20px;">Demo-Pixel</h3>
+<div class="demo-grid reveal">
+<div class="demo-card"><h4>Borg</h4><p>HardToCrack leent u een demo-Pixel voor presentatie in de winkel, zonder investering vooraf.</p></div>
+<div class="demo-card"><h4>Aankoop met korting</h4><p>Koop uw demo-toestel onder exclusieve voorwaarden en behoud het als bedrijfsmiddel.</p></div>
+<div class="demo-card"><h4>Gefinancierd met uw eerste verkopen</h4><p>Het toestel verdient zichzelf terug via de commissies op uw eerste verkopen.</p></div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 10. TRAINING AND SUPPORT ============ -->
 <section id="formacion">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Support</div>
-      <h2>Training to sell<br>with confidence</h2>
-      <p>You don't need to be technical. We train you and your team to confidently present GrapheneOS and the packs from day one.</p>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Ondersteuning</div>
+<h2>Training om te verkopen<br/>met vertrouwen</h2>
+<p>U hoeft niet technisch te zijn. We trainen u en uw team zodat u GrapheneOS en de pakketten vanaf dag één met vertrouwen kunt presenteren.</p>
+</div>
+<div class="train-grid reveal">
+<div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-cap"></use></svg></div><h3>Basistraining</h3><p>Wat GrapheneOS is, hoe de pakketten werken en hoe u de ideale klant herkent.</p></div>
+<div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-doc"></use></svg></div><h3>Verkoopgids</h3><p>Gesprekspunten, antwoorden op veelvoorkomende bezwaren en een voorgesteld gespreksscript.</p></div>
+<div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-headset"></use></svg></div><h3>Doorlopende ondersteuning</h3><p>E-mail, tickets via het Partnerportaal, videogesprekken en prioriteitschat.</p></div>
+</div>
+<div class="flow-note reveal" style="margin-top:32px;">
+<svg class="icon"><use href="#i-check"></use></svg>
+      Na afronding van de training ontvangt uw team het Officieel HardToCrack Partnercertificaat
     </div>
-    <div class="train-grid reveal">
-      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-cap"/></svg></div><h3>Initial training</h3><p>What GrapheneOS is, how the packs work, and how to identify the ideal customer.</p></div>
-      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-doc"/></svg></div><h3>Sales guide</h3><p>Talking points, answers to common objections, and a suggested conversation script.</p></div>
-      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-headset"/></svg></div><h3>Ongoing support</h3><p>Email, tickets from the Partner Portal, video calls and priority chat.</p></div>
-    </div>
-    <div class="flow-note reveal" style="margin-top:32px;">
-      <svg class="icon"><use href="#i-check"/></svg>
-      Upon completing training, your team receives the HardToCrack Official Partner Certificate
-    </div>
-  </div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 11. USE CASES ============ -->
 <section id="casos">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Customer profile</div>
-      <h2>Who does your store sell to?</h2>
-      <p>Anyone who values their privacy is a potential customer. These profiles are usually the first to commit.</p>
-    </div>
-    <div class="cases-grid reveal">
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-scale"/></svg></div><h4>Lawyers</h4><p>Attorney-client privilege and communications.</p></div>
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-shield"/></svg></div><h4>Doctors</h4><p>Protection of patient data.</p></div>
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-mic"/></svg></div><h4>Journalists</h4><p>Protection of sources and communications.</p></div>
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-brief"/></svg></div><h4>Business owners</h4><p>Confidentiality of corporate information.</p></div>
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-badge"/></svg></div><h4>Law enforcement</h4><p>Personal devices without unnecessary exposure.</p></div>
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-flag"/></svg></div><h4>Activists</h4><p>Protection against surveillance and censorship.</p></div>
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-eye"/></svg></div><h4>Privacy-conscious users</h4><p>General public wanting to take back control of their data.</p></div>
-      <div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-user"/></svg></div><h4>And your regular customer</h4><p>Anyone looking for a premium, different device.</p></div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Klantprofiel</div>
+<h2>Aan wie verkoopt uw winkel?</h2>
+<p>Iedereen die privacy belangrijk vindt, is een potentiële klant. Deze profielen stappen doorgaans als eerste in.</p>
+</div>
+<div class="cases-grid reveal">
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-scale"></use></svg></div><h4>Advocaten</h4><p>Beroepsgeheim en vertrouwelijke communicatie.</p></div>
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-shield"></use></svg></div><h4>Artsen</h4><p>Bescherming van patiëntgegevens.</p></div>
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-mic"></use></svg></div><h4>Journalisten</h4><p>Bescherming van bronnen en communicatie.</p></div>
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-brief"></use></svg></div><h4>Ondernemers</h4><p>Vertrouwelijkheid van bedrijfsinformatie.</p></div>
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-badge"></use></svg></div><h4>Handhaving</h4><p>Persoonlijke toestellen zonder onnodige blootstelling.</p></div>
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-flag"></use></svg></div><h4>Activisten</h4><p>Bescherming tegen surveillance en censuur.</p></div>
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-eye"></use></svg></div><h4>Privacybewuste gebruikers</h4><p>Consumenten die de controle over hun gegevens willen terugnemen.</p></div>
+<div class="case-card"><div class="icon-badge"><svg class="icon"><use href="#i-user"></use></svg></div><h4>En uw reguliere klant</h4><p>Iedereen die een premium en onderscheidend toestel zoekt.</p></div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 12. MARKETING ============ -->
 <section id="marketing">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Visibility</div>
-      <h2>Your customers will find you</h2>
-      <p>We don't just supply devices. We help generate demand through a unified marketing strategy across the entire Partner network.</p>
-    </div>
-    <div class="mkt-grid reveal">
-      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-mega"/></svg></div><h3>Online campaigns</h3><p>Digital advertising to attract customers interested in privacy and security.</p></div>
-      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-globe"/></svg></div><h3>Official website</h3><p>Catalog, packs and contact form centralized at hardtocrack.com.</p></div>
-      <div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-pin"/></svg></div><h3>Distributor map</h3><p>Your customers can easily find you as the Official Partner in their area.</p></div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Zichtbaarheid</div>
+<h2>Uw klanten zullen u vinden</h2>
+<p>We leveren niet alleen toestellen. We helpen vraag te creëren via een uniforme marketingstrategie voor het hele Partnernetwerk.</p>
+</div>
+<div class="mkt-grid reveal">
+<div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-mega"></use></svg></div><h3>Onlinecampagnes</h3><p>Digitale advertenties om klanten aan te trekken die geïnteresseerd zijn in privacy en beveiliging.</p></div>
+<div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-globe"></use></svg></div><h3>Officiële website</h3><p>Catalogus, pakketten en contactformulier centraal beschikbaar op hardtocrack.com.</p></div>
+<div class="card"><div class="card-top-line"></div><div class="icon-badge"><svg class="icon"><use href="#i-pin"></use></svg></div><h3>Partnerkaart</h3><p>Klanten kunnen u eenvoudig vinden als Officiële Partner in hun regio.</p></div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 13. FAQ ============ -->
 <section id="faq">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Frequently asked questions</div>
-      <h2>Everything you need to know<br>before you start</h2>
-      <p>These are the most common questions from our partners. Your team will have access to an extended list in the Partner Portal.</p>
-    </div>
-
-    <div class="faq-list reveal" id="faqList">
-      <div class="faq-item">
-        <button class="faq-q">Do I need technical knowledge of GrapheneOS? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>No. HardToCrack fully prepares every device and provides all the sales training your team needs.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Who installs GrapheneOS? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>HardToCrack. All installation, configuration, verification and certification is carried out exclusively by our technical team.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Who provides technical support to the end customer? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>HardToCrack. We handle any issue related to GrapheneOS, configuration, updates, migrations and warranty. Your store keeps the commercial relationship with the customer.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do I have to buy stock? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>Not necessarily. You can work made-to-order without tying up capital, keep a small display stock, or hold your own stock if sales volume justifies it.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do the devices come with a warranty? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>Yes. Every unit is inspected, certified and delivered with a warranty in accordance with applicable law.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Can I sell accessories and additional services? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>Yes. VPN, eSIM, domains, private email, privacy accessories, and future solutions from the HardToCrack ecosystem.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Is there territorial exclusivity? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>Yes, subject to availability and the terms agreed for each commercial area.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do I receive marketing material? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>Yes. You'll have access to signage, displays, images, product sheets and social media resources.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Can banking apps be used on GrapheneOS? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>Yes, the vast majority of Android apps work normally. When an app requires Google Services, it can be installed in an isolated profile with no special system privileges.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What about the camera, microphone and GPS? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>The customer decides what permissions to grant each app, with granular control per sensor and per app.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How long does preparation and shipping take? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>The timeline depends on the pack ordered; it's communicated in the Partner Portal when each order is confirmed, along with shipment tracking.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How are commissions calculated and paid? <svg><use href="#i-plus"/></svg></button>
-        <div class="faq-a"><p>Every order is tracked in the Partner Portal, where your store can check the benefit generated by each sale and service.</p></div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Veelgestelde vragen</div>
+<h2>Alles wat u moet weten<br/>voordat u begint</h2>
+<p>Dit zijn de meest voorkomende vragen van onze Partners. Uw team krijgt toegang tot een uitgebreide lijst in het Partnerportaal.</p>
+</div>
+<div class="faq-list reveal" id="faqList">
+<div class="faq-item">
+<button class="faq-q">Heb ik technische kennis van GrapheneOS nodig? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Nee. HardToCrack bereidt elk toestel volledig voor en verzorgt alle verkooptraining die uw team nodig heeft.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Wie installeert GrapheneOS? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>HardToCrack. Alle installatie, configuratie, verificatie en certificering wordt uitsluitend door ons technische team uitgevoerd.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Wie biedt technische ondersteuning aan de eindklant? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>HardToCrack. Wij behandelen alle kwesties rond GrapheneOS, configuratie, updates, migraties en garantie. Uw winkel behoudt de commerciële relatie met de klant.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Moet ik voorraad inkopen? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Niet noodzakelijk. U kunt op bestelling werken zonder kapitaal vast te zetten, een kleine demonstratievoorraad aanhouden of eigen voorraad houden wanneer het verkoopvolume dit rechtvaardigt.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Worden de toestellen met garantie geleverd? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Ja. Elk toestel wordt gecontroleerd, gecertificeerd en geleverd met garantie conform de toepasselijke wetgeving.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Kan ik accessoires en aanvullende diensten verkopen? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Ja. VPN, eSIM, domeinen, private e-mail, privacyaccessoires en toekomstige oplossingen uit het HardToCrack-ecosysteem.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Is er territoriale exclusiviteit? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Ja, afhankelijk van beschikbaarheid en de voorwaarden die voor elk commercieel gebied worden afgesproken.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Ontvang ik marketingmateriaal? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Ja. U krijgt toegang tot signing, displays, afbeeldingen, productbladen en middelen voor sociale media.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Kunnen bankapps worden gebruikt op GrapheneOS? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Ja, de overgrote meerderheid van Android-apps werkt normaal. Wanneer een app Google Services vereist, kan deze in een geïsoleerd profiel worden geïnstalleerd zonder speciale systeemrechten.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Hoe zit het met camera, microfoon en GPS? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>De klant bepaalt welke rechten elke app krijgt, met gedetailleerde controle per sensor en per app.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Hoe lang duren voorbereiding en verzending? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>De doorlooptijd hangt af van het gekozen pakket; deze wordt bij bevestiging van elke bestelling in het Partnerportaal gecommuniceerd, samen met de trackinginformatie.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Hoe worden commissies berekend en uitbetaald? <svg><use href="#i-plus"></use></svg></button>
+<div class="faq-a"><p>Elke bestelling wordt gevolgd in het Partnerportaal, waar uw winkel het voordeel per verkoop en dienst kan bekijken.</p></div>
+</div>
+</div>
+</div>
 </section>
-
 <div class="container"><div class="divider-line"></div></div>
-
 <!-- ============ 14. PARTNER APPLICATION ============ -->
 <section id="solicitud">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Next steps</div>
-      <h2>Apply to become an Official Partner</h2>
-      <p>Fill out the form and our team will get in touch to learn about your business and review the available exclusivity zone.</p>
-    </div>
-
-    <div class="req-list reveal">
-      <div><svg><use href="#i-check"/></svg> Care for brand image</div>
-      <div><svg><use href="#i-check"/></svg> Visible counter space</div>
-      <div><svg><use href="#i-check"/></svg> Customer service</div>
-      <div><svg><use href="#i-check"/></svg> Active participation in the network</div>
-    </div>
-
-    <form class="form-wrap reveal" id="partnerForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-      <div class="form-grid">
-        <div class="field"><label>Full name <span>*</span></label><input type="text" required name="nombre"></div>
-        <div class="field"><label>Store name <span>*</span></label><input type="text" required name="tienda"></div>
-        <div class="field full"><label>Address <span>*</span></label><input type="text" required name="direccion"></div>
-        <div class="field"><label>City <span>*</span></label><input type="text" required name="ciudad"></div>
-        <div class="field"><label>Phone <span>*</span></label><input type="tel" required name="telefono"></div>
-        <div class="field"><label>Email <span>*</span></label><input type="email" required name="email"></div>
-        <div class="field"><label>Website (optional)</label><input type="url" name="web"></div>
-        <div class="field"><label>Number of stores</label>
-          <select name="num_tiendas">
-            <option value="1">1 store</option>
-            <option value="2-3">2–3 stores</option>
-            <option value="4+">4 or more</option>
-          </select>
-        </div>
-        <div class="field full"><label>Zone of interest / desired exclusivity</label><input type="text" name="zona" placeholder="E.g. Malasaña, Madrid"></div>
-        <div class="field full"><label>Message (optional)</label><textarea name="mensaje" placeholder="Tell us briefly about your store..."></textarea></div>
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Volgende stappen</div>
+<h2>Meld u aan als Officiële Partner</h2>
+<p>Vul het formulier in. Ons team neemt contact op om uw bedrijf te leren kennen en de beschikbare exclusiviteitszone te beoordelen.</p>
+</div>
+<div class="req-list reveal">
+<div><svg><use href="#i-check"></use></svg> Zorg voor het merkimago</div>
+<div><svg><use href="#i-check"></use></svg> Zichtbare ruimte op de balie</div>
+<div><svg><use href="#i-check"></use></svg> Klantenservice</div>
+<div><svg><use href="#i-check"></use></svg> Actieve deelname aan het netwerk</div>
+</div>
+<form action="https://formspree.io/f/YOUR_FORM_ID" class="form-wrap reveal" id="partnerForm" method="POST" novalidate="">
+<div class="form-grid">
+<div class="field"><label>Volledige naam <span>*</span></label><input name="nombre" required="" type="text"/></div>
+<div class="field"><label>Winkelnaam <span>*</span></label><input name="tienda" required="" type="text"/></div>
+<div class="field full"><label>Adres <span>*</span></label><input name="direccion" required="" type="text"/></div>
+<div class="field"><label>Plaats <span>*</span></label><input name="ciudad" required="" type="text"/></div>
+<div class="field"><label>Telefoon <span>*</span></label><input name="telefono" required="" type="tel"/></div>
+<div class="field"><label>E-mail <span>*</span></label><input name="email" required="" type="email"/></div>
+<div class="field"><label>Website (optioneel)</label><input name="web" type="url"/></div>
+<div class="field"><label>Aantal winkels</label>
+<select name="num_tiendas">
+<option value="1">1 winkel</option>
+<option value="2-3">2–3 winkels</option>
+<option value="4+">4 of meer</option>
+</select>
+</div>
+<div class="field full"><label>Gewenste regio / exclusiviteitszone</label><input name="zona" placeholder="Bijv. Malasaña, Madrid" type="text"/></div>
+<div class="field full"><label>Bericht (optioneel)</label><textarea name="mensaje" placeholder="Vertel kort iets over uw winkel..."></textarea></div>
+</div>
+<input id="utm_source" name="utm_source" type="hidden"/>
+<input id="utm_medium" name="utm_medium" type="hidden"/>
+<input id="utm_campaign" name="utm_campaign" type="hidden"/>
+<input id="formSubject" name="_subject" type="hidden" value="New HardToCrack Partner request"/>
+<label class="consent-row">
+<input name="consentimiento_privacidad" required="" type="checkbox" value="Aceptado"/>
+<span>Ik ga ermee akkoord dat HardToCrack deze gegevens uitsluitend gebruikt om op mijn aanvraag te reageren.</span>
+</label>
+<div class="form-submit">
+<button class="btn btn-primary" id="submitButton" type="submit">Aanvraag versturen</button>
+<span class="form-note">We reageren binnen 48 werkuren.</span>
+</div>
+<div class="success-msg" id="successMsg">
+<svg class="icon" style="color:var(--green)"><use href="#i-check"></use></svg>
+        Aanvraag ontvangen. Ons team neemt binnenkort contact met u op.
       </div>
-      <input type="hidden" name="utm_source" id="utm_source">
-      <input type="hidden" name="utm_medium" id="utm_medium">
-      <input type="hidden" name="utm_campaign" id="utm_campaign">
-      <input type="hidden" name="_subject" id="formSubject" value="New HardToCrack Partner request">
-      <label class="consent-row">
-        <input type="checkbox" name="consentimiento_privacidad" value="Aceptado" required>
-        <span>I agree that HardToCrack may use this data solely to respond to my request.</span>
-      </label>
-      <div class="form-submit">
-        <button type="submit" class="btn btn-primary" id="submitButton">Submit request</button>
-        <span class="form-note">We'll respond within 48 business hours.</span>
+<div class="phase2-note">
+<svg class="icon"><use href="#i-lock"></use></svg>
+        Binnenkort: privétoegang voor Partners met orderbeheer, commissies en marketingmateriaal.
       </div>
-      <div class="success-msg" id="successMsg">
-        <svg class="icon" style="color:var(--green)"><use href="#i-check"/></svg>
-        Request received. Our team will be in touch shortly.
-      </div>
-      <div class="phase2-note">
-        <svg class="icon"><use href="#i-lock"/></svg>
-        Coming soon: private Partner access with order management, commissions and marketing materials.
-      </div>
-    </form>
-  </div>
+</form>
+</div>
 </section>
-
 <!-- ============ FOOTER ============ -->
 <footer>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="logo brand-lockup footer-lockup" href="#inicio">
-          <img class="brand-mark" src="assets/ht-logo.png" alt="">
-          <span class="brand-copy">
-            <span class="logo-word">HARD<span>TO</span>CRACK</span>
-            <span class="logo-sub">SECURITY · PRIVACY · FREEDOM</span>
-          </span>
-        </a>
-        <p>Verified hardware. Privacy without compromise. A nationwide network of Partner stores specialized in digital privacy.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Partner Program</h5>
-        <a href="#por-que">Why become a Partner</a>
-        <a href="#packs">Packs and pricing</a>
-        <a href="#rentabilidad">Profitability</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="footer-col">
-        <h5>Resources</h5>
-        <a href="#garantia">Quality guarantee</a>
-        <a href="#exclusividad">Zone exclusivity</a>
-        <a href="#kit">Partner Kit</a>
-        <a href="#formacion">Training and support</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <a href="mailto:partners@hardtocrack.com">partners@hardtocrack.com</a>
-        <a href="https://hardtocrack.eu">hardtocrack.eu</a>
-        <a href="#solicitud">Become a Partner</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 HardToCrack. All rights reserved.</span>
-      <span class="footer-tag">PRIVACY. SECURITY. FREEDOM.</span>
-    </div>
-  </div>
+<div class="container">
+<div class="footer-top">
+<div class="footer-brand">
+<a class="logo brand-lockup footer-lockup" href="#inicio">
+<img alt="" class="brand-mark" src="/assets/ht-logo.png"/>
+<span class="brand-copy">
+<span class="logo-word">HARD<span>TO</span>CRACK</span>
+<span class="logo-sub">SECURITY · PRIVACY · FREEDOM</span>
+</span>
+</a>
+<p>Geverifieerde hardware. Privacy zonder compromissen. Een landelijk netwerk van Partnerwinkels gespecialiseerd in digitale privacy.</p>
+</div>
+<div class="footer-col">
+<h5>Partnerprogramma</h5>
+<a href="#por-que">Waarom Partner worden</a>
+<a href="#packs">Pakketten en prijzen</a>
+<a href="#rentabilidad">Rendement</a>
+<a href="#faq">FAQ</a>
+</div>
+<div class="footer-col">
+<h5>Materialen</h5>
+<a href="#garantia">Kwaliteitsgarantie</a>
+<a href="#exclusividad">Zone-exclusiviteit</a>
+<a href="#kit">Partnerkit</a>
+<a href="#formacion">Training en ondersteuning</a>
+</div>
+<div class="footer-col">
+<h5>Contact</h5>
+<a href="mailto:partners@hardtocrack.com">partners@hardtocrack.com</a>
+<a href="https://hardtocrack.eu">hardtocrack.eu</a>
+<a href="#solicitud">Word Partner</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 HardToCrack. Alle rechten voorbehouden.</span>
+<span class="footer-tag">PRIVACY. SECURITY. FREEDOM.</span>
+</div>
+</div>
 </footer>
-
 <script>
   // Mobile menu
   const burger = document.getElementById('burgerBtn');
@@ -1476,6 +1751,5 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
   addEventListener('resize', updateProgress);
   updateProgress();
 </script>
-
 </body>
 </html>
