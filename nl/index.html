@@ -772,7 +772,33 @@ nav{height:80px;max-width:var(--maxw);padding-inline:32px}
 .phone-screen p{font-size:9px;letter-spacing:.13em;margin-top:8px}
 .screen-lock{position:absolute;bottom:27px;display:flex;align-items:center;gap:7px;color:#95a6b2;font:500 9px 'JetBrains Mono',monospace}
 .screen-lock .icon{width:13px;height:13px}
-.float-chip{border-radius:13px;border-color:rgba(167,220,234,.19);box-shadow:0 24px 65px rgba(0,0,0,.44)}
+.float-chip{
+  position:absolute;
+  z-index:6;
+  display:grid;
+  gap:4px;
+  width:max-content;
+  max-width:230px;
+  padding:14px 16px;
+  border:1px solid rgba(167,220,234,.19);
+  border-radius:13px;
+  background:rgba(7,12,18,.84);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 24px 65px rgba(0,0,0,.44);
+  color:var(--muted);
+  font-size:11.5px;
+  line-height:1.45;
+}
+.float-chip b{
+  display:block;
+  color:var(--text);
+  font-family:'Oswald',sans-serif;
+  font-size:14px;
+  line-height:1.15;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+}
 .chip-a{left:-4%;top:18%}.chip-b{right:-7%;bottom:20%}
 .device-caption{
   position:absolute;bottom:3%;left:50%;transform:translateX(-50%);
