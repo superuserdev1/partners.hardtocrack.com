@@ -773,7 +773,9 @@ nav{height:80px;max-width:var(--maxw);padding-inline:32px}
 .phone-screen p{font-size:9px;letter-spacing:.13em;margin-top:8px}
 .screen-lock{position:absolute;bottom:27px;display:flex;align-items:center;gap:7px;color:#95a6b2;font:500 9px 'JetBrains Mono',monospace}
 .screen-lock .icon{width:13px;height:13px}
-.float-chip{border-radius:13px;border-color:rgba(167,220,234,.19);box-shadow:0 24px 65px rgba(0,0,0,.44)}
+.float-chip{position:absolute;z-index:6;min-width:210px;max-width:280px;padding:16px 18px;border:1px solid rgba(167,220,234,.19);border-radius:13px;background:rgba(7,12,18,.88);backdrop-filter:blur(12px);box-shadow:0 24px 65px rgba(0,0,0,.44);color:var(--text)}
+.float-chip strong{display:block;font-family:'Oswald',sans-serif;font-size:16px;line-height:1.15;text-transform:uppercase;letter-spacing:.01em;margin-bottom:5px}
+.float-chip span{display:block;color:var(--muted);font-size:12px;line-height:1.45}
 .chip-a{left:-4%;top:18%}.chip-b{right:-7%;bottom:20%}
 .device-caption{
   position:absolute;bottom:3%;left:50%;transform:translateX(-50%);
@@ -996,7 +998,7 @@ footer{background:linear-gradient(180deg,#070b10,#040609);padding-top:74px}
   <div class="hero-beam hero-beam-b" aria-hidden="true"></div>
   <div class="container hero-grid">
     <div class="hero-copy reveal">
-      <div class="eyebrow">Official Partner Program · Spain</div>
+      <div class="eyebrow">Official Partner Program ·</div>
       <h1>Turn your store into a benchmark for <span class="grad-text">digital privacy.</span></h1>
       <p class="lead">Offer Google Pixel devices professionally prepared with GrapheneOS, privacy services and high-value accessories. HardToCrack handles installation, configuration, quality control and technical support.</p>
       <div class="hero-ctas">
