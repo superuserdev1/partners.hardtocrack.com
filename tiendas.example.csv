@@ -1,0 +1,2 @@
+codigo,tienda,titular,territorio,email_registrado,telefono,token,pin,estado,alta,ultima_rotacion,baja,notas
+HTC-DEM-000,Tienda de demostración,Responsable Demo,Madrid,demo@example.invalid,,,0000,suspendida,2026-09-23,2026-09-23,,No usar en producción

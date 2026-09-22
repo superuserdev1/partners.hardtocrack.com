@@ -1,0 +1,23 @@
+[Unit]
+Description=HardToCrack - registro de pedidos
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hardtocrack
+Group=hardtocrack
+WorkingDirectory=/opt/hardtocrack-pedidos
+EnvironmentFile=/etc/hardtocrack-pedidos.env
+ExecStart=/opt/hardtocrack-pedidos/.venv/bin/uvicorn server:app --host 127.0.0.1 --port 8080 --workers 1
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/hardtocrack-pedidos/registro /opt/hardtocrack-pedidos/registros
+
+[Install]
+WantedBy=multi-user.target

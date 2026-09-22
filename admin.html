@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<base href="/pedidos/">
+<title>Gestión interna de pedidos · HardToCrack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B1018;--panel:#111A27;--line:rgba(35,184,255,.2);--blue:#23B8FF;
+  --green:#20E38C;--text:#F3F8FC;--muted:#91A8B8;--danger:#ff7070;--warning:#ffc65c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 550px at 80% -10%,rgba(35,184,255,.13),transparent 60%),var(--bg);
+  color:var(--text);font:14px/1.5 Inter,system-ui,sans-serif;min-height:100vh;padding:22px}
+.wrap{max-width:1120px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding-bottom:18px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;
+  font:900 18px Archivo,sans-serif;letter-spacing:.03em}.brand img{width:38px;height:43px}.brand span{background:linear-gradient(110deg,var(--blue),var(--green));
+  background-clip:text;-webkit-background-clip:text;color:transparent}.private{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.14em}
+h1{font:900 clamp(25px,5vw,38px)/1.1 Archivo,sans-serif;margin:28px 0 8px}.intro{color:var(--muted);margin-bottom:22px}
+.login,.toolbar,.card,.metric{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:13px}.login{padding:18px;display:grid;
+  grid-template-columns:1.3fr 1fr auto;gap:12px;align-items:end}.toolbar{padding:14px;margin-top:16px;display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+label{display:grid;gap:6px;color:var(--muted);font-weight:600;font-size:12px}input,textarea{width:100%;background:#0D1622;color:var(--text);
+  border:1px solid var(--line);border-radius:9px;padding:11px 12px;font:inherit}input:focus,textarea:focus{outline:none;border-color:var(--blue)}
+button{border:0;border-radius:9px;padding:11px 16px;background:linear-gradient(110deg,var(--blue),var(--green));color:#06131B;
+  font:900 12px Archivo,sans-serif;text-transform:uppercase;letter-spacing:.04em;cursor:pointer}button.secondary{background:#1A2939;color:var(--text);border:1px solid var(--line)}
+button.reject{background:rgba(255,112,112,.12);color:#ffaaaa;border:1px solid rgba(255,112,112,.35)}button:disabled{opacity:.45;cursor:not-allowed}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0}.metric{padding:14px}.metric b{display:block;font:900 25px Archivo,sans-serif}.metric span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.metric.danger b{color:var(--danger)}.orders{display:grid;gap:12px}.card{padding:17px}.card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.ref{font:900 18px Archivo,sans-serif}.meta{color:var(--muted);font-size:12px}.tag{padding:5px 9px;border-radius:999px;font-weight:800;font-size:11px;background:rgba(255,198,92,.1);color:var(--warning)}
+.tag.ok{background:rgba(32,227,140,.1);color:var(--green)}.tag.bad{background:rgba(255,112,112,.1);color:var(--danger)}
+.details{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}.details b{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.personal{padding:12px;background:rgba(0,0,0,.16);border-radius:9px;margin-top:10px}.actions{display:grid;grid-template-columns:1fr auto auto;gap:9px;align-items:end;margin-top:12px}.actions textarea{min-height:44px;resize:vertical}
+.status{min-height:22px;margin:12px 0;color:var(--muted)}.status.bad{color:var(--danger)}.empty{padding:34px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:13px}
+[hidden]{display:none!important}@media(max-width:780px){.login{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.details{grid-template-columns:repeat(2,1fr)}.actions{grid-template-columns:1fr}.card-head{flex-direction:column}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <div class="brand"><img src="ht-logo.svg" alt=""><span>HARDTOCRACK</span></div>
+    <div class="private">Uso interno · No compartir</div>
+  </div>
+  <h1>Gestión de pedidos</h1>
+  <p class="intro">Aceptación o rechazo dentro del plazo de dos días hábiles. Los datos personales solo se muestran en este panel protegido.</p>
+
+  <section class="login" id="login">
+    <label>Clave interna<input id="token" type="password" autocomplete="current-password" placeholder="ADMIN_TOKEN"></label>
+    <label>Operador<input id="operador" maxlength="80" value="Administración HTC"></label>
+    <button id="entrar">Acceder</button>
+  </section>
+
+  <section id="panel" hidden>
+    <div class="toolbar">
+      <label>Mes<input id="mes" type="month"></label>
+      <button id="actualizar" class="secondary">Actualizar</button>
+      <button id="salir" class="secondary">Cerrar sesión</button>
+    </div>
+    <div id="status" class="status"></div>
+    <div class="metrics" id="metrics"></div>
+    <div class="orders" id="orders"></div>
+  </section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const api="";
+let token=sessionStorage.getItem("htc_admin_token")||"";
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fecha=v=>v?new Date(v).toLocaleString("es-ES",{dateStyle:"short",timeStyle:"short"}):"—";
+const estadoTexto=v=>({"pendiente de aceptacion":"Pendiente","aceptado":"Aceptado","rechazado":"Rechazado"}[v]||v);
+const estadoClase=v=>v==="aceptado"?"ok":v==="rechazado"?"bad":"";
+
+function mostrarPanel(){ $("login").hidden=true; $("panel").hidden=false; cargar(); }
+function error(m){ $("status").className="status bad"; $("status").textContent=m; }
+
+async function peticion(url,opts={}){
+  const r=await fetch(api+url,{...opts,headers:{"Content-Type":"application/json","X-Admin-Token":token,...(opts.headers||{})}});
+  let d={}; try{d=await r.json()}catch{}
+  if(!r.ok){if(r.status===401){sessionStorage.removeItem("htc_admin_token");token=""}throw new Error(d.detail||"No se pudo completar la operación.")}
+  return d;
+}
+
+function tarjeta(p){
+  const pendiente=p.estado==="pendiente de aceptacion";
+  const vencido=p.vencido?'<span class="tag bad">Plazo vencido</span>':`<span class="tag ${estadoClase(p.estado)}">${esc(estadoTexto(p.estado))}</span>`;
+  return `<article class="card" data-ref="${esc(p.referencia)}">
+    <div class="card-head"><div><div class="ref">${esc(p.referencia)}</div><div class="meta">${fecha(p.fecha_hora)} · ${esc(p.codigo_tienda)}</div></div>${vencido}</div>
+    <div class="details">
+      <div><b>Equipo</b>${esc(p.modelo)} · ${esc(p.estado_equipo)}</div><div><b>Pack</b>${esc(p.pack)}</div>
+      <div><b>Precio</b>${esc(p.precio)} €</div><div><b>Pago</b>${esc(p.forma_pago)}</div>
+      <div><b>Accesorios</b>${esc(p.accesorios||"—")}</div><div><b>Fecha límite</b>${esc(p.fecha_limite||"—")}</div>
+    </div>
+    <div class="personal"><b>Cliente:</b> ${esc(p.cliente||"—")} · <b>Contacto:</b> ${esc(p.contacto||"—")}<br>
+      <b>Correo tienda:</b> ${esc(p.email_tienda||"—")}<br><b>Observaciones:</b> ${esc(p.observaciones||"—")}</div>
+    ${pendiente?`<div class="actions"><label>Motivo o nota de resolución<textarea class="motivo" maxlength="500" placeholder="Obligatorio si se rechaza"></textarea></label>
+      <button class="aceptar">Aceptar</button><button class="reject rechazar">Rechazar</button></div>`:
+      `<div class="meta" style="margin-top:10px">Resolución: ${fecha(p.decision_fecha)}${p.decision_motivo?` · ${esc(p.decision_motivo)}`:""}</div>`}
+  </article>`;
+}
+
+async function cargar(){
+  $("status").className="status"; $("status").textContent="Cargando…";
+  try{
+    const d=await peticion(`/api/admin/pedidos?mes=${encodeURIComponent($("mes").value)}`);
+    const c=d.contadores;
+    $("metrics").innerHTML=[["Total",c.total],["Pendientes",c.pendientes],["Aceptados",c.aceptados],["Rechazados",c.rechazados],["Fuera de plazo",c.vencidos]].map(([n,v],i)=>`<div class="metric ${i===4&&v?"danger":""}"><b>${v}</b><span>${n}</span></div>`).join("");
+    $("orders").innerHTML=d.pedidos.length?d.pedidos.map(tarjeta).join(""):'<div class="empty">No hay pedidos en este mes.</div>';
+    $("status").textContent=`${d.pedidos.length} pedido(s) cargados.`;
+  }catch(e){error(e.message);if(!token){$("login").hidden=false;$("panel").hidden=true}}
+}
+
+async function decidir(card,estado){
+  const motivo=card.querySelector(".motivo").value.trim();
+  if(estado==="rechazado"&&!motivo){error("Indica el motivo antes de rechazar el pedido.");return}
+  const ref=card.dataset.ref;
+  if(!confirm(`${estado==="aceptado"?"Aceptar":"Rechazar"} el pedido ${ref}?`))return;
+  card.querySelectorAll("button").forEach(b=>b.disabled=true);
+  try{
+    const d=await peticion(`/api/admin/pedidos/${encodeURIComponent(ref)}/decision`,{method:"POST",body:JSON.stringify({estado,motivo,operador:$("operador").value.trim()})});
+    $("status").className="status";$("status").textContent=`${ref}: ${estado}.${d.avisos?.length?" "+d.avisos.join(" "):""}`;await cargar();
+  }catch(e){error(e.message);card.querySelectorAll("button").forEach(b=>b.disabled=false)}
+}
+
+$("entrar").addEventListener("click",()=>{token=$("token").value.trim();if(!token){error("Introduce la clave interna.");return}sessionStorage.setItem("htc_admin_token",token);mostrarPanel()});
+$("actualizar").addEventListener("click",cargar);
+$("salir").addEventListener("click",()=>{sessionStorage.removeItem("htc_admin_token");location.reload()});
+$("orders").addEventListener("click",e=>{const card=e.target.closest(".card");if(e.target.classList.contains("aceptar"))decidir(card,"aceptado");if(e.target.classList.contains("rechazar"))decidir(card,"rechazado")});
+$("mes").value=new Date().toISOString().slice(0,7);
+if(token)mostrarPanel();
+</script>
+</body>
+</html>

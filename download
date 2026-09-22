@@ -1,0 +1,11 @@
+# credenciales y datos: nunca al repositorio
+registro/tiendas.csv
+registro/eventos.csv
+registro/qr/
+registros/
+*.xlsx
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

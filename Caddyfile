@@ -1,0 +1,12 @@
+partners.hardtocrack.com {
+    encode zstd gzip
+
+    @pedidos path /pedidos /pedidos/*
+    @api path /api/*
+
+    header @pedidos X-Robots-Tag "noindex, nofollow, noarchive"
+    header @api Cache-Control "no-store"
+
+    reverse_proxy @pedidos 127.0.0.1:8080
+    reverse_proxy @api 127.0.0.1:8080
+}

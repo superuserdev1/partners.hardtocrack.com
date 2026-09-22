@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215.89 244.47" role="img" aria-label="HardToCrack">
+  <title>HardToCrack</title>
+  <defs>
+    <linearGradient id="ht-gradient" x1="0" y1="122.23" x2="215.89" y2="122.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#23B8FF"/>
+      <stop offset="1" stop-color="#20E38C"/>
+    </linearGradient>
+  </defs>
+  <polygon fill="url(#ht-gradient)" points="87.31 51.59 108.64 39.19 108.64 244.47 0 179.15 0 63.72 108.64 0 215.89 64.43 215.89 178.63 139.28 225.75 139.28 108.19 118.08 108.19 118.08 88.39 182.87 88.39 182.87 108.39 160.27 108.39 160.27 187.57 195.46 166.77 195.46 75.6 109.09 23.81 20.91 76.2 20.91 166.37 87.29 207.36 87.29 134.58 54.3 134.58 54.3 172.77 33.51 160.17 33.51 84.79 53.9 72.4 53.9 113.39 87.69 113.39 87.31 51.59"/>
+</svg>
