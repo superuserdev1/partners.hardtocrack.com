@@ -35,7 +35,14 @@ pedido ni un acuse automático.
    de escritura, pero **no autentica a la persona que escanea el QR**.
 2. La tienda revisa el borrador y lo envía desde su correo registrado. Si el
    teléfono no tiene una aplicación de correo configurada, copia asunto y texto y
-   los pega en su correo habitual.
+   los pega en su correo habitual. Si la configuración hace demasiado largo el
+   enlace `mailto:`, la página oculta «Abrir correo» y pide copiar el texto
+   completo para evitar que una app de correo lo trunque.
+   La sección «Apps y perfiles solicitados» transcribe la hoja de elección:
+   perfiles, apps por perfil, servicios y dudas pendientes. Todo queda en el
+   mismo correo del pedido para que HTC evalúe compatibilidad y alcance del pack.
+   Los campos de configuración son opcionales; la tienda puede marcar que el
+   cliente prefiere asesoramiento. Essential no incluye perfiles separados.
 3. Al llegar el mensaje, comparar **referencia + código + remitente real**
    con el registro privado y confirmar que la tienda esté activa. Una dirección
    escrita en el cuerpo no sustituye esta comparación. Ante discordancia, poner

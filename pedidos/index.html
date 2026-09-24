@@ -7,7 +7,7 @@
   <title>Pedidos de tiendas · HardToCrack</title>
   <style>
     :root{color-scheme:dark;--bg:#0B1018;--panel:#111d29;--line:#315064;--text:#f3f8fc;--muted:#bdcbd5;--blue:#23b8ff;--green:#20e38c}
-    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0, #123144 0, var(--bg) 46%);color:var(--text);font:16px/1.5 system-ui,sans-serif}
+    *{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:radial-gradient(circle at 85% 0, #123144 0, var(--bg) 46%);color:var(--text);font:16px/1.5 system-ui,sans-serif}
     main{max-width:760px;margin:auto;padding:22px 16px 70px}header{display:flex;align-items:center;gap:12px;padding:8px 0 20px;border-bottom:1px solid var(--line)}
     header img{height:43px;width:43px}header strong{font-size:18px;letter-spacing:.08em;background:linear-gradient(100deg,var(--blue),var(--green));background-clip:text;color:transparent}header small{display:block;color:var(--muted);font-size:12px}
     h1{font-size:clamp(28px,5vw,39px);line-height:1.1;margin:30px 0 10px}h1 span{color:var(--green)}h2{font-size:18px;margin:0 0 14px}
@@ -16,6 +16,8 @@
     label{display:block;font-size:13px;font-weight:700;color:#d8e9f2;margin-bottom:6px}input,select,textarea{display:block;width:100%;min-height:46px;padding:10px 12px;border:1px solid #527286;border-radius:9px;background:#0c1620;color:white;font:inherit}
     input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:1px}textarea{resize:vertical;min-height:95px}.wide{grid-column:1/-1}
     .hint{font-size:12px;color:var(--muted);margin:6px 0 0}.check{display:flex;gap:10px;margin-top:20px;color:var(--muted);font-size:13px}.check input{width:18px;height:18px;min-height:18px;flex:none;accent-color:var(--green)}
+    fieldset{border:1px solid var(--line);border-radius:10px;padding:14px;margin:0;min-width:0}legend{padding:0 5px;font-size:13px;font-weight:700;color:#d8e9f2}
+    .choices{display:flex;flex-wrap:wrap;gap:8px 20px}.choices label{display:flex;align-items:center;gap:8px;margin:0;font-weight:400}.choices input{width:18px;height:18px;min-height:18px;flex:none;accent-color:var(--green)}
     button,.action{display:inline-block;border:0;border-radius:9px;padding:13px 17px;background:linear-gradient(110deg,var(--blue),var(--green));color:#081521;font:700 14px system-ui,sans-serif;text-align:center;text-decoration:none;cursor:pointer}.secondary{background:#1a2b3a;color:white;border:1px solid var(--line)}
     button:disabled{opacity:.5;cursor:wait}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.notice{padding:13px 16px;border:1px solid #638994;border-radius:10px;background:#17313a;color:#e5f8fb;margin:20px 0}
     .receipt{display:none}.receipt.active{display:block}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#07121b;border:1px solid var(--line);padding:16px;border-radius:10px;font:13px/1.5 ui-monospace,monospace}
@@ -26,7 +28,7 @@
 <main>
   <header><img src="ht-logo.svg" alt="" width="43" height="43"><div><strong>HARDTOCRACK</strong><small>Red de partners · Pedidos</small></div></header>
   <h1>Prepara tu pedido <span>por correo</span></h1>
-  <p class="intro">Completa la ficha y abre el mensaje dirigido a <strong>pedidos@hardtocrack.com</strong>. Envíalo desde el correo autorizado de tu tienda. HardToCrack confirmará la recepción y aceptación por respuesta.</p>
+  <p class="intro">Completa el pedido y las preferencias de configuración del cliente. Abre el mensaje dirigido a <strong>pedidos@hardtocrack.com</strong> y envíalo desde el correo autorizado de tu tienda. HardToCrack confirmará la recepción y aceptación por respuesta.</p>
   <div class="notice" id="qr_aviso" role="status">El QR rellena la referencia y el código alfanumérico de la tienda. La página no registra ni envía pedidos por sí sola; HardToCrack comprueba el correo recibido.</div>
   <form id="pedido" class="card" autocomplete="off">
     <h2>1. Identificación de la tienda</h2>
@@ -49,12 +51,33 @@
       <div class="wide"><label for="pago">Forma de pago *</label><select id="pago" required><option value="">Selecciona</option><option>Cobro en tienda (mandato activo)</option><option>Pago a HardToCrack</option><option>Pendiente de confirmar</option></select></div>
       <div class="wide"><label for="observaciones">Observaciones necesarias</label><textarea id="observaciones" maxlength="350"></textarea></div>
     </div>
+    <h2 style="margin-top:28px">4. Apps y perfiles solicitados</h2>
+    <p class="hint">Transcribe lo que indique el cliente en su hoja de elección. Puedes dejar opciones pendientes para que HTC las revise con él. Las preferencias se incluirán en el mismo correo del pedido.</p>
+    <div class="grid" style="margin-top:16px">
+      <div class="wide"><label for="decision_config">Cómo quiere decidir la configuración</label><select id="decision_config"><option>Aconsejadme: pendiente de hablar con HTC</option><option>He elegido las apps y perfiles indicados</option><option>Quiero decidirlo junto con HTC</option></select></div>
+      <fieldset class="wide"><legend>Perfiles deseados</legend><div class="choices"><label><input type="checkbox" name="perfil" value="Core">Core</label><label><input type="checkbox" name="perfil" value="Comunicaciones">Comunicaciones</label><label><input type="checkbox" name="perfil" value="Finanzas">Finanzas</label></div><p class="hint">El perfil Propietario siempre existe. HTC confirmará qué distribución conviene al cliente.</p></fieldset>
+      <div class="wide"><label for="apps_actuales">Apps actuales que quiere conservar</label><textarea id="apps_actuales" maxlength="160" placeholder="Solo nombres de apps; ninguna contraseña ni dato de acceso"></textarea></div>
+      <div class="wide"><label for="apps_core">Apps que quiere en Core</label><input id="apps_core" maxlength="140" placeholder="Ej.: correo, nube, contraseñas, autenticador"></div>
+      <div class="wide"><label for="apps_comunicaciones">Apps que quiere en Comunicaciones</label><input id="apps_comunicaciones" maxlength="140" placeholder="Ej.: Signal, WhatsApp, Telegram, SimpleX"></div>
+      <div class="wide"><label for="apps_finanzas">Apps que quiere en Finanzas</label><input id="apps_finanzas" maxlength="140" placeholder="Solo nombres de apps bancarias o de cripto"></div>
+      <div><label for="correo_config">Correo y agenda</label><select id="correo_config"><option value="">Por decidir con HTC</option><option>Proton</option><option>Nextcloud</option><option>Cuenta actual</option></select></div>
+      <div><label for="nube_config">Nube</label><select id="nube_config"><option value="">Por decidir con HTC</option><option>Proton Drive</option><option>Nextcloud</option><option>Sin nube</option></select></div>
+      <div><label for="password_config">Gestor de contraseñas</label><select id="password_config"><option value="">Por decidir con HTC</option><option>Proton Pass</option><option>Bitwarden</option><option>KeePassDX</option></select></div>
+      <div><label for="dos_factor_config">Autenticador 2FA</label><select id="dos_factor_config"><option value="">Por decidir con HTC</option><option>Aegis</option><option>Ente Auth</option><option>Proton Authenticator</option></select></div>
+      <div><label for="vpn_config">VPN</label><select id="vpn_config"><option value="">Por decidir con HTC</option><option>La incluida en el pack</option><option>VPN del cliente</option><option>Sin VPN solicitada</option></select></div>
+      <div><label for="play_config">Google Play aislado</label><select id="play_config"><option value="">Por decidir con HTC</option><option>En Comunicaciones</option><option>En Finanzas</option><option>En ambos perfiles</option><option>En ninguno</option></select></div>
+      <div><label for="avisos_config">Avisos entre perfiles</label><select id="avisos_config"><option value="">Por decidir con HTC</option><option>Reenviar avisos</option><option>No reenviar avisos</option></select></div>
+      <div><label for="intercambio_config">Intercambio de archivos entre perfiles</label><select id="intercambio_config"><option value="">Por decidir con HTC</option><option>Solo cuando lo solicite el cliente</option><option>No compartir archivos entre perfiles</option></select></div>
+      <div><label for="llamadas_config">Llamadas y SMS</label><select id="llamadas_config"><option value="">Por decidir con HTC</option><option>Propietario</option><option>Core</option><option>Comunicaciones</option></select></div>
+      <div class="wide"><label for="notas_config">Otras preferencias de configuración</label><textarea id="notas_config" maxlength="180" placeholder="Indica necesidades concretas o cuestiones pendientes para HTC"></textarea></div>
+    </div>
+    <p class="hint">Las preferencias están sujetas a compatibilidad y al alcance del pack. Essential no incluye perfiles separados ni la configuración de estas apps; HTC confirmará cualquier servicio adicional antes de realizarlo.</p>
     <p class="hint">No incluyas contraseñas, PIN del dispositivo, códigos de recuperación, DNI, tarjetas, fotos del terminal ni datos sensibles.</p>
     <label class="check"><input id="autorizacion" type="checkbox" required><span>Confirmo que el cliente ha autorizado el contacto y que enviaré el mensaje desde la dirección registrada de esta tienda.</span></label>
-    <button type="submit" style="margin-top:21px">Preparar correo del pedido</button>
+    <button type="submit" style="margin-top:21px">Preparar correo con pedido y configuración</button>
   </form>
   <section id="resultado" class="card receipt" aria-live="polite">
-    <h2>4. Revisa y envía el correo</h2>
+    <h2>5. Revisa y envía el correo</h2>
     <p class="note">Pulsa «Abrir correo», revisa el mensaje y después pulsa <strong>Enviar</strong> en tu aplicación de correo. Si no se abre, copia el texto y envíalo a <strong>pedidos@hardtocrack.com</strong> desde la cuenta registrada.</p>
     <p><strong>Asunto:</strong> <span id="asunto"></span></p>
     <pre id="texto"></pre>
@@ -67,7 +90,7 @@
 <script>
 (() => {
   const form = document.getElementById('pedido');
-  const fields = Object.fromEntries(['tienda','codigo','modelo','estado','pack','precio','accesorios','cliente','contacto','pago','observaciones'].map(id => [id, document.getElementById(id)]));
+  const fields = Object.fromEntries(['tienda','codigo','modelo','estado','pack','precio','accesorios','cliente','contacto','pago','observaciones','decision_config','apps_actuales','apps_core','apps_comunicaciones','apps_finanzas','correo_config','nube_config','password_config','dos_factor_config','vpn_config','play_config','avisos_config','intercambio_config','llamadas_config','notas_config'].map(id => [id, document.getElementById(id)]));
   const result = document.getElementById('resultado');
   const qrNotice = document.getElementById('qr_aviso');
   const qrStatus = document.getElementById('qr_estado');
@@ -153,6 +176,7 @@
     qrNotice.classList.remove('invalid');
     qrStatus.textContent = 'Código correspondiente a la tienda seleccionada. El remitente se comprobará al recibir el pedido.';
     const value = id => fields[id].value.trim();
+    const profiles = [...form.querySelectorAll('input[name="perfil"]:checked')].map(input => input.value);
     const subject = `[PEDIDO][${value('tienda')}] Solicitud de tienda`;
     const body = [
       'PEDIDO HARDTOCRACK · PENDIENTE DE VALIDACIÓN',
@@ -170,13 +194,36 @@
       `Forma de pago: ${value('pago')}`,
       `Observaciones: ${value('observaciones') || 'Ninguna'}`,
       '',
+      'PREFERENCIAS DE CONFIGURACIÓN · PENDIENTES DE REVISIÓN POR HTC',
+      `Decisión del cliente: ${value('decision_config')}`,
+      `Perfiles solicitados: ${profiles.join(', ') || 'Por decidir con HTC'} (Propietario siempre existe)`,
+      `Apps actuales a conservar: ${value('apps_actuales') || 'Por decidir'}`,
+      `Apps en Core: ${value('apps_core') || 'Por decidir'}`,
+      `Apps en Comunicaciones: ${value('apps_comunicaciones') || 'Por decidir'}`,
+      `Apps en Finanzas: ${value('apps_finanzas') || 'Por decidir'}`,
+      `Correo y agenda: ${value('correo_config') || 'Por decidir'}`,
+      `Nube: ${value('nube_config') || 'Por decidir'}`,
+      `Contraseñas: ${value('password_config') || 'Por decidir'}`,
+      `Autenticador 2FA: ${value('dos_factor_config') || 'Por decidir'}`,
+      `VPN: ${value('vpn_config') || 'Por decidir'}`,
+      `Google Play aislado: ${value('play_config') || 'Por decidir'}`,
+      `Avisos entre perfiles: ${value('avisos_config') || 'Por decidir'}`,
+      `Intercambio de archivos entre perfiles: ${value('intercambio_config') || 'Por decidir'}`,
+      `Llamadas y SMS: ${value('llamadas_config') || 'Por decidir'}`,
+      `Otras preferencias: ${value('notas_config') || 'Ninguna'}`,
+      '',
       'Enviado desde el correo autorizado de la tienda.',
       'Pendiente de confirmación por HardToCrack.'
     ].join('\n');
     document.getElementById('asunto').textContent = subject;
     document.getElementById('texto').textContent = body;
-    document.getElementById('abrir').href = `mailto:pedidos@hardtocrack.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    document.getElementById('estado_copia').textContent = '';
+    const mailto = `mailto:pedidos@hardtocrack.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const abrir = document.getElementById('abrir');
+    abrir.hidden = mailto.length > 1900;
+    abrir.href = abrir.hidden ? 'mailto:pedidos@hardtocrack.com' : mailto;
+    document.getElementById('estado_copia').textContent = abrir.hidden
+      ? 'El pedido contiene muchos detalles para abrirlo con seguridad en una aplicación de correo. Usa «Copiar texto» y pégalo completo en un mensaje a pedidos@hardtocrack.com.'
+      : '';
     result.classList.add('active');
     result.scrollIntoView({behavior:'smooth',block:'start'});
   });
