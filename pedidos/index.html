@@ -19,7 +19,7 @@
     button,.action{display:inline-block;border:0;border-radius:9px;padding:13px 17px;background:linear-gradient(110deg,var(--blue),var(--green));color:#081521;font:700 14px system-ui,sans-serif;text-align:center;text-decoration:none;cursor:pointer}.secondary{background:#1a2b3a;color:white;border:1px solid var(--line)}
     button:disabled{opacity:.5;cursor:wait}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.notice{padding:13px 16px;border:1px solid #638994;border-radius:10px;background:#17313a;color:#e5f8fb;margin:20px 0}
     .receipt{display:none}.receipt.active{display:block}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#07121b;border:1px solid var(--line);padding:16px;border-radius:10px;font:13px/1.5 ui-monospace,monospace}
-    .status{min-height:22px;color:var(--green)}footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12px}a{color:#76d7ff}
+    .status{min-height:22px;color:var(--green)}.notice.invalid{border-color:#f08f8f;background:#4b232b;color:#fff}footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12px}a{color:#76d7ff}
   </style>
 </head>
 <body>
@@ -27,7 +27,7 @@
   <header><img src="ht-logo.svg" alt="" width="43" height="43"><div><strong>HARDTOCRACK</strong><small>Red de partners · Pedidos</small></div></header>
   <h1>Prepara tu pedido <span>por correo</span></h1>
   <p class="intro">Completa la ficha y abre el mensaje dirigido a <strong>pedidos@hardtocrack.com</strong>. Envíalo desde el correo autorizado de tu tienda. HardToCrack confirmará la recepción y aceptación por respuesta.</p>
-  <div class="notice">El QR rellena la referencia y el código alfanumérico de la tienda. La página no registra ni envía pedidos por sí sola; HardToCrack comprueba el correo recibido.</div>
+  <div class="notice" id="qr_aviso" role="status">El QR rellena la referencia y el código alfanumérico de la tienda. La página no registra ni envía pedidos por sí sola; HardToCrack comprueba el correo recibido.</div>
   <form id="pedido" class="card" autocomplete="off">
     <h2>1. Identificación de la tienda</h2>
     <div class="grid">
@@ -69,6 +69,8 @@
   const form = document.getElementById('pedido');
   const fields = Object.fromEntries(['tienda','codigo','modelo','estado','pack','precio','accesorios','cliente','contacto','pago','observaciones'].map(id => [id, document.getElementById(id)]));
   const result = document.getElementById('resultado');
+  const qrNotice = document.getElementById('qr_aviso');
+  const qrStatus = document.getElementById('qr_estado');
   const query = new URLSearchParams(location.search);
   const suggested = (query.get('t') || query.get('partner') || query.get('ref') || '').toUpperCase();
   if ([...fields.tienda.options].some(option => option.value === suggested)) fields.tienda.value = suggested;
@@ -81,21 +83,50 @@
     'HTC-MAD-004':'5028a36883fb2e492ff1d857f057e76ab59df160bb3f6181e6d1b5267025a6ca',
     'HTC-MAD-005':'fe6c5bef45cdf1f5ce5914334669c0577627b86e998fda0a95412b758a65db7b'
   };
-  if (fields.tienda.value && /^[A-HJ-NP-Z2-9]{12}$/.test(fromQr)) {
-    fields.codigo.value = fromQr;
-    document.getElementById('qr_estado').textContent = 'Código leído del enlace. Se comprobará antes de preparar el correo.';
+  async function matchesCode(store, code) {
+    if (!globalThis.crypto?.subtle) return null;
+    const bytes = new TextEncoder().encode(`${store}:${code}`);
+    const digest = await crypto.subtle.digest('SHA-256', bytes);
+    const hash = [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+    return codeHashes[store] === hash;
   }
+  function invalidQr(message) {
+    qrNotice.classList.add('invalid');
+    qrNotice.textContent = message;
+    qrStatus.textContent = message;
+  }
+  async function inspectQr() {
+    if (!query.has('t') && !query.has('k')) return;
+    if (!fields.tienda.value || !/^[A-HJ-NP-Z2-9]{12}$/.test(fromQr)) {
+      invalidQr('QR no válido: falta una referencia o el código tiene un formato incorrecto. No se ha reconocido ningún pedido.');
+      return;
+    }
+    qrStatus.textContent = 'Comprobando el código del enlace…';
+    const match = await matchesCode(suggested, fromQr);
+    if (fields.tienda.value !== suggested || fields.codigo.value) return;
+    if (match === null) {
+      invalidQr('No se puede comprobar el QR en este navegador. Abre la página con HTTPS.');
+    } else if (!match) {
+      invalidQr('QR no válido: el código no corresponde a esta tienda. No se ha reconocido ningún pedido.');
+    } else {
+      fields.codigo.value = fromQr;
+      qrStatus.textContent = 'Referencia y código del QR coinciden. Completa la ficha y envía el correo.';
+    }
+  }
+  inspectQr();
   fields.tienda.addEventListener('change', () => {
     if (fields.tienda.value !== suggested && fields.codigo.value === fromQr) {
       fields.codigo.value = '';
       fields.codigo.setCustomValidity('');
-      document.getElementById('qr_estado').textContent = 'Referencia cambiada: introduce el código correspondiente a esta tienda.';
+      qrStatus.textContent = 'Referencia cambiada: introduce el código correspondiente a esta tienda.';
     }
   });
   fields.codigo.addEventListener('input', () => {
     fields.codigo.value = fields.codigo.value.toUpperCase().replace(/[^A-HJ-NP-Z2-9]/g, '');
     fields.codigo.setCustomValidity('');
-    document.getElementById('qr_estado').textContent = 'Código modificado. Se comprobará con la tienda seleccionada.';
+    qrNotice.classList.remove('invalid');
+    qrNotice.textContent = 'El código introducido se comprobará con la tienda antes de preparar el correo.';
+    qrStatus.textContent = 'Código modificado. Se comprobará con la tienda seleccionada.';
   });
   form.addEventListener('input', () => result.classList.remove('active'));
   form.addEventListener('change', () => result.classList.remove('active'));
@@ -104,24 +135,23 @@
     result.classList.remove('active');
     fields.codigo.value = fields.codigo.value.toUpperCase().trim();
     if (!form.reportValidity()) return;
-    if (!globalThis.crypto?.subtle) {
-      document.getElementById('qr_estado').textContent = 'No se puede comprobar el código en este navegador. Abre la página con HTTPS.';
-      return;
-    }
     const selectedStore = fields.tienda.value;
     const enteredCode = fields.codigo.value;
-    const bytes = new TextEncoder().encode(`${selectedStore}:${enteredCode}`);
-    const digest = await crypto.subtle.digest('SHA-256', bytes);
+    const match = await matchesCode(selectedStore, enteredCode);
     if (fields.tienda.value !== selectedStore || fields.codigo.value !== enteredCode) return;
-    const hash = [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
-    if (codeHashes[selectedStore] !== hash) {
+    if (match === null) {
+      invalidQr('No se puede comprobar el código en este navegador. Abre la página con HTTPS.');
+      return;
+    }
+    if (!match) {
       const message = 'El código alfanumérico no corresponde a esta tienda.';
       fields.codigo.setCustomValidity(message);
-      document.getElementById('qr_estado').textContent = message;
+      invalidQr(message);
       fields.codigo.reportValidity();
       return;
     }
-    document.getElementById('qr_estado').textContent = 'Código correspondiente a la tienda seleccionada. El remitente se comprobará al recibir el pedido.';
+    qrNotice.classList.remove('invalid');
+    qrStatus.textContent = 'Código correspondiente a la tienda seleccionada. El remitente se comprobará al recibir el pedido.';
     const value = id => fields[id].value.trim();
     const subject = `[PEDIDO][${value('tienda')}] Solicitud de tienda`;
     const body = [
