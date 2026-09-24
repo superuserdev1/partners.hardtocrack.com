@@ -48,28 +48,61 @@
     <div class="grid">
       <div><label for="cliente">Nombre del cliente *</label><input id="cliente" maxlength="100" required></div>
       <div><label for="contacto">Correo o teléfono autorizado del cliente *</label><input id="contacto" maxlength="120" required></div>
+      <div class="wide"><label for="codigo_cliente">Código cliente HTC (si ya existe)</label><input id="codigo_cliente" maxlength="40" placeholder="Dejar en blanco si HTC aún no lo ha asignado"></div>
       <div class="wide"><label for="pago">Forma de pago *</label><select id="pago" required><option value="">Selecciona</option><option>Cobro en tienda (mandato activo)</option><option>Pago a HardToCrack</option><option>Pendiente de confirmar</option></select></div>
       <div class="wide"><label for="observaciones">Observaciones necesarias</label><textarea id="observaciones" maxlength="350"></textarea></div>
     </div>
-    <h2 style="margin-top:28px">4. Apps y perfiles solicitados</h2>
-    <p class="hint">Transcribe lo que indique el cliente en su hoja de elección. Puedes dejar opciones pendientes para que HTC las revise con él. Las preferencias se incluirán en el mismo correo del pedido.</p>
+    <h2 style="margin-top:28px">4. Hoja de elección · configuración del cliente</h2>
+    <p class="hint">Sigue los apartados 1–7 de la página 8 de la guía impresa. Marca solo lo decidido; HTC revisará las opciones pendientes antes de configurar el Pixel.</p>
     <div class="grid" style="margin-top:16px">
-      <div class="wide"><label for="decision_config">Cómo quiere decidir la configuración</label><select id="decision_config"><option>Aconsejadme: pendiente de hablar con HTC</option><option>He elegido las apps y perfiles indicados</option><option>Quiero decidirlo junto con HTC</option></select></div>
-      <fieldset class="wide"><legend>Perfiles deseados</legend><div class="choices"><label><input type="checkbox" name="perfil" value="Core">Core</label><label><input type="checkbox" name="perfil" value="Comunicaciones">Comunicaciones</label><label><input type="checkbox" name="perfil" value="Finanzas">Finanzas</label></div><p class="hint">El perfil Propietario siempre existe. HTC confirmará qué distribución conviene al cliente.</p></fieldset>
-      <div class="wide"><label for="apps_actuales">Apps actuales que quiere conservar</label><textarea id="apps_actuales" maxlength="160" placeholder="Solo nombres de apps; ninguna contraseña ni dato de acceso"></textarea></div>
-      <div class="wide"><label for="apps_core">Apps que quiere en Core</label><input id="apps_core" maxlength="140" placeholder="Ej.: correo, nube, contraseñas, autenticador"></div>
-      <div class="wide"><label for="apps_comunicaciones">Apps que quiere en Comunicaciones</label><input id="apps_comunicaciones" maxlength="140" placeholder="Ej.: Signal, WhatsApp, Telegram, SimpleX"></div>
-      <div class="wide"><label for="apps_finanzas">Apps que quiere en Finanzas</label><input id="apps_finanzas" maxlength="140" placeholder="Solo nombres de apps bancarias o de cripto"></div>
-      <div><label for="correo_config">Correo y agenda</label><select id="correo_config"><option value="">Por decidir con HTC</option><option>Proton</option><option>Nextcloud</option><option>Cuenta actual</option></select></div>
-      <div><label for="nube_config">Nube</label><select id="nube_config"><option value="">Por decidir con HTC</option><option>Proton Drive</option><option>Nextcloud</option><option>Sin nube</option></select></div>
-      <div><label for="password_config">Gestor de contraseñas</label><select id="password_config"><option value="">Por decidir con HTC</option><option>Proton Pass</option><option>Bitwarden</option><option>KeePassDX</option></select></div>
-      <div><label for="dos_factor_config">Autenticador 2FA</label><select id="dos_factor_config"><option value="">Por decidir con HTC</option><option>Aegis</option><option>Ente Auth</option><option>Proton Authenticator</option></select></div>
-      <div><label for="vpn_config">VPN</label><select id="vpn_config"><option value="">Por decidir con HTC</option><option>La incluida en el pack</option><option>VPN del cliente</option><option>Sin VPN solicitada</option></select></div>
-      <div><label for="play_config">Google Play aislado</label><select id="play_config"><option value="">Por decidir con HTC</option><option>En Comunicaciones</option><option>En Finanzas</option><option>En ambos perfiles</option><option>En ninguno</option></select></div>
-      <div><label for="avisos_config">Avisos entre perfiles</label><select id="avisos_config"><option value="">Por decidir con HTC</option><option>Reenviar avisos</option><option>No reenviar avisos</option></select></div>
-      <div><label for="intercambio_config">Intercambio de archivos entre perfiles</label><select id="intercambio_config"><option value="">Por decidir con HTC</option><option>Solo cuando lo solicite el cliente</option><option>No compartir archivos entre perfiles</option></select></div>
-      <div><label for="llamadas_config">Llamadas y SMS</label><select id="llamadas_config"><option value="">Por decidir con HTC</option><option>Propietario</option><option>Core</option><option>Comunicaciones</option></select></div>
-      <div class="wide"><label for="notas_config">Otras preferencias de configuración</label><textarea id="notas_config" maxlength="180" placeholder="Indica necesidades concretas o cuestiones pendientes para HTC"></textarea></div>
+      <div><label for="fecha_config">Fecha de la hoja</label><input id="fecha_config" type="date"></div>
+      <div><label for="decision_config">Cómo prefiere decidir</label><select id="decision_config"><option>Aconsejadme: pendiente de hablar con HTC</option><option>He elegido las opciones marcadas</option><option>Quiero decidirlo junto con HTC</option></select></div>
+      <fieldset class="wide"><legend>1. Perfiles</legend>
+        <p class="hint">Propietario siempre existe. Marca los perfiles que solicita el cliente.</p>
+        <div class="choices"><label><input type="checkbox" name="perfil" value="Core">Core</label><label><input type="checkbox" name="perfil" value="Comunicaciones">Comunicaciones</label><label><input type="checkbox" name="perfil" value="Finanzas">Finanzas</label></div>
+        <div class="grid" style="margin-top:14px">
+          <div><label for="llamadas_config">Llamadas y SMS en</label><select id="llamadas_config"><option value="">Por decidir con HTC</option><option>Propietario</option><option>Core</option><option>Comunicaciones</option></select></div>
+          <div><label for="pin_config">PIN por perfil</label><select id="pin_config"><option value="">Por decidir con HTC</option><option>El mismo en todos</option><option>Distinto en cada uno</option></select></div>
+          <div class="wide"><label for="avisos_config">Avisos entre perfiles</label><select id="avisos_config"><option value="">Por decidir con HTC</option><option>Reenviar</option><option>No reenviar</option></select></div>
+        </div>
+      </fieldset>
+      <fieldset class="wide"><legend>2. Core</legend><div class="grid">
+        <div><label for="correo_config">Correo y agenda</label><select id="correo_config"><option value="">Por decidir con HTC</option><option>Proton</option><option>Nextcloud</option><option>Mi cuenta actual</option></select></div>
+        <div><label for="nube_config">Nube</label><select id="nube_config"><option value="">Por decidir con HTC</option><option>Proton Drive</option><option>Nextcloud</option><option>Sin nube</option></select></div>
+        <div><label for="password_config">Contraseñas</label><select id="password_config"><option value="">Por decidir con HTC</option><option>Proton Pass</option><option>Bitwarden</option><option>KeePassDX</option></select></div>
+        <div><label for="vpn_config">VPN</label><select id="vpn_config"><option value="">Por decidir con HTC</option><option>La del pack</option><option>Una mía</option></select></div>
+        <label class="check wide"><input id="vpn_otros" type="checkbox"><span>VPN también en otros perfiles</span></label>
+      </div></fieldset>
+      <fieldset class="wide"><legend>3. Autenticador 2FA</legend><div class="grid">
+        <div><label for="dos_factor_config">App</label><select id="dos_factor_config"><option value="">Por decidir con HTC</option><option>Aegis</option><option>Ente Auth</option><option>Proton Authenticator</option><option>Aconsejadme</option></select></div>
+        <div><label for="copia_2fa">Copia</label><select id="copia_2fa"><option value="">Por decidir con HTC</option><option>Archivo cifrado</option><option>Sincronizada</option></select></div>
+        <label class="check wide"><input id="recuperacion_probada" type="checkbox"><span>Prueba de recuperación hecha</span></label>
+      </div></fieldset>
+      <fieldset class="wide"><legend>4. Comunicaciones</legend>
+        <p class="hint">Apps que quiere el cliente:</p>
+        <div class="choices"><label><input type="checkbox" name="mensajeria" value="Signal">Signal</label><label><input type="checkbox" name="mensajeria" value="WhatsApp">WhatsApp</label><label><input type="checkbox" name="mensajeria" value="Telegram">Telegram</label><label><input type="checkbox" name="mensajeria" value="Session">Session</label><label><input type="checkbox" name="mensajeria" value="SimpleX">SimpleX</label><label><input type="checkbox" name="mensajeria" value="Threema">Threema</label></div>
+        <div style="margin-top:14px"><label for="play_config">Google Play aislado</label><select id="play_config"><option value="">Por decidir con HTC</option><option>En Comunicaciones</option><option>En Finanzas</option><option>En ninguno</option></select></div>
+      </fieldset>
+      <fieldset class="wide"><legend>5. Finanzas</legend>
+        <label for="apps_finanzas">Nombre de las apps, nunca datos de acceso</label><input id="apps_finanzas" maxlength="140" placeholder="Solo nombres de apps bancarias o de cripto">
+        <div class="choices" style="margin-top:14px"><label><input id="finanzas_probada" type="checkbox">Probada en tienda</label><label><input id="finanzas_segundo_plano" type="checkbox">En 2.º plano</label><label><input id="finanzas_cerrar" type="checkbox">Cerrar al salir</label></div>
+      </fieldset>
+      <fieldset class="wide"><legend>6. Fondo de inicio</legend><div class="grid">
+        <div><label for="fondo_propietario">Propietario</label><select id="fondo_propietario"><option value="">Por decidir</option><option>Inicio HT</option><option>Alt. A</option><option>Alt. B</option></select></div>
+        <div><label for="fondo_core">Core</label><select id="fondo_core"><option value="">Por decidir</option><option>Inicio HT</option><option>Alt. A</option><option>Alt. B</option></select></div>
+        <div><label for="fondo_comunicaciones">Comunicaciones</label><select id="fondo_comunicaciones"><option value="">Por decidir</option><option>Inicio HT</option><option>Alt. A</option><option>Alt. B</option></select></div>
+        <div><label for="fondo_finanzas">Finanzas</label><select id="fondo_finanzas"><option value="">Por decidir</option><option>Inicio HT</option><option>Alt. A</option><option>Alt. B</option></select></div>
+      </div></fieldset>
+      <fieldset class="wide"><legend>7. Ayuda en la entrega</legend>
+        <select id="ayuda_entrega" aria-label="Ayuda en la entrega"><option value="">Por decidir con HTC</option><option>Solo el encargado</option><option>Llamada con HTC</option><option>SimpleX de HTC</option><option>Lo termino yo</option></select>
+      </fieldset>
+      <div class="wide"><label for="notas_config">Notas de la hoja</label><textarea id="notas_config" maxlength="180" placeholder="Dudas pendientes para HTC; nunca códigos ni contraseñas"></textarea></div>
+      <fieldset class="wide"><legend>Aclaraciones adicionales para HTC</legend><div class="grid">
+        <div class="wide"><label for="apps_actuales">Otras apps actuales que quiere conservar</label><input id="apps_actuales" maxlength="160" placeholder="Solo nombres de apps"></div>
+        <div class="wide"><label for="apps_core">Detalle de apps en Core</label><input id="apps_core" maxlength="140"></div>
+        <div class="wide"><label for="apps_comunicaciones">Detalle de apps en Comunicaciones</label><input id="apps_comunicaciones" maxlength="140"></div>
+        <div class="wide"><label for="intercambio_config">Intercambio de archivos entre perfiles</label><select id="intercambio_config"><option value="">Por decidir con HTC</option><option>Solo cuando lo solicite el cliente</option><option>No compartir archivos entre perfiles</option></select></div>
+      </div></fieldset>
     </div>
     <p class="hint">Las preferencias están sujetas a compatibilidad y al alcance del pack. Essential no incluye perfiles separados ni la configuración de estas apps; HTC confirmará cualquier servicio adicional antes de realizarlo.</p>
     <p class="hint">No incluyas contraseñas, PIN del dispositivo, códigos de recuperación, DNI, tarjetas, fotos del terminal ni datos sensibles.</p>
@@ -90,7 +123,7 @@
 <script>
 (() => {
   const form = document.getElementById('pedido');
-  const fields = Object.fromEntries(['tienda','codigo','modelo','estado','pack','precio','accesorios','cliente','contacto','pago','observaciones','decision_config','apps_actuales','apps_core','apps_comunicaciones','apps_finanzas','correo_config','nube_config','password_config','dos_factor_config','vpn_config','play_config','avisos_config','intercambio_config','llamadas_config','notas_config'].map(id => [id, document.getElementById(id)]));
+  const fields = Object.fromEntries(['tienda','codigo','modelo','estado','pack','precio','accesorios','cliente','contacto','codigo_cliente','pago','observaciones','fecha_config','decision_config','llamadas_config','pin_config','avisos_config','correo_config','nube_config','password_config','vpn_config','dos_factor_config','copia_2fa','play_config','apps_finanzas','fondo_propietario','fondo_core','fondo_comunicaciones','fondo_finanzas','ayuda_entrega','notas_config','apps_actuales','apps_core','apps_comunicaciones','intercambio_config'].map(id => [id, document.getElementById(id)]));
   const result = document.getElementById('resultado');
   const qrNotice = document.getElementById('qr_aviso');
   const qrStatus = document.getElementById('qr_estado');
@@ -176,7 +209,50 @@
     qrNotice.classList.remove('invalid');
     qrStatus.textContent = 'Código correspondiente a la tienda seleccionada. El remitente se comprobará al recibir el pedido.';
     const value = id => fields[id].value.trim();
-    const profiles = [...form.querySelectorAll('input[name="perfil"]:checked')].map(input => input.value);
+    const choices = name => [...form.querySelectorAll(`input[name="${name}"]:checked`)].map(input => input.value).join(', ');
+    const selected = (label, id) => value(id) ? `${label}: ${value(id)}` : null;
+    const marked = (label, id) => document.getElementById(id).checked ? `${label}: Sí` : null;
+    const configLines = [
+      'HOJA DE ELECCIÓN · PÁGINA 8 · REVISAR CON HTC',
+      selected('Fecha de la hoja', 'fecha_config'),
+      selected('Cómo quiere decidir', 'decision_config'),
+      '1. PERFILES',
+      `Perfiles: Propietario${choices('perfil') ? ', ' + choices('perfil') : ' (otros por decidir)'}`,
+      selected('Llamadas y SMS en', 'llamadas_config'),
+      selected('PIN por perfil (solo preferencia; sin PIN)', 'pin_config'),
+      selected('Avisos entre perfiles', 'avisos_config'),
+      '2. CORE',
+      selected('Correo y agenda', 'correo_config'),
+      selected('Nube', 'nube_config'),
+      selected('Contraseñas', 'password_config'),
+      selected('VPN', 'vpn_config'),
+      marked('VPN también en otros perfiles', 'vpn_otros'),
+      '3. AUTENTICADOR 2FA',
+      selected('App 2FA', 'dos_factor_config'),
+      selected('Copia 2FA', 'copia_2fa'),
+      marked('Prueba de recuperación hecha', 'recuperacion_probada'),
+      '4. COMUNICACIONES',
+      choices('mensajeria') ? `Apps: ${choices('mensajeria')}` : null,
+      selected('Google Play aislado', 'play_config'),
+      '5. FINANZAS',
+      selected('Nombre de las apps (sin datos de acceso)', 'apps_finanzas'),
+      marked('App financiera probada en tienda', 'finanzas_probada'),
+      marked('Finanzas en segundo plano', 'finanzas_segundo_plano'),
+      marked('Cerrar Finanzas al salir', 'finanzas_cerrar'),
+      '6. FONDO DE INICIO',
+      selected('Propietario', 'fondo_propietario'),
+      selected('Core', 'fondo_core'),
+      selected('Comunicaciones', 'fondo_comunicaciones'),
+      selected('Finanzas', 'fondo_finanzas'),
+      '7. AYUDA EN LA ENTREGA',
+      selected('Ayuda', 'ayuda_entrega'),
+      selected('Notas de la hoja', 'notas_config'),
+      'ACLARACIONES ADICIONALES PARA HTC',
+      selected('Otras apps actuales a conservar', 'apps_actuales'),
+      selected('Detalle de apps en Core', 'apps_core'),
+      selected('Detalle de apps en Comunicaciones', 'apps_comunicaciones'),
+      selected('Intercambio de archivos entre perfiles', 'intercambio_config')
+    ].filter(Boolean);
     const subject = `[PEDIDO][${value('tienda')}] Solicitud de tienda`;
     const body = [
       'PEDIDO HARDTOCRACK · PENDIENTE DE VALIDACIÓN',
@@ -191,26 +267,11 @@
       '',
       `Cliente: ${value('cliente')}`,
       `Contacto autorizado: ${value('contacto')}`,
+      `Código cliente HTC: ${value('codigo_cliente') || 'Pendiente de asignar por HTC'}`,
       `Forma de pago: ${value('pago')}`,
       `Observaciones: ${value('observaciones') || 'Ninguna'}`,
       '',
-      'PREFERENCIAS DE CONFIGURACIÓN · PENDIENTES DE REVISIÓN POR HTC',
-      `Decisión del cliente: ${value('decision_config')}`,
-      `Perfiles solicitados: ${profiles.join(', ') || 'Por decidir con HTC'} (Propietario siempre existe)`,
-      `Apps actuales a conservar: ${value('apps_actuales') || 'Por decidir'}`,
-      `Apps en Core: ${value('apps_core') || 'Por decidir'}`,
-      `Apps en Comunicaciones: ${value('apps_comunicaciones') || 'Por decidir'}`,
-      `Apps en Finanzas: ${value('apps_finanzas') || 'Por decidir'}`,
-      `Correo y agenda: ${value('correo_config') || 'Por decidir'}`,
-      `Nube: ${value('nube_config') || 'Por decidir'}`,
-      `Contraseñas: ${value('password_config') || 'Por decidir'}`,
-      `Autenticador 2FA: ${value('dos_factor_config') || 'Por decidir'}`,
-      `VPN: ${value('vpn_config') || 'Por decidir'}`,
-      `Google Play aislado: ${value('play_config') || 'Por decidir'}`,
-      `Avisos entre perfiles: ${value('avisos_config') || 'Por decidir'}`,
-      `Intercambio de archivos entre perfiles: ${value('intercambio_config') || 'Por decidir'}`,
-      `Llamadas y SMS: ${value('llamadas_config') || 'Por decidir'}`,
-      `Otras preferencias: ${value('notas_config') || 'Ninguna'}`,
+      ...configLines,
       '',
       'Enviado desde el correo autorizado de la tienda.',
       'Pendiente de confirmación por HardToCrack.'
