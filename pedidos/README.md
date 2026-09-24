@@ -30,7 +30,8 @@ pedido ni un acuse automático.
 1. El QR rellena referencia y código; la tienda completa el resto de la ficha.
    Si falta uno de los dos, el navegador impide preparar el correo. La web
    coteja el código con la tienda mediante huellas SHA-256 incluidas en la
-   página y rechaza un código cambiado o de otra tienda. Esto corrige errores
+   página al abrir el QR y otra vez antes de preparar el correo. Muestra
+   «QR no válido» y rechaza un código cambiado o de otra tienda. Esto corrige errores
    de escritura, pero **no autentica a la persona que escanea el QR**.
 2. La tienda revisa el borrador y lo envía desde su correo registrado. Si el
    teléfono no tiene una aplicación de correo configurada, copia asunto y texto y
