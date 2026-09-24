@@ -32,7 +32,7 @@
     <h2>1. Identificación de la tienda</h2>
     <div class="grid">
       <div><label for="tienda">Referencia de tienda *</label><select id="tienda" required><option value="">Selecciona tu tienda</option><option>HTC-MAD-001</option><option>HTC-MAD-002</option><option>HTC-MAD-003</option><option>HTC-MAD-004</option><option>HTC-MAD-005</option></select></div>
-      <div><label for="codigo">Código alfanumérico de tienda *</label><input id="codigo" type="password" required minlength="12" maxlength="12" pattern="[A-HJ-NP-Z2-9]{12}" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="12 caracteres"><p class="hint" id="qr_estado">Se rellena al escanear el QR de la tienda; también puedes escribirlo manualmente. Se cotejará al recibir el correo.</p></div>
+      <div><label for="codigo">Código alfanumérico de tienda *</label><input id="codigo" type="password" required minlength="12" maxlength="12" pattern="[A-HJ-NP-Z2-9]{12}" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="12 caracteres"><p class="hint" id="qr_estado" aria-live="polite">Se rellena al escanear el QR; también puedes escribirlo manualmente. Debe corresponder a la tienda seleccionada.</p></div>
     </div>
     <h2 style="margin-top:28px">2. Equipo y pedido</h2>
     <div class="grid">
@@ -73,23 +73,55 @@
   const suggested = (query.get('t') || query.get('partner') || query.get('ref') || '').toUpperCase();
   if ([...fields.tienda.options].some(option => option.value === suggested)) fields.tienda.value = suggested;
   const fromQr = (query.get('k') || '').toUpperCase();
+  // Solo huellas de los pares tienda/código. Las credenciales reales no se publican en el código fuente.
+  const codeHashes = {
+    'HTC-MAD-001':'404f6fe87f0807e87739e9dde0e55295098253511ed57b4e77b1e9c33e0c7502',
+    'HTC-MAD-002':'e64d5594f13246251c4da18e3687d3c710905e82adc5feb919a1b64e48d99d21',
+    'HTC-MAD-003':'9009c86c03d4cb1846bc1c4ece7dc82a2036dfeb61757300cc16eb39e6183589',
+    'HTC-MAD-004':'5028a36883fb2e492ff1d857f057e76ab59df160bb3f6181e6d1b5267025a6ca',
+    'HTC-MAD-005':'fe6c5bef45cdf1f5ce5914334669c0577627b86e998fda0a95412b758a65db7b'
+  };
   if (fields.tienda.value && /^[A-HJ-NP-Z2-9]{12}$/.test(fromQr)) {
     fields.codigo.value = fromQr;
-    document.getElementById('qr_estado').textContent = 'Código relleno desde el QR. HardToCrack comprobará la tienda y el remitente del correo.';
+    document.getElementById('qr_estado').textContent = 'Código leído del enlace. Se comprobará antes de preparar el correo.';
   }
   fields.tienda.addEventListener('change', () => {
     if (fields.tienda.value !== suggested && fields.codigo.value === fromQr) {
       fields.codigo.value = '';
+      fields.codigo.setCustomValidity('');
       document.getElementById('qr_estado').textContent = 'Referencia cambiada: introduce el código correspondiente a esta tienda.';
     }
   });
-  fields.codigo.addEventListener('input', () => { fields.codigo.value = fields.codigo.value.toUpperCase().replace(/[^A-HJ-NP-Z2-9]/g, ''); });
+  fields.codigo.addEventListener('input', () => {
+    fields.codigo.value = fields.codigo.value.toUpperCase().replace(/[^A-HJ-NP-Z2-9]/g, '');
+    fields.codigo.setCustomValidity('');
+    document.getElementById('qr_estado').textContent = 'Código modificado. Se comprobará con la tienda seleccionada.';
+  });
   form.addEventListener('input', () => result.classList.remove('active'));
   form.addEventListener('change', () => result.classList.remove('active'));
-  form.addEventListener('submit', event => {
+  form.addEventListener('submit', async event => {
     event.preventDefault();
+    result.classList.remove('active');
     fields.codigo.value = fields.codigo.value.toUpperCase().trim();
     if (!form.reportValidity()) return;
+    if (!globalThis.crypto?.subtle) {
+      document.getElementById('qr_estado').textContent = 'No se puede comprobar el código en este navegador. Abre la página con HTTPS.';
+      return;
+    }
+    const selectedStore = fields.tienda.value;
+    const enteredCode = fields.codigo.value;
+    const bytes = new TextEncoder().encode(`${selectedStore}:${enteredCode}`);
+    const digest = await crypto.subtle.digest('SHA-256', bytes);
+    if (fields.tienda.value !== selectedStore || fields.codigo.value !== enteredCode) return;
+    const hash = [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+    if (codeHashes[selectedStore] !== hash) {
+      const message = 'El código alfanumérico no corresponde a esta tienda.';
+      fields.codigo.setCustomValidity(message);
+      document.getElementById('qr_estado').textContent = message;
+      fields.codigo.reportValidity();
+      return;
+    }
+    document.getElementById('qr_estado').textContent = 'Código correspondiente a la tienda seleccionada. El remitente se comprobará al recibir el pedido.';
     const value = id => fields[id].value.trim();
     const subject = `[PEDIDO][${value('tienda')}] Solicitud de tienda`;
     const body = [
