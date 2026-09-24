@@ -27,12 +27,12 @@
   <header><img src="ht-logo.svg" alt="" width="43" height="43"><div><strong>HARDTOCRACK</strong><small>Red de partners · Pedidos</small></div></header>
   <h1>Prepara tu pedido <span>por correo</span></h1>
   <p class="intro">Completa la ficha y abre el mensaje dirigido a <strong>pedidos@hardtocrack.com</strong>. Envíalo desde el correo autorizado de tu tienda. HardToCrack confirmará la recepción y aceptación por respuesta.</p>
-  <div class="notice">Tu referencia de tienda y tu código privado deben figurar en el correo. Esta página no registra ni envía pedidos por sí sola.</div>
+  <div class="notice">El QR rellena la referencia y el código alfanumérico de la tienda. La página no registra ni envía pedidos por sí sola; HardToCrack comprueba el correo recibido.</div>
   <form id="pedido" class="card" autocomplete="off">
     <h2>1. Identificación de la tienda</h2>
     <div class="grid">
       <div><label for="tienda">Referencia de tienda *</label><select id="tienda" required><option value="">Selecciona tu tienda</option><option>HTC-MAD-001</option><option>HTC-MAD-002</option><option>HTC-MAD-003</option><option>HTC-MAD-004</option><option>HTC-MAD-005</option></select></div>
-      <div><label for="codigo">Código privado alfanumérico *</label><input id="codigo" type="password" required minlength="12" maxlength="12" pattern="[A-HJ-NP-Z2-9]{12}" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="12 caracteres"><p class="hint">Escribe el código que HardToCrack entregó a tu tienda. Se comprobará al recibir el correo.</p></div>
+      <div><label for="codigo">Código alfanumérico de tienda *</label><input id="codigo" type="password" required minlength="12" maxlength="12" pattern="[A-HJ-NP-Z2-9]{12}" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="12 caracteres"><p class="hint" id="qr_estado">Se rellena al escanear el QR de la tienda; también puedes escribirlo manualmente. Se cotejará al recibir el correo.</p></div>
     </div>
     <h2 style="margin-top:28px">2. Equipo y pedido</h2>
     <div class="grid">
@@ -60,7 +60,7 @@
     <pre id="texto"></pre>
     <div class="actions"><a id="abrir" class="action" href="mailto:pedidos@hardtocrack.com">Abrir correo</a><button id="copiar" type="button" class="secondary">Copiar texto</button></div>
     <p id="estado_copia" class="status" role="status"></p>
-    <p class="hint">El código se comprueba manualmente junto con la referencia y el remitente autorizado. Preparar el correo no equivale a enviarlo ni a aceptar el pedido.</p>
+    <p class="hint">El código incluido en el QR no identifica por sí solo a quien envía el pedido: HardToCrack comprueba también el remitente autorizado. Preparar el correo no equivale a enviarlo ni a aceptar el pedido.</p>
   </section>
   <footer>Canal de pedidos: <a href="mailto:pedidos@hardtocrack.com">pedidos@hardtocrack.com</a> · HardToCrack Partners</footer>
 </main>
@@ -72,7 +72,17 @@
   const query = new URLSearchParams(location.search);
   const suggested = (query.get('t') || query.get('partner') || query.get('ref') || '').toUpperCase();
   if ([...fields.tienda.options].some(option => option.value === suggested)) fields.tienda.value = suggested;
-  // La referencia del QR es pública. Nunca se incluye el código privado en URL, HTML o almacenamiento local.
+  const fromQr = (query.get('k') || '').toUpperCase();
+  if (fields.tienda.value && /^[A-HJ-NP-Z2-9]{12}$/.test(fromQr)) {
+    fields.codigo.value = fromQr;
+    document.getElementById('qr_estado').textContent = 'Código relleno desde el QR. HardToCrack comprobará la tienda y el remitente del correo.';
+  }
+  fields.tienda.addEventListener('change', () => {
+    if (fields.tienda.value !== suggested && fields.codigo.value === fromQr) {
+      fields.codigo.value = '';
+      document.getElementById('qr_estado').textContent = 'Referencia cambiada: introduce el código correspondiente a esta tienda.';
+    }
+  });
   fields.codigo.addEventListener('input', () => { fields.codigo.value = fields.codigo.value.toUpperCase().replace(/[^A-HJ-NP-Z2-9]/g, ''); });
   form.addEventListener('input', () => result.classList.remove('active'));
   form.addEventListener('change', () => result.classList.remove('active'));
@@ -85,7 +95,7 @@
     const body = [
       'PEDIDO HARDTOCRACK · PENDIENTE DE VALIDACIÓN',
       `Referencia de tienda: ${value('tienda')}`,
-      `Código privado de tienda: ${value('codigo')}`,
+      `Código alfanumérico de tienda: ${value('codigo')}`,
       '',
       `Modelo: ${value('modelo')}`,
       `Estado: ${value('estado')}`,
