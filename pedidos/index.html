@@ -29,12 +29,12 @@
   <header><img src="/pedidos/ht-logo.svg" alt="" width="43" height="43"><div><strong>HARDTOCRACK</strong><small>Red de partners · Pedidos</small></div></header>
   <h1>Prepara tu pedido <span>por correo</span></h1>
   <p class="intro">Completa el pedido y las preferencias de configuración del cliente. Abre el mensaje dirigido a <strong>pedidos@hardtocrack.com</strong> y envíalo desde el correo autorizado de tu tienda. HardToCrack confirmará la recepción y aceptación por respuesta.</p>
-  <div class="notice" id="qr_aviso" role="status">El QR rellena la referencia y el código alfanumérico de la tienda. La página no registra ni envía pedidos por sí sola; HardToCrack comprueba el correo recibido.</div>
+  <div class="notice" id="qr_aviso" role="status">El QR rellena la referencia de la tienda. Introduce tu código alfanumérico para continuar. La página no registra ni envía pedidos por sí sola; HardToCrack comprueba el correo recibido.</div>
   <form id="pedido" class="card" autocomplete="off">
     <h2>1. Identificación de la tienda</h2>
     <div class="grid">
       <div><label for="tienda">Referencia de tienda *</label><select id="tienda" required><option value="">Selecciona tu tienda</option><option>HTC-MAD-001</option><option>HTC-MAD-002</option><option>HTC-MAD-003</option><option>HTC-MAD-004</option><option>HTC-MAD-005</option></select></div>
-      <div><label for="codigo">Código alfanumérico de tienda *</label><input id="codigo" type="password" required minlength="12" maxlength="12" pattern="[A-HJ-NP-Z2-9]{12}" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="12 caracteres"><p class="hint" id="qr_estado" aria-live="polite">Se rellena al escanear el QR; también puedes escribirlo manualmente. Debe corresponder a la tienda seleccionada.</p></div>
+      <div><label for="codigo">Código alfanumérico de tienda *</label><input id="codigo" type="password" required minlength="12" maxlength="12" pattern="[A-HJ-NP-Z2-9]{12}" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="12 caracteres"><p class="hint" id="qr_estado" aria-live="polite">Introduce el código que HardToCrack ha entregado por separado al responsable de tu tienda. Debe corresponder a la tienda seleccionada.</p></div>
     </div>
     <h2 style="margin-top:28px">2. Equipo y pedido</h2>
     <div class="grid">
@@ -116,7 +116,7 @@
     <pre id="texto"></pre>
     <div class="actions"><a id="abrir" class="action" href="mailto:pedidos@hardtocrack.com">Abrir correo</a><button id="copiar" type="button" class="secondary">Copiar texto</button></div>
     <p id="estado_copia" class="status" role="status"></p>
-    <p class="hint">El código incluido en el QR no identifica por sí solo a quien envía el pedido: HardToCrack comprueba también el remitente autorizado. Preparar el correo no equivale a enviarlo ni a aceptar el pedido.</p>
+    <p class="hint">El código alfanumérico no identifica por sí solo a quien envía el pedido: HardToCrack comprueba también el remitente autorizado. Preparar el correo no equivale a enviarlo ni a aceptar el pedido.</p>
   </section>
   <footer>Canal de pedidos: <a href="mailto:pedidos@hardtocrack.com">pedidos@hardtocrack.com</a> · <a href="/privacidad/">Protección de datos</a> · HardToCrack Partners</footer>
 </main>
@@ -152,7 +152,8 @@
     qrStatus.textContent = message;
   }
   async function inspectQr() {
-    if (!query.has('t') && !query.has('k')) return;
+    // Los QR con solo referencia no incluyen el código, que se introduce por separado.
+    if (!query.has('k')) return;
     if (!fields.tienda.value || !/^[A-HJ-NP-Z2-9]{12}$/.test(fromQr)) {
       invalidQr('QR no válido: falta una referencia o el código tiene un formato incorrecto. No se ha reconocido ningún pedido.');
       return;
