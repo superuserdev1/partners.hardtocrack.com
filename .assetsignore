@@ -1,0 +1,34 @@
+# Publish only the public website files; never upload repository metadata or backend files.
+*
+!*/
+!*.html
+!*.css
+!*.js
+!*.svg
+!*.png
+!*.jpg
+!*.jpeg
+!*.webp
+!*.gif
+!*.ico
+!*.woff
+!*.woff2
+!*.ttf
+!*.pdf
+!robots.txt
+!sitemap.xml
+!_headers
+!_redirects
+
+# Internal directories and administration pages remain excluded.
+.git/
+**/.git/
+.github/
+**/.github/
+.wrangler/
+**/.wrangler/
+.vercel/
+**/.vercel/
+node_modules/
+**/node_modules/
+pedidos/admin.html
